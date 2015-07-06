@@ -3,6 +3,14 @@
     "SetAutoClose()": {
       "prefix": "SetAutoClose()",
       "body": "SetAutoClose(${1});"
+    },
+    "SetAutoClose(false)": {
+      "prefix": "SetAutoClose(false)",
+      "body": "SetAutoClose(\"false\");"
+    },
+    "SetAutoClose(true)": {
+      "prefix": "SetAutoClose(true)",
+      "body": "SetAutoClose(\"true\");"
     }
   }
 }

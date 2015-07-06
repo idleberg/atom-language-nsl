@@ -3,6 +3,22 @@
     "RequestExecutionLevel()": {
       "prefix": "RequestExecutionLevel()",
       "body": "RequestExecutionLevel(${1});"
+    },
+    "RequestExecutionLevel(admin)": {
+      "prefix": "RequestExecutionLevel(admin)",
+      "body": "RequestExecutionLevel(\"${1:admin}\");"
+    },
+    "RequestExecutionLevel(highest)": {
+      "prefix": "RequestExecutionLevel(highest)",
+      "body": "RequestExecutionLevel(\"${1:highest}\");"
+    },
+    "RequestExecutionLevel(none)": {
+      "prefix": "RequestExecutionLevel(none)",
+      "body": "RequestExecutionLevel(\"${1:none}\");"
+    },
+    "RequestExecutionLevel(user)": {
+      "prefix": "RequestExecutionLevel(user)",
+      "body": "RequestExecutionLevel(\"${1:user}\");"
     }
   }
 }

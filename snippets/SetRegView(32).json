@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "SetRegView(32)": {
-      "prefix": "SetRegView(32)",
-      "body": "SetRegView(\"32\");"
-    }
-  }
-}

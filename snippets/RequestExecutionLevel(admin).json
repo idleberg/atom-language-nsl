@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "RequestExecutionLevel(admin)": {
-      "prefix": "RequestExecutionLevel(admin)",
-      "body": "RequestExecutionLevel(\"${1:admin}\");"
-    }
-  }
-}

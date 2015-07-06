@@ -3,6 +3,18 @@
     "SetCompress()": {
       "prefix": "SetCompress()",
       "body": "SetCompress(${1});"
+    },
+    "SetCompress(auto)": {
+      "prefix": "SetCompress(auto)",
+      "body": "SetCompress(\"auto\");"
+    },
+    "SetCompress(force)": {
+      "prefix": "SetCompress(force)",
+      "body": "SetCompress(\"force\");"
+    },
+    "SetCompress(off)": {
+      "prefix": "SetCompress(off)",
+      "body": "SetCompress(\"off\");"
     }
   }
 }

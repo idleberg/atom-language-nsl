@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "SilentInstall(silentlog)": {
-      "prefix": "SilentInstall(silentlog)",
-      "body": "SilentInstall(\"silentlog\");"
-    }
-  }
-}

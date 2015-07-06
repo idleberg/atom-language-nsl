@@ -3,6 +3,18 @@
     "ShowInstDetails()": {
       "prefix": "ShowInstDetails()",
       "body": "ShowInstDetails(${1});"
+    },
+    "ShowInstDetails(hide)": {
+      "prefix": "ShowInstDetails(hide)",
+      "body": "ShowInstDetails(\"hide\");"
+    },
+    "ShowInstDetails(nevershow)": {
+      "prefix": "ShowInstDetails(nevershow)",
+      "body": "ShowInstDetails(\"show\");"
+    },
+    "ShowInstDetails(show)": {
+      "prefix": "ShowInstDetails(show)",
+      "body": "ShowInstDetails(\"show\");"
     }
   }
 }

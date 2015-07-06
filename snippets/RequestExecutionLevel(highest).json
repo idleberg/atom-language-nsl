@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "RequestExecutionLevel(highest)": {
-      "prefix": "RequestExecutionLevel(highest)",
-      "body": "RequestExecutionLevel(\"${1:highest}\");"
-    }
-  }
-}

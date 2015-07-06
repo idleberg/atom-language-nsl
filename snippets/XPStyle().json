@@ -3,6 +3,14 @@
     "XPStyle()": {
       "prefix": "XPStyle()",
       "body": "XPStyle(${1});"
+    },
+    "XPStyle(off)": {
+      "prefix": "XPStyle(off)",
+      "body": "XPStyle(\"off\");"
+    },
+    "XPStyle(on)": {
+      "prefix": "XPStyle(on)",
+      "body": "XPStyle(\"on\");"
     }
   }
 }

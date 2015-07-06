@@ -3,6 +3,14 @@
     "SetRegView()": {
       "prefix": "SetRegView()",
       "body": "SetRegView(${1});"
+    },
+    "SetRegView(32)": {
+      "prefix": "SetRegView(32)",
+      "body": "SetRegView(\"32\");"
+    },
+    "SetRegView(64)": {
+      "prefix": "SetRegView(64)",
+      "body": "SetRegView(\"64\");"
     }
   }
 }

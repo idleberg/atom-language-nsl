@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "page License()": {
-      "prefix": "page License()",
-      "body": "page License(${1:function}) {\n\t${2:// your code here}\n}"
-    }
-  }
-}

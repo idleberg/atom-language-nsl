@@ -3,6 +3,18 @@
     "ShowUninstDetails()": {
       "prefix": "ShowUninstDetails()",
       "body": "ShowUninstDetails(${1});"
+    },
+    "ShowUninstDetails(hide)": {
+      "prefix": "ShowUninstDetails(hide)",
+      "body": "ShowUninstDetails(\"hide\");"
+    },
+    "ShowUninstDetails(nevershow)": {
+      "prefix": "ShowUninstDetails(nevershow)",
+      "body": "ShowUninstDetails(\"show\");"
+    },
+    "ShowUninstDetails(show)": {
+      "prefix": "ShowUninstDetails(show)",
+      "body": "ShowUninstDetails(\"show\");"
     }
   }
 }

@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "uninstall page InstFiles()": {
-      "prefix": "uninstall page InstFiles()",
-      "body": "uninstall page InstFiles(${1:function}) {\n\t${2:// your code here}\n}"
-    }
-  }
-}

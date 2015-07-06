@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "page instConfirm()": {
-      "prefix": "page instConfirm()",
-      "body": "page uninstConfirm(${1:function}) {\n\t${2:// your code here}\n}"
-    }
-  }
-}

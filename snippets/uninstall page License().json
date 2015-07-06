@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "uninstall page License()": {
-      "prefix": "uninstall page License()",
-      "body": "uninstall page License(${1:function}) {\n\t${2:// your code here}\n}"
-    }
-  }
-}

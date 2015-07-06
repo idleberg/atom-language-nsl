@@ -3,6 +3,10 @@
     "#if": {
       "prefix": "if",
       "body": "#if\n\t${1:// your code here}\n#ifend"
+    },
+    "#if…#else": {
+      "prefix": "if…#else",
+      "body": "#if\n\t${1:// your code here}\n#else\n\t${2:// your code here}\n#ifend"
     }
   }
 }

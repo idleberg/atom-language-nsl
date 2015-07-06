@@ -3,6 +3,14 @@
     "AllowRootDirInstall()": {
       "prefix": "AllowRootDirInstall()",
       "body": "AllowRootDirInstall(${1});"
+    },
+    "AllowRootDirInstall(false)": {
+      "prefix": "AllowRootDirInstall(false)",
+      "body": "AllowRootDirInstall(false);"
+    },
+        "AllowRootDirInstall(true)": {
+      "prefix": "AllowRootDirInstall(true)",
+      "body": "AllowRootDirInstall(true);"
     }
   }
 }

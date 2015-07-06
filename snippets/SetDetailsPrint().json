@@ -3,6 +3,26 @@
     "SetDetailsPrint()": {
       "prefix": "SetDetailsPrint()",
       "body": "SetDetailsPrint(${1});"
+    },
+    "SetDetailsPrint(both)": {
+      "prefix": "SetDetailsPrint(both)",
+      "body": "SetDetailsPrint(\"both\");"
+    },
+    "SetDetailsPrint(lastused)": {
+      "prefix": "SetDetailsPrint(lastused)",
+      "body": "SetDetailsPrint(\"lastused\");"
+    },
+    "SetDetailsPrint(listonly)": {
+      "prefix": "SetDetailsPrint(listonly)",
+      "body": "SetDetailsPrint(\"listonly\");"
+    },
+    "SetDetailsPrint(none)": {
+      "prefix": "SetDetailsPrint(none)",
+      "body": "SetDetailsPrint(\"none\");"
+    },
+    "SetDetailsPrint(textonly)": {
+      "prefix": "SetDetailsPrint(textonly)",
+      "body": "SetDetailsPrint(\"textonly\");"
     }
   }
 }

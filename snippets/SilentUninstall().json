@@ -3,6 +3,14 @@
     "SilentUninstall()": {
       "prefix": "SilentUninstall()",
       "body": "SilentUninstall(${1});"
+    },
+    "SilentUninstall(normal)": {
+      "prefix": "SilentUninstall(normal)",
+      "body": "SilentUninstall(\"normal\");"
+    },
+    "SilentUninstall(silent)": {
+      "prefix": "SilentUninstall(silent)",
+      "body": "SilentUninstall(\"silent\");"
     }
   }
 }

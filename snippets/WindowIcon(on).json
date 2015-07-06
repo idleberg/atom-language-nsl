@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "WindowIcon(on)": {
-      "prefix": "WindowIcon(on)",
-      "body": "WindowIcon(\"on\");"
-    }
-  }
-}

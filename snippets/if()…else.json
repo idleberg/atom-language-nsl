@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "if()…else": {
-      "prefix": "if()…else",
-      "body": "if (${1:condition}) {\n\t${2:// your code here}\n} else {\n\t${3:// your code here}\n}"
-    }
-  }
-}

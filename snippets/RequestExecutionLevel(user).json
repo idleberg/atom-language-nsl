@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "RequestExecutionLevel(user)": {
-      "prefix": "RequestExecutionLevel(user)",
-      "body": "RequestExecutionLevel(\"${1:user}\");"
-    }
-  }
-}

@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "XPStyle(off)": {
-      "prefix": "XPStyle(off)",
-      "body": "XPStyle(\"off\");"
-    }
-  }
-}

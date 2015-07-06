@@ -3,6 +3,14 @@
     "SetDatablockOptimize()": {
       "prefix": "SetDatablockOptimize()",
       "body": "SetDatablockOptimize(${1});"
+    },
+    "SetDatablockOptimize(off)": {
+      "prefix": "SetDatablockOptimize(off)",
+      "body": "SetDatablockOptimize(\"off\");"
+    },
+    "SetDatablockOptimize(on)": {
+      "prefix": "SetDatablockOptimize(on)",
+      "body": "SetDatablockOptimize(\"on\");"
     }
   }
 }

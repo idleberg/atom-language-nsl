@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "uninstall page uninstConfirm()": {
-      "prefix": "uninstall page uninstConfirm()",
-      "body": "uninstall page uninstConfirm(${1:function}) {\n\t${2:// your code here}\n}"
-    }
-  }
-}

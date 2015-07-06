@@ -3,6 +3,14 @@
     "WindowIcon()": {
       "prefix": "WindowIcon()",
       "body": "WindowIcon(${1});"
+    },
+    "WindowIcon(off)": {
+      "prefix": "WindowIcon(off)",
+      "body": "WindowIcon(\"off\");"
+    },
+    "WindowIcon(on)": {
+      "prefix": "WindowIcon(on)",
+      "body": "WindowIcon(\"on\");"
     }
   }
 }

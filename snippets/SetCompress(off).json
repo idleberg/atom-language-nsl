@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "SetCompress(off)": {
-      "prefix": "SetCompress(off)",
-      "body": "SetCompress(\"off\");"
-    }
-  }
-}

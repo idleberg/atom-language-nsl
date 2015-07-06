@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "page InstFiles()": {
-      "prefix": "page InstFiles()",
-      "body": "page InstFiles(${1:function}) {\n\t${2:// your code here}\n}"
-    }
-  }
-}

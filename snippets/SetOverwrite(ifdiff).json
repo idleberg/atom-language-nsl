@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "SetOverwrite(ifdiff)": {
-      "prefix": "SetOverwrite(ifdiff)",
-      "body": "SetOverwrite(\"ifdiff\");"
-    }
-  }
-}

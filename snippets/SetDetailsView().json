@@ -3,6 +3,14 @@
     "SetDetailsView()": {
       "prefix": "SetDetailsView()",
       "body": "SetDetailsView(${1});"
+    },
+    "SetDetailsView(hide)": {
+      "prefix": "SetDetailsView(hide)",
+      "body": "SetDetailsView(\"hide\");"
+    },
+    "SetDetailsView(show)": {
+      "prefix": "SetDetailsView(show)",
+      "body": "SetDetailsView(\"show\");"
     }
   }
 }

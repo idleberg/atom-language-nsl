@@ -3,6 +3,14 @@
     "SetSilent()": {
       "prefix": "SetSilent()",
       "body": "SetSilent(${1});"
+    },
+    "SetSilent(normal)": {
+      "prefix": "SetSilent(normal)",
+      "body": "SetSilent(\"normal\");"
+    },
+    "SetSilent(silent)": {
+      "prefix": "SetSilent(silent)",
+      "body": "SetSilent(\"silent\");"
     }
   }
 }

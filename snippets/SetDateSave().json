@@ -3,6 +3,14 @@
     "SetDateSave()": {
       "prefix": "SetDateSave()",
       "body": "SetDateSave(${1});"
+    },
+    "SetDateSave(off)": {
+      "prefix": "SetDateSave(off)",
+      "body": "SetDateSave(\"off\");"
+    },
+    "SetDateSave(on)": {
+      "prefix": "SetDateSave(on)",
+      "body": "SetDateSave(\"on\");"
     }
   }
 }

@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "ShowUninstDetails(hide)": {
-      "prefix": "ShowUninstDetails(hide)",
-      "body": "ShowUninstDetails(\"hide\");"
-    }
-  }
-}

@@ -1,0 +1,28 @@
+{
+  ".source.nsl": {
+    "uninstall page()": {
+      "prefix": "uninstall page()",
+      "body": "uninstall page ${1:PageType}(${2:function}) {\n\t${3:// your code here}\n}"
+    },
+    "uninstall page Components()": {
+      "prefix": "uninstall page Components()",
+      "body": "uninstall page Components(${1:function}) {\n\t${2:// your code here}\n}"
+    },
+    "uninstall page Directory()": {
+      "prefix": "uninstall page Directory()",
+      "body": "uninstall page Directory(${1:function}) {\n\t${2:// your code here}\n}"
+    },
+    "uninstall page InstFiles()": {
+      "prefix": "uninstall page InstFiles()",
+      "body": "uninstall page InstFiles(${1:function}) {\n\t${2:// your code here}\n}"
+    },
+    "uninstall page License()": {
+      "prefix": "uninstall page License()",
+      "body": "uninstall page License(${1:function}) {\n\t${2:// your code here}\n}"
+    },
+    "uninstall page uninstConfirm()": {
+      "prefix": "uninstall page uninstConfirm()",
+      "body": "uninstall page uninstConfirm(${1:function}) {\n\t${2:// your code here}\n}"
+    }
+  }
+}

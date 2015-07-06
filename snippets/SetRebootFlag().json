@@ -3,6 +3,14 @@
     "SetRebootFlag()": {
       "prefix": "SetRebootFlag()",
       "body": "SetRebootFlag(${1});"
+    },
+    "SetRebootFlag(false)": {
+      "prefix": "SetRebootFlag(false)",
+      "body": "SetRebootFlag(\"false\");"
+    },
+    "SetRebootFlag(true)": {
+      "prefix": "SetRebootFlag(true)",
+      "body": "SetRebootFlag(\"true\");"
     }
   }
 }
