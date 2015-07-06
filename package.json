@@ -17,6 +17,10 @@
   },
   "devDependencies": {
     "gulp": "^3.9.0",
-    "gulp-coffeelint": "^0.5.0"
+    "gulp-coffeelint": "^0.5.0",
+    "gulp-json-lint": "^0.1.0"
+  },
+  "scripts": {
+    "test": "gulp lint"
   }
 }
