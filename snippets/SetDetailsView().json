@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "SetDetailsView()": {
+      "prefix": "SetDetailsView()",
+      "body": "SetDetailsView(${1});"
+    }
+  }
+}

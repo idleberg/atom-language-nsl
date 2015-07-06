@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "SectionGetSize()": {
+      "prefix": "SectionGetSize()",
+      "body": "SectionGetSize(${1});"
+    }
+  }
+}

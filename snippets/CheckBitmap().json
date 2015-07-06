@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "CheckBitmap()": {
+      "prefix": "CheckBitmap()",
+      "body": "CheckBitmap(${1});"
+    }
+  }
+}

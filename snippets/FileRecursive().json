@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "FileRecursive()": {
+      "prefix": "FileRecursive()",
+      "body": "FileRecursive(${1});"
+    }
+  }
+}

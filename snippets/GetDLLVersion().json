@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "GetDLLVersion()": {
+      "prefix": "GetDLLVersion()",
+      "body": "GetDLLVersion(${1});"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "un.onUninstSuccess()": {
+      "prefix": "un.onUninstSuccess()",
+      "body": "function un.onUninstSuccess(${1}) {\n\t${2:// your code here}\n}"
+    }
+  }
+}

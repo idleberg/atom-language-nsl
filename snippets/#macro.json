@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "#macro": {
+      "prefix": "#macro",
+      "body": "#macro\n\t${1:// your code here}\n#macroend"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "LicenseText()": {
+      "prefix": "LicenseText()",
+      "body": "LicenseText(${1});"
+    }
+  }
+}

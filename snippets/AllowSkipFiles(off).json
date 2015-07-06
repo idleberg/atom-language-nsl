@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "AllowSkipFiles(off)": {
+      "prefix": "AllowSkipFiles(off)",
+      "body": "AllowSkipFiles(off);"
+    }
+  }
+}

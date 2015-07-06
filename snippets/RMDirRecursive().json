@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "RMDirRecursive()": {
+      "prefix": "RMDirRecursive()",
+      "body": "RMDirRecursive(${1});"
+    }
+  }
+}

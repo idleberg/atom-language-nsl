@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "SetOutPath()": {
+      "prefix": "SetOutPath()",
+      "body": "SetOutPath(${1});"
+    }
+  }
+}

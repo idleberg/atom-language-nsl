@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "FindFirst()": {
+      "prefix": "FindFirst()",
+      "body": "FindFirst(${1});"
+    }
+  }
+}

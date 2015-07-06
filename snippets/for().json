@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "for()": {
+      "prefix": "for()",
+      "body": "for(${1:condition}) {\n\t${2:// your code here}\n}"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "AutoCloseWindow()": {
+      "prefix": "AutoCloseWindow()",
+      "body": "AutoCloseWindow(${1});"
+    }
+  }
+}

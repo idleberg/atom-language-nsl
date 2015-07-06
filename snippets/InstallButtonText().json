@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "InstallButtonText()": {
+      "prefix": "InstallButtonText()",
+      "body": "InstallButtonText(${1});"
+    }
+  }
+}

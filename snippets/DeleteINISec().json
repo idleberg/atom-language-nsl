@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "DeleteINISec()": {
+      "prefix": "DeleteINISec()",
+      "body": "DeleteINISec(${1});"
+    }
+  }
+}

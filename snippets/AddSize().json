@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "AddSize()": {
+      "prefix": "AddSize()",
+      "body": "AddSize(${1});"
+    }
+  }
+}

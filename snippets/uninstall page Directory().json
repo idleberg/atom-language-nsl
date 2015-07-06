@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "uninstall page Directory()": {
+      "prefix": "uninstall page Directory()",
+      "body": "uninstall page Directory(${1:function}) {\n\t${2:// your code here}\n}"
+    }
+  }
+}

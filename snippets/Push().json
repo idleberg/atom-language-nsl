@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "Push()": {
+      "prefix": "Push()",
+      "body": "Push(${1});"
+    }
+  }
+}

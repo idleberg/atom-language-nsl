@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "DetailsButtonText()": {
+      "prefix": "DetailsButtonText()",
+      "body": "DetailsButtonText(${1});"
+    }
+  }
+}

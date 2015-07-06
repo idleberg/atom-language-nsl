@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "#if": {
+      "prefix": "#if",
+      "body": "#if\n\t${1:// your code here}\n#ifend"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "IfRebootFlag()": {
+      "prefix": "IfRebootFlag()",
+      "body": "IfRebootFlag(${1});"
+    }
+  }
+}

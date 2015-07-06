@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "InstProgressFlags()": {
+      "prefix": "InstProgressFlags()",
+      "body": "InstProgressFlags(${1});"
+    }
+  }
+}

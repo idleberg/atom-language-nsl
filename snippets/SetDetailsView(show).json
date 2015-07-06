@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "SetDetailsView(show)": {
+      "prefix": "SetDetailsView(show)",
+      "body": "SetDetailsView(\"show\");"
+    }
+  }
+}

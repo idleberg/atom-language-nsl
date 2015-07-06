@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "DirText()": {
+      "prefix": "DirText()",
+      "body": "DirText(${1});"
+    }
+  }
+}

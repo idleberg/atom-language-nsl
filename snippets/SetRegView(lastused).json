@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "SetRegView(lastused)": {
+      "prefix": "SetRegView(lastused)",
+      "body": "SetRegView(\"lastused\");"
+    }
+  }
+}

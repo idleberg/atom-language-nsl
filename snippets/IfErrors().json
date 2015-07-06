@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "IfErrors()": {
+      "prefix": "IfErrors()",
+      "body": "IfErrors(${1});"
+    }
+  }
+}

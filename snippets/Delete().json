@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "Delete()": {
+      "prefix": "Delete()",
+      "body": "Delete(${1});"
+    }
+  }
+}

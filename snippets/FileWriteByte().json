@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "FileWriteByte()": {
+      "prefix": "FileWriteByte()",
+      "body": "FileWriteByte(${1});"
+    }
+  }
+}

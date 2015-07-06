@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "SetRebootFlag(true)": {
+      "prefix": "SetRebootFlag(true)",
+      "body": "SetRebootFlag(\"true\");"
+    }
+  }
+}

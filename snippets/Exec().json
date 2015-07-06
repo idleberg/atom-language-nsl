@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "Exec()": {
+      "prefix": "Exec()",
+      "body": "Exec(${1});"
+    }
+  }
+}

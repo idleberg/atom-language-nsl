@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "switch():1": {
+      "prefix": "switch():1",
+      "body": "switch(\\$${1:variable}) {\n\tcase ${2:value}:\n\t\t${3:// your code here}\n\tdefault:\n\t\t${4:// your code here}\n}"
+    }
+  }
+}

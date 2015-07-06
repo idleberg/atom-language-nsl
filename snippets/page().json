@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "page()": {
+      "prefix": "page()",
+      "body": "page ${1:PageType}(${2:function}) {\n\t${3:// your code here}\n}"
+    }
+  }
+}

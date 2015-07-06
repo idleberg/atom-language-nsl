@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "LoadLanguageFile()": {
+      "prefix": "LoadLanguageFile()",
+      "body": "LoadLanguageFile(${1});"
+    }
+  }
+}

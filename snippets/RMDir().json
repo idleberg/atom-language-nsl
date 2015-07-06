@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "RMDir()": {
+      "prefix": "RMDir()",
+      "body": "RMDir(${1});"
+    }
+  }
+}

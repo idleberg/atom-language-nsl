@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "SetShellVarContext(current)": {
+      "prefix": "SetShellVarContext(current)",
+      "body": "SetShellVarContext(\"current\");"
+    }
+  }
+}

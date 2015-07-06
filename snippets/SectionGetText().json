@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "SectionGetText()": {
+      "prefix": "SectionGetText()",
+      "body": "SectionGetText(${1});"
+    }
+  }
+}

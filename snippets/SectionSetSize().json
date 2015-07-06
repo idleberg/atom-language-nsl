@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "SectionSetSize()": {
+      "prefix": "SectionSetSize()",
+      "body": "SectionSetSize(${1});"
+    }
+  }
+}

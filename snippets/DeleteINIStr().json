@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "DeleteINIStr()": {
+      "prefix": "DeleteINIStr()",
+      "body": "DeleteINIStr(${1});"
+    }
+  }
+}

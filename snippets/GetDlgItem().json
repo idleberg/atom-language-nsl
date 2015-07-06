@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "GetDlgItem()": {
+      "prefix": "GetDlgItem()",
+      "body": "GetDlgItem(${1});"
+    }
+  }
+}

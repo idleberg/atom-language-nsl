@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "GetInstDirError()": {
+      "prefix": "GetInstDirError()",
+      "body": "GetInstDirError(${1});"
+    }
+  }
+}

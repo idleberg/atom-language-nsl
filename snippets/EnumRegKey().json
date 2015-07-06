@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "EnumRegKey()": {
+      "prefix": "EnumRegKey()",
+      "body": "EnumRegKey(${1});"
+    }
+  }
+}

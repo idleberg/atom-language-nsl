@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "SetRegView(64)": {
+      "prefix": "SetRegView(64)",
+      "body": "SetRegView(\"64\");"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "AllowRootDirInstall(true)": {
+      "prefix": "AllowRootDirInstall(true)",
+      "body": "AllowRootDirInstall(true);"
+    }
+  }
+}

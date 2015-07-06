@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "SetCompressor()": {
+      "prefix": "SetCompressor()",
+      "body": "SetCompressor(${1});"
+    }
+  }
+}

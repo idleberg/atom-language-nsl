@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "SilentUninstall(normal)": {
+      "prefix": "SilentUninstall(normal)",
+      "body": "SilentUninstall(\"normal\");"
+    }
+  }
+}

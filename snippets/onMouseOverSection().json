@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "onMouseOverSection()": {
+      "prefix": "onMouseOverSection()",
+      "body": "function .onMouseOverSection(${1}) {\n\t${2:// your code here}\n}"
+    }
+  }
+}

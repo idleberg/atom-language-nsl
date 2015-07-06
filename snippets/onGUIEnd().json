@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "onGUIEnd()": {
+      "prefix": "onGUIEnd()",
+      "body": "function .onGUIEnd(${1}) {\n\t${2:// your code here}\n}"
+    }
+  }
+}

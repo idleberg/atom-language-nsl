@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "SetFileAttributes()": {
+      "prefix": "SetFileAttributes()",
+      "body": "SetFileAttributes(${1});"
+    }
+  }
+}

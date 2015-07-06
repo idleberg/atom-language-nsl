@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "File()": {
+      "prefix": "File()",
+      "body": "File(${1});"
+    }
+  }
+}

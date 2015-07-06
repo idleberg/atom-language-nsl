@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "Rename()": {
+      "prefix": "Rename()",
+      "body": "Rename(${1});"
+    }
+  }
+}

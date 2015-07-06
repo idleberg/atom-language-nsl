@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "IntFmt()": {
+      "prefix": "IntFmt()",
+      "body": "IntFmt(${1});"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "LicenseForceSelection()": {
+      "prefix": "LicenseForceSelection()",
+      "body": "LicenseForceSelection(${1});"
+    }
+  }
+}

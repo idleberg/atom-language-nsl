@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "StrLen()": {
+      "prefix": "StrLen()",
+      "body": "StrLen(${1});"
+    }
+  }
+}

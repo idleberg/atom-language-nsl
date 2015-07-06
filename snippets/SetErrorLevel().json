@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "SetErrorLevel()": {
+      "prefix": "SetErrorLevel()",
+      "body": "SetErrorLevel(${1:error_level});"
+    }
+  }
+}

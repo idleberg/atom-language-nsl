@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "WindowIcon()": {
+      "prefix": "WindowIcon()",
+      "body": "WindowIcon(${1});"
+    }
+  }
+}

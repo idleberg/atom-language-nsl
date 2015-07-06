@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "SetSilent(silent)": {
+      "prefix": "SetSilent(silent)",
+      "body": "SetSilent(\"silent\");"
+    }
+  }
+}

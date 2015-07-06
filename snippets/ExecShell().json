@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "ExecShell()": {
+      "prefix": "ExecShell()",
+      "body": "ExecShell(${1});"
+    }
+  }
+}

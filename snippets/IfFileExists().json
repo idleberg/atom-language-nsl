@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "IfFileExists()": {
+      "prefix": "IfFileExists()",
+      "body": "IfFileExists(${1});"
+    }
+  }
+}

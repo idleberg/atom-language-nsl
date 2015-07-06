@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "uninstall page Components()": {
+      "prefix": "uninstall page Components()",
+      "body": "uninstall page Components(${1:function}) {\n\t${2:// your code here}\n}"
+    }
+  }
+}

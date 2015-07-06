@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "SectionGetInstTypes()": {
+      "prefix": "SectionGetInstTypes()",
+      "body": "SectionGetInstTypes(${1});"
+    }
+  }
+}

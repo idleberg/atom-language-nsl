@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "WriteRegExpandStr()": {
+      "prefix": "WriteRegExpandStr()",
+      "body": "WriteRegExpandStr(${1});"
+    }
+  }
+}

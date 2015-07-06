@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "MiscButtonText()": {
+      "prefix": "MiscButtonText()",
+      "body": "MiscButtonText(${1});"
+    }
+  }
+}

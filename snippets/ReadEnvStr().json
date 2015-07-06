@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "ReadEnvStr()": {
+      "prefix": "ReadEnvStr()",
+      "body": "ReadEnvStr(${1});"
+    }
+  }
+}

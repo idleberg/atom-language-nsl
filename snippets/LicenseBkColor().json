@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "LicenseBkColor()": {
+      "prefix": "LicenseBkColor()",
+      "body": "LicenseBkColor(${1});"
+    }
+  }
+}

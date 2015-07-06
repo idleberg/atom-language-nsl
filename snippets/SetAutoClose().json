@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "SetAutoClose()": {
+      "prefix": "SetAutoClose()",
+      "body": "SetAutoClose(${1});"
+    }
+  }
+}

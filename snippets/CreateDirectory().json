@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "CreateDirectory()": {
+      "prefix": "CreateDirectory()",
+      "body": "CreateDirectory(${1});"
+    }
+  }
+}

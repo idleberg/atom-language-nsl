@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "CRCCheck()": {
+      "prefix": "CRCCheck()",
+      "body": "CRCCheck(${1});"
+    }
+  }
+}

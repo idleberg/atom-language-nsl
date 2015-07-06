@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "SetDetailsPrint(lastused)": {
+      "prefix": "SetDetailsPrint(lastused)",
+      "body": "SetDetailsPrint(\"lastused\");"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "function()": {
+      "prefix": "function()",
+      "body": "function ${1:function_name}(${2}) {\n\t${3:// your code here}\n}"
+    }
+  }
+}

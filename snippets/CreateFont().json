@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "CreateFont()": {
+      "prefix": "CreateFont()",
+      "body": "CreateFont(${1});"
+    }
+  }
+}

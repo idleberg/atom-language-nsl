@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "page Directory()": {
+      "prefix": "page Directory()",
+      "body": "page Directory(${1:function}) {\n\t${2:// your code here}\n}"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "SetDetailsPrint(none)": {
+      "prefix": "SetDetailsPrint(none)",
+      "body": "SetDetailsPrint(\"none\");"
+    }
+  }
+}

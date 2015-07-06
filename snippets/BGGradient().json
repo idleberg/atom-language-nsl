@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "BGGradient()": {
+      "prefix": "BGGradient()",
+      "body": "BGGradient(${1});"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "IfSilent()": {
+      "prefix": "IfSilent()",
+      "body": "IfSilent(${1});"
+    }
+  }
+}

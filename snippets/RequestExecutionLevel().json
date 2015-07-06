@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "RequestExecutionLevel()": {
+      "prefix": "RequestExecutionLevel()",
+      "body": "RequestExecutionLevel(${1});"
+    }
+  }
+}

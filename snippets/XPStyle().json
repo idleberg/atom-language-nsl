@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "XPStyle()": {
+      "prefix": "XPStyle()",
+      "body": "XPStyle(${1});"
+    }
+  }
+}

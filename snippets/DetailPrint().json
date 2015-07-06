@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "DetailPrint()": {
+      "prefix": "DetailPrint()",
+      "body": "DetailPrint(${1});"
+    }
+  }
+}

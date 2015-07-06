@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "InstType()": {
+      "prefix": "InstType()",
+      "body": "InstType(${1});"
+    }
+  }
+}

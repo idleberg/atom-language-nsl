@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "Quit()": {
+      "prefix": "Quit()",
+      "body": "Quit(${1});"
+    }
+  }
+}

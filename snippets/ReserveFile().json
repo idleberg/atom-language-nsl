@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "ReserveFile()": {
+      "prefix": "ReserveFile()",
+      "body": "ReserveFile(${1});"
+    }
+  }
+}

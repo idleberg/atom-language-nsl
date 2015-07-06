@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "UninstallButtonText()": {
+      "prefix": "UninstallButtonText()",
+      "body": "UninstallButtonText(\"${1:text}\");"
+    }
+  }
+}

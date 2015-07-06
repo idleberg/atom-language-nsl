@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "onUserAbort()": {
+      "prefix": "onUserAbort()",
+      "body": "function .onUserAbort(${1}) {\n\t${2:// your code here}\n}"
+    }
+  }
+}

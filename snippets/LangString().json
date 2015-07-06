@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "LangString()": {
+      "prefix": "LangString()",
+      "body": "LangString(${1});"
+    }
+  }
+}

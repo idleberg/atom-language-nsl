@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "InitPluginsDir()": {
+      "prefix": "InitPluginsDir()",
+      "body": "InitPluginsDir(${1});"
+    }
+  }
+}

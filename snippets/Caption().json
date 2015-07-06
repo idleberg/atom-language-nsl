@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "Caption()": {
+      "prefix": "Caption()",
+      "body": "Caption(\"${1:caption}\");"
+    }
+  }
+}

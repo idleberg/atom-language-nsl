@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "SetDetailsPrint(listonly)": {
+      "prefix": "SetDetailsPrint(listonly)",
+      "body": "SetDetailsPrint(\"listonly\");"
+    }
+  }
+}

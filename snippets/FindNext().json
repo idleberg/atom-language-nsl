@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "FindNext()": {
+      "prefix": "FindNext()",
+      "body": "FindNext(${1});"
+    }
+  }
+}

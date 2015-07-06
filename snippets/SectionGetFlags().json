@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "SectionGetFlags()": {
+      "prefix": "SectionGetFlags()",
+      "body": "SectionGetFlags(${1});"
+    }
+  }
+}

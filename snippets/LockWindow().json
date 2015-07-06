@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "LockWindow()": {
+      "prefix": "LockWindow()",
+      "body": "LockWindow(${1});"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "SetOverwrite(ifnewer)": {
+      "prefix": "SetOverwrite(ifnewer)",
+      "body": "SetOverwrite(\"ifnewer\");"
+    }
+  }
+}

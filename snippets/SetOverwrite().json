@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "SetOverwrite()": {
+      "prefix": "SetOverwrite()",
+      "body": "SetOverwrite(${1});"
+    }
+  }
+}

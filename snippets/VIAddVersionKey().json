@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "VIAddVersionKey()": {
+      "prefix": "VIAddVersionKey()",
+      "body": "VIAddVersionKey(${1});"
+    }
+  }
+}

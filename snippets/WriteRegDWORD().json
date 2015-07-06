@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "WriteRegDWORD()": {
+      "prefix": "WriteRegDWORD()",
+      "body": "WriteRegDWORD(${1});"
+    }
+  }
+}

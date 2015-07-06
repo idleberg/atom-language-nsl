@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "SetDatablockOptimize(on)": {
+      "prefix": "SetDatablockOptimize(on)",
+      "body": "SetDatablockOptimize(\"on\");"
+    }
+  }
+}

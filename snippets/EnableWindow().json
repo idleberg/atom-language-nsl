@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "EnableWindow()": {
+      "prefix": "EnableWindow()",
+      "body": "EnableWindow(${1});"
+    }
+  }
+}

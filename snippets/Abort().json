@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "Abort()": {
+      "prefix": "Abort()",
+      "body": "Abort(${1});"
+    }
+  }
+}

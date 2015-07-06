@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "SetShellVarContext(all)": {
+      "prefix": "SetShellVarContext(all)",
+      "body": "SetShellVarContext(\"all\");"
+    }
+  }
+}

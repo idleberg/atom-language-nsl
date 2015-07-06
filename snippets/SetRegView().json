@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "SetRegView()": {
+      "prefix": "SetRegView()",
+      "body": "SetRegView(${1});"
+    }
+  }
+}

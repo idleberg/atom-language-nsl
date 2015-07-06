@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "GetFunctionAddress()": {
+      "prefix": "GetFunctionAddress()",
+      "body": "GetFunctionAddress(${1});"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "AddBrandingImage()": {
+      "prefix": "AddBrandingImage()",
+      "body": "AddBrandingImage(${1});"
+    }
+  }
+}

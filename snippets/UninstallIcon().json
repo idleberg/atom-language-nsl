@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "UninstallIcon()": {
+      "prefix": "UninstallIcon()",
+      "body": "UninstallIcon(${1});"
+    }
+  }
+}

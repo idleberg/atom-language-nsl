@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "SetDateSave(on)": {
+      "prefix": "SetDateSave(on)",
+      "body": "SetDateSave(\"on\");"
+    }
+  }
+}

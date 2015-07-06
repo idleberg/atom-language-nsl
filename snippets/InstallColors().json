@@ -1,0 +1,8 @@
+{
+  ".source.nsl": {
+    "InstallColors()": {
+      "prefix": "InstallColors()",
+      "body": "InstallColors(${1});"
+    }
+  }
+}
