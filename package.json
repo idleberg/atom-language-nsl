@@ -1,12 +1,17 @@
 {
   "name": "language-nsl",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Atom language support for nsL Assembler",
   "author": {
     "name": "Jan T. Sott",
     "url": "http://github.com/idleberg"
   },
-  "keywords": ["nsis","nullsoft","installer","setup"],
+  "keywords": [
+    "nsis",
+    "nullsoft",
+    "installer",
+    "setup"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/idleberg/language-nsl"
