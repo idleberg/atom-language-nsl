@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "StrCpy()": {
-      "prefix": "StrCpy()",
-      "body": "StrCpy(${1});"
-    }
-  }
-}

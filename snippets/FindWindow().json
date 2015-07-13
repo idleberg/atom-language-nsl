@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "FindWindow()": {
-      "prefix": "FindWindow()",
-      "body": "FindWindow(${1});"
-    }
-  }
-}

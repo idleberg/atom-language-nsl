@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "FileSeek()": {
-      "prefix": "FileSeek()",
-      "body": "FileSeek(${1});"
-    }
-  }
-}

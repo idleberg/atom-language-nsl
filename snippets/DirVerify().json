@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "DirVerify()": {
-      "prefix": "DirVerify()",
-      "body": "DirVerify(${1});"
-    }
-  }
-}

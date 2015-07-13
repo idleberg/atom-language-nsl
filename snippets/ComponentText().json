@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "ComponentText()": {
-      "prefix": "ComponentText()",
-      "body": "ComponentText(${1});"
-    }
-  }
-}

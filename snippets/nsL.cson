@@ -1,0 +1,1074 @@
+'.source.nsl':
+  '#define':
+    'prefix': 'define'
+    'body': '#define ${1:gflag}'
+  '#if..#else':
+    'prefix': 'if..#else'
+    'body': """
+      #if
+      	${1:// your code here}
+      #else
+      	${2:// your code here}
+      #ifend
+    """
+  '#if':
+    'prefix': 'if'
+    'body': """
+      #if
+      	${1:// your code here}
+      #ifend
+    """
+  '#macro':
+    'prefix': 'macro'
+    'body': """
+      #macro
+      	${1:// your code here}
+      #macroend
+    """
+  '#nsis':
+    'prefix': 'nsis'
+    'body': """
+      #nsis
+      	${1:// your code here}
+      #nsisend
+    """
+  'Abort()':
+    'prefix': 'Abort()'
+    'body': 'Abort(${1});'
+  'AddBrandingImage()':
+    'prefix': 'AddBrandingImage()'
+    'body': 'AddBrandingImage(${1});'
+  'AddSize()':
+    'prefix': 'AddSize()'
+    'body': 'AddSize(${1});'
+  'AllowRootDirInstall()':
+    'prefix': 'AllowRootDirInstall()'
+    'body': 'AllowRootDirInstall(${1});'
+  'AllowRootDirInstall(false)':
+    'prefix': 'AllowRootDirInstall(false)'
+    'body': 'AllowRootDirInstall(false);'
+  'AllowRootDirInstall(true)':
+    'prefix': 'AllowRootDirInstall(true)'
+    'body': 'AllowRootDirInstall(true);'
+  'AllowSkipFiles()':
+    'prefix': 'AllowSkipFiles()'
+    'body': 'AllowSkipFiles(${1});'
+  'AllowSkipFiles(off)':
+    'prefix': 'AllowSkipFiles(off)'
+    'body': 'AllowSkipFiles(off);'
+  'AllowSkipFiles(on)':
+    'prefix': 'AllowSkipFiles(on)'
+    'body': 'AllowSkipFiles(on);'
+  'AutoCloseWindow()':
+    'prefix': 'AutoCloseWindow()'
+    'body': 'AutoCloseWindow(${1});'
+  'AutoCloseWindow(false)':
+    'prefix': 'AutoCloseWindow(false)'
+    'body': 'AutoCloseWindow("false");'
+  'AutoCloseWindow(true)':
+    'prefix': 'AutoCloseWindow(true)'
+    'body': 'AutoCloseWindow("true");'
+  'BGFont()':
+    'prefix': 'BGFont()'
+    'body': 'BGFont(${1});'
+  'BGGradient()':
+    'prefix': 'BGGradient()'
+    'body': 'BGGradient(${1});'
+  'BrandingText()':
+    'prefix': 'BrandingText()'
+    'body': 'BrandingText(${1});'
+  'BringToFront()':
+    'prefix': 'BringToFront()'
+    'body': 'BringToFront(${1});'
+  'Call()':
+    'prefix': 'Call()'
+    'body': 'Call(${1});'
+  'Caption()':
+    'prefix': 'Caption()'
+    'body': 'Caption("${1:caption}");'
+  'case':
+    'prefix': 'case'
+    'body': """
+      case ${1:value}:
+      	${2:// your code here}
+    """
+  'ChangeUI()':
+    'prefix': 'ChangeUI()'
+    'body': 'ChangeUI(${1});'
+  'CheckBitmap()':
+    'prefix': 'CheckBitmap()'
+    'body': 'CheckBitmap(${1});'
+  'ClearErrors()':
+    'prefix': 'ClearErrors()'
+    'body': 'ClearErrors(${1});'
+  'CompletedText()':
+    'prefix': 'CompletedText()'
+    'body': 'CompletedText(${1});'
+  'ComponentText()':
+    'prefix': 'ComponentText()'
+    'body': 'ComponentText(${1});'
+  'CopyFiles()':
+    'prefix': 'CopyFiles()'
+    'body': 'CopyFiles(${1});'
+  'CRCCheck()':
+    'prefix': 'CRCCheck()'
+    'body': 'CRCCheck(${1});'
+  'CreateDirectory()':
+    'prefix': 'CreateDirectory()'
+    'body': 'CreateDirectory(${1});'
+  'CreateFont()':
+    'prefix': 'CreateFont()'
+    'body': 'CreateFont(${1});'
+  'CreateShortCut()':
+    'prefix': 'CreateShortCut()'
+    'body': 'CreateShortCut(${1});'
+  'Delete()':
+    'prefix': 'Delete()'
+    'body': 'Delete(${1});'
+  'DeleteINISec()':
+    'prefix': 'DeleteINISec()'
+    'body': 'DeleteINISec(${1});'
+  'DeleteINIStr()':
+    'prefix': 'DeleteINIStr()'
+    'body': 'DeleteINIStr(${1});'
+  'DeleteRegKey()':
+    'prefix': 'DeleteRegKey()'
+    'body': 'DeleteRegKey(${1});'
+  'DeleteRegValue()':
+    'prefix': 'DeleteRegValue()'
+    'body': 'DeleteRegValue(${1});'
+  'DetailPrint()':
+    'prefix': 'DetailPrint()'
+    'body': 'DetailPrint(${1});'
+  'DetailsButtonText()':
+    'prefix': 'DetailsButtonText()'
+    'body': 'DetailsButtonText(${1});'
+  'DirText()':
+    'prefix': 'DirText()'
+    'body': 'DirText(${1});'
+  'DirVar()':
+    'prefix': 'DirVar()'
+    'body': 'DirVar(${1});'
+  'DirVerify()':
+    'prefix': 'DirVerify()'
+    'body': 'DirVerify(${1});'
+  'EnableWindow()':
+    'prefix': 'EnableWindow()'
+    'body': 'EnableWindow(${1});'
+  'EnumRegKey()':
+    'prefix': 'EnumRegKey()'
+    'body': 'EnumRegKey(${1});'
+  'EnumRegValue()':
+    'prefix': 'EnumRegValue()'
+    'body': 'EnumRegValue(${1});'
+  'Exch()':
+    'prefix': 'Exch()'
+    'body': 'Exch(${1});'
+  'Exec()':
+    'prefix': 'Exec()'
+    'body': 'Exec(${1});'
+  'ExecShell()':
+    'prefix': 'ExecShell()'
+    'body': 'ExecShell(${1});'
+  'ExecWait()':
+    'prefix': 'ExecWait()'
+    'body': 'ExecWait(${1});'
+  'ExpandEnvStrings()':
+    'prefix': 'ExpandEnvStrings()'
+    'body': 'ExpandEnvStrings(${1});'
+  'File()':
+    'prefix': 'File()'
+    'body': 'File(${1});'
+  'FileBufSize()':
+    'prefix': 'FileBufSize()'
+    'body': 'FileBufSize(${1});'
+  'FileClose()':
+    'prefix': 'FileClose()'
+    'body': 'FileClose(${1});'
+  'FileErrorText()':
+    'prefix': 'FileErrorText()'
+    'body': 'FileErrorText(${1});'
+  'FileOpen()':
+    'prefix': 'FileOpen()'
+    'body': 'FileOpen(${1});'
+  'FileRead()':
+    'prefix': 'FileRead()'
+    'body': 'FileRead(${1});'
+  'FileReadByte()':
+    'prefix': 'FileReadByte()'
+    'body': 'FileReadByte(${1});'
+  'FileRecursive()':
+    'prefix': 'FileRecursive()'
+    'body': 'FileRecursive(${1});'
+  'FileSeek()':
+    'prefix': 'FileSeek()'
+    'body': 'FileSeek(${1});'
+  'FileWrite()':
+    'prefix': 'FileWrite()'
+    'body': 'FileWrite(${1});'
+  'FileWriteByte()':
+    'prefix': 'FileWriteByte()'
+    'body': 'FileWriteByte(${1});'
+  'FindClose()':
+    'prefix': 'FindClose()'
+    'body': 'FindClose(${1});'
+  'FindFirst()':
+    'prefix': 'FindFirst()'
+    'body': 'FindFirst(${1});'
+  'FindNext()':
+    'prefix': 'FindNext()'
+    'body': 'FindNext(${1});'
+  'FindWindow()':
+    'prefix': 'FindWindow()'
+    'body': 'FindWindow(${1});'
+  'FlushINI()':
+    'prefix': 'FlushINI()'
+    'body': 'FlushINI(${1});'
+  'for()':
+    'prefix': 'for()'
+    'body': """
+      for(${1:condition}) {
+      	${2:// your code here}
+      }
+    """
+  'function()':
+    'prefix': 'function()'
+    'body': """
+      function ${1:function_name}(${2}) {
+      	${3:// your code here}
+      }
+    """
+  'GetCurInstType()':
+    'prefix': 'GetCurInstType()'
+    'body': 'GetCurInstType(${1});'
+  'GetCurrentAddress()':
+    'prefix': 'GetCurrentAddress()'
+    'body': 'GetCurrentAddress(${1});'
+  'GetDlgItem()':
+    'prefix': 'GetDlgItem()'
+    'body': 'GetDlgItem(${1});'
+  'GetDLLVersion()':
+    'prefix': 'GetDLLVersion()'
+    'body': 'GetDLLVersion(${1});'
+  'GetDLLVersionLocal()':
+    'prefix': 'GetDLLVersionLocal()'
+    'body': 'GetDLLVersionLocal(${1});'
+  'GetErrorLevel()':
+    'prefix': 'GetErrorLevel()'
+    'body': 'GetErrorLevel(${1});'
+  'GetFileTime()':
+    'prefix': 'GetFileTime()'
+    'body': 'GetFileTime(${1});'
+  'GetFileTimeLocal()':
+    'prefix': 'GetFileTimeLocal()'
+    'body': 'GetFileTimeLocal(${1});'
+  'GetFunctionAddress()':
+    'prefix': 'GetFunctionAddress()'
+    'body': 'GetFunctionAddress(${1});'
+  'GetInstDirError()':
+    'prefix': 'GetInstDirError()'
+    'body': 'GetInstDirError(${1});'
+  'GetLabelAddress()':
+    'prefix': 'GetLabelAddress()'
+    'body': 'GetLabelAddress(${1});'
+  'GetTempFileName()':
+    'prefix': 'GetTempFileName()'
+    'body': 'GetTempFileName(${1});'
+  'HideWindow()':
+    'prefix': 'HideWindow()'
+    'body': 'HideWindow(${1});'
+  'Icon()':
+    'prefix': 'Icon()'
+    'body': 'Icon(${1});'
+  'if()..else':
+    'prefix': 'if()..else'
+    'body': """
+      if (${1:condition}) {
+      	${2:// your code here}
+      } else {
+      	${3:// your code here}
+      }
+    """
+  'if()..else if()..else':
+    'prefix': 'if()..else if()..else'
+    'body': """
+      if (${1:condition}) {
+      	${2:// your code here}
+      } else if (${3:condition}) {
+      	${4:// your code here}
+      } else {
+      	${5:// your code here}
+      }
+    """
+  'if()..else if()':
+    'prefix': 'if()..else if()'
+    'body': """
+      if (${1:condition}) {
+      	${2:// your code here}
+      } else if (${3:condition}) {
+      	${4:// your code here}
+      }
+    """
+  'if()':
+    'prefix': 'if()'
+    'body': """
+      if (${1:condition}) {
+      	${2:// your code here}
+      }
+    """
+  'IfAbort()':
+    'prefix': 'IfAbort()'
+    'body': 'IfAbort(${1});'
+  'IfErrors()':
+    'prefix': 'IfErrors()'
+    'body': 'IfErrors(${1});'
+  'IfFileExists()':
+    'prefix': 'IfFileExists()'
+    'body': 'IfFileExists(${1});'
+  'IfRebootFlag()':
+    'prefix': 'IfRebootFlag()'
+    'body': 'IfRebootFlag(${1});'
+  'IfSilent()':
+    'prefix': 'IfSilent()'
+    'body': 'IfSilent(${1});'
+  'InitPluginsDir()':
+    'prefix': 'InitPluginsDir()'
+    'body': 'InitPluginsDir(${1});'
+  'InstallButtonText()':
+    'prefix': 'InstallButtonText()'
+    'body': 'InstallButtonText(${1});'
+  'InstallColors()':
+    'prefix': 'InstallColors()'
+    'body': 'InstallColors(${1});'
+  'InstallDir()':
+    'prefix': 'InstallDir()'
+    'body': 'InstallDir(${1});'
+  'InstallDirRegKey()':
+    'prefix': 'InstallDirRegKey()'
+    'body': 'InstallDirRegKey(${1});'
+  'InstProgressFlags()':
+    'prefix': 'InstProgressFlags()'
+    'body': 'InstProgressFlags(${1});'
+  'InstType()':
+    'prefix': 'InstType()'
+    'body': 'InstType(${1});'
+  'InstTypeGetText()':
+    'prefix': 'InstTypeGetText()'
+    'body': 'InstTypeGetText(${1});'
+  'InstTypeSetText()':
+    'prefix': 'InstTypeSetText()'
+    'body': 'InstTypeSetText(${1});'
+  'IntFmt()':
+    'prefix': 'IntFmt()'
+    'body': 'IntFmt(${1});'
+  'IsWindow()':
+    'prefix': 'IsWindow()'
+    'body': 'IsWindow(${1});'
+  'LangString()':
+    'prefix': 'LangString()'
+    'body': 'LangString(${1});'
+  'LicenseBkColor()':
+    'prefix': 'LicenseBkColor()'
+    'body': 'LicenseBkColor(${1});'
+  'LicenseData()':
+    'prefix': 'LicenseData()'
+    'body': 'LicenseData(${1});'
+  'LicenseForceSelection()':
+    'prefix': 'LicenseForceSelection()'
+    'body': 'LicenseForceSelection(${1});'
+  'LicenseLangString()':
+    'prefix': 'LicenseLangString()'
+    'body': 'LicenseLangString(${1});'
+  'LicenseText()':
+    'prefix': 'LicenseText()'
+    'body': 'LicenseText(${1});'
+  'LoadLanguageFile()':
+    'prefix': 'LoadLanguageFile()'
+    'body': 'LoadLanguageFile(${1});'
+  'LockWindow()':
+    'prefix': 'LockWindow()'
+    'body': 'LockWindow(${1});'
+  'LogSet()':
+    'prefix': 'LogSet()'
+    'body': 'LogSet(${1});'
+  'LogText()':
+    'prefix': 'LogText()'
+    'body': 'LogText(${1});'
+  'MessageBox()':
+    'prefix': 'MessageBox()'
+    'body': 'MessageBox(${1});'
+  'MiscButtonText()':
+    'prefix': 'MiscButtonText()'
+    'body': 'MiscButtonText(${1});'
+  'Name()':
+    'prefix': 'Name()'
+    'body': 'Name("${1:name}");'
+  'onGUIEnd()':
+    'prefix': 'onGUIEnd()'
+    'body': """
+      function .onGUIEnd(${1}) {
+      	${2:// your code here}
+      }
+    """
+  'onGUIInit()':
+    'prefix': 'onGUIInit()'
+    'body': """
+      function .onGUIInit(${1}) {
+      	${2:// your code here}
+      }
+    """
+  'onInit()':
+    'prefix': 'onInit()'
+    'body': """
+      function .onInit(${1}) {
+      	${2:// your code here}
+      }
+    """
+  'onInstFailed()':
+    'prefix': 'onInstFailed()'
+    'body': """
+      function .onInstFailed(${1}) {
+      	${2:// your code here}
+      }
+    """
+  'onInstSuccess()':
+    'prefix': 'onInstSuccess()'
+    'body': """
+      function .onInstSuccess(${1}) {
+      	${2:// your code here}
+      }
+    """
+  'onMouseOverSection()':
+    'prefix': 'onMouseOverSection()'
+    'body': """
+      function .onMouseOverSection(${1}) {
+      	${2:// your code here}
+      }
+    """
+  'onRebootFailed()':
+    'prefix': 'onRebootFailed()'
+    'body': """
+      function .onRebootFailed(${1}) {
+      	${2:// your code here}
+      }
+    """
+  'onSelChange()':
+    'prefix': 'onSelChange()'
+    'body': """
+      function .onSelChange(${1}) {
+      	${2:// your code here}
+      }
+    """
+  'onUserAbort()':
+    'prefix': 'onUserAbort()'
+    'body': """
+      function .onUserAbort(${1}) {
+      	${2:// your code here}
+      }
+    """
+  'onVerifyInstDir()':
+    'prefix': 'onVerifyInstDir()'
+    'body': """
+      function .onVerifyInstDir(${1}) {
+      	${2:// your code here}
+      }
+    """
+  'OutFile()':
+    'prefix': 'OutFile()'
+    'body': 'OutFile("${1:file_name}.exe");'
+  'page()':
+    'prefix': 'page()'
+    'body': """
+      page ${1:PageType}(${2:function}) {
+      	${3:// your code here}
+      }
+    """
+  'page Components()':
+    'prefix': 'page Components()'
+    'body': """
+      page Components(${1:function}) {
+      	${2:// your code here}
+      }
+    """
+  'page Directory()':
+    'prefix': 'page Directory()'
+    'body': """
+      page Directory(${1:function}) {
+      	${2:// your code here}
+      }
+    """
+  'page InstConfirm()':
+    'prefix': 'page InstConfirm()'
+    'body': """
+      page InstConfirm(${1:function}) {
+      	${2:// your code here}
+      }
+    """
+  'page InstFiles()':
+    'prefix': 'page InstFiles()'
+    'body': """
+      page InstFiles(${1:function}) {
+      	${2:// your code here}
+      }
+    """
+  'page License()':
+    'prefix': 'page License()'
+    'body': """
+      page License(${1:function}) {
+      	${2:// your code here}
+      }
+    """
+  'Pop()':
+    'prefix': 'Pop()'
+    'body': 'Pop(${1});'
+  'Push()':
+    'prefix': 'Push()'
+    'body': 'Push(${1});'
+  'Quit()':
+    'prefix': 'Quit()'
+    'body': 'Quit(${1});'
+  'ReadEnvStr()':
+    'prefix': 'ReadEnvStr()'
+    'body': 'ReadEnvStr(${1});'
+  'ReadINIStr()':
+    'prefix': 'ReadINIStr()'
+    'body': 'ReadINIStr(${1});'
+  'ReadRegDWORD()':
+    'prefix': 'ReadRegDWORD()'
+    'body': 'ReadRegDWORD(${1});'
+  'ReadRegStr()':
+    'prefix': 'ReadRegStr()'
+    'body': 'ReadRegStr(${1});'
+  'Reboot()':
+    'prefix': 'Reboot()'
+    'body': 'Reboot(${1});'
+  'RegDLL()':
+    'prefix': 'RegDLL()'
+    'body': 'RegDLL(${1});'
+  'Rename()':
+    'prefix': 'Rename()'
+    'body': 'Rename(${1});'
+  'RequestExecutionLevel()':
+    'prefix': 'RequestExecutionLevel()'
+    'body': 'RequestExecutionLevel(${1});'
+  'RequestExecutionLevel(admin)':
+    'prefix': 'RequestExecutionLevel(admin)'
+    'body': 'RequestExecutionLevel("${1:admin}");'
+  'RequestExecutionLevel(highest)':
+    'prefix': 'RequestExecutionLevel(highest)'
+    'body': 'RequestExecutionLevel("${1:highest}");'
+  'RequestExecutionLevel(none)':
+    'prefix': 'RequestExecutionLevel(none)'
+    'body': 'RequestExecutionLevel("${1:none}");'
+  'RequestExecutionLevel(user)':
+    'prefix': 'RequestExecutionLevel(user)'
+    'body': 'RequestExecutionLevel("${1:user}");'
+  'ReserveFile()':
+    'prefix': 'ReserveFile()'
+    'body': 'ReserveFile(${1});'
+  'ReserveFileRecursive()':
+    'prefix': 'ReserveFileRecursive()'
+    'body': 'ReserveFileRecursive(${1});'
+  'RMDir()':
+    'prefix': 'RMDir()'
+    'body': 'RMDir(${1});'
+  'RMDirRecursive()':
+    'prefix': 'RMDirRecursive()'
+    'body': 'RMDirRecursive(${1});'
+  'SearchPath()':
+    'prefix': 'SearchPath()'
+    'body': 'SearchPath(${1});'
+  'section()':
+    'prefix': 'section()'
+    'body': """
+      section ${1:section_index}("${2:section_name}"${3}) {
+      	${4:// your code here}
+      }
+    """
+  'SectionGetFlags()':
+    'prefix': 'SectionGetFlags()'
+    'body': 'SectionGetFlags(${1});'
+  'SectionGetInstTypes()':
+    'prefix': 'SectionGetInstTypes()'
+    'body': 'SectionGetInstTypes(${1});'
+  'SectionGetSize()':
+    'prefix': 'SectionGetSize()'
+    'body': 'SectionGetSize(${1});'
+  'SectionGetText()':
+    'prefix': 'SectionGetText()'
+    'body': 'SectionGetText(${1});'
+  'SectionIn()':
+    'prefix': 'SectionIn()'
+    'body': 'SectionIn(${1});'
+  'SectionSetFlags()':
+    'prefix': 'SectionSetFlags()'
+    'body': 'SectionSetFlags(${1});'
+  'SectionSetInstTypes()':
+    'prefix': 'SectionSetInstTypes()'
+    'body': 'SectionSetInstTypes(${1});'
+  'SectionSetSize()':
+    'prefix': 'SectionSetSize()'
+    'body': 'SectionSetSize(${1});'
+  'SectionSetText()':
+    'prefix': 'SectionSetText()'
+    'body': 'SectionSetText(${1});'
+  'SendMessage()':
+    'prefix': 'SendMessage()'
+    'body': 'SendMessage(${1});'
+  'SetAutoClose()':
+    'prefix': 'SetAutoClose()'
+    'body': 'SetAutoClose(${1});'
+  'SetAutoClose(false)':
+    'prefix': 'SetAutoClose(false)'
+    'body': 'SetAutoClose("false");'
+  'SetAutoClose(true)':
+    'prefix': 'SetAutoClose(true)'
+    'body': 'SetAutoClose("true");'
+  'SetBrandingImage()':
+    'prefix': 'SetBrandingImage()'
+    'body': 'SetBrandingImage(${1});'
+  'SetCompress()':
+    'prefix': 'SetCompress()'
+    'body': 'SetCompress(${1});'
+  'SetCompress(auto)':
+    'prefix': 'SetCompress(auto)'
+    'body': 'SetCompress("auto");'
+  'SetCompress(force)':
+    'prefix': 'SetCompress(force)'
+    'body': 'SetCompress("force");'
+  'SetCompress(off)':
+    'prefix': 'SetCompress(off)'
+    'body': 'SetCompress("off");'
+  'SetCompressor()':
+    'prefix': 'SetCompressor()'
+    'body': 'SetCompressor(${1});'
+  'SetCompressorDictSize()':
+    'prefix': 'SetCompressorDictSize()'
+    'body': 'SetCompressorDictSize(${1:dict_size_mb});'
+  'SetCtlColors()':
+    'prefix': 'SetCtlColors()'
+    'body': 'SetCtlColors(${1});'
+  'SetCurInstType()':
+    'prefix': 'SetCurInstType()'
+    'body': 'SetCurInstType(${1});'
+  'SetDatablockOptimize()':
+    'prefix': 'SetDatablockOptimize()'
+    'body': 'SetDatablockOptimize(${1});'
+  'SetDatablockOptimize(off)':
+    'prefix': 'SetDatablockOptimize(off)'
+    'body': 'SetDatablockOptimize("off");'
+  'SetDatablockOptimize(on)':
+    'prefix': 'SetDatablockOptimize(on)'
+    'body': 'SetDatablockOptimize("on");'
+  'SetDateSave()':
+    'prefix': 'SetDateSave()'
+    'body': 'SetDateSave(${1});'
+  'SetDateSave(off)':
+    'prefix': 'SetDateSave(off)'
+    'body': 'SetDateSave("off");'
+  'SetDateSave(on)':
+    'prefix': 'SetDateSave(on)'
+    'body': 'SetDateSave("on");'
+  'SetDetailsPrint()':
+    'prefix': 'SetDetailsPrint()'
+    'body': 'SetDetailsPrint(${1});'
+  'SetDetailsPrint(both)':
+    'prefix': 'SetDetailsPrint(both)'
+    'body': 'SetDetailsPrint("both");'
+  'SetDetailsPrint(lastused)':
+    'prefix': 'SetDetailsPrint(lastused)'
+    'body': 'SetDetailsPrint("lastused");'
+  'SetDetailsPrint(listonly)':
+    'prefix': 'SetDetailsPrint(listonly)'
+    'body': 'SetDetailsPrint("listonly");'
+  'SetDetailsPrint(none)':
+    'prefix': 'SetDetailsPrint(none)'
+    'body': 'SetDetailsPrint("none");'
+  'SetDetailsPrint(textonly)':
+    'prefix': 'SetDetailsPrint(textonly)'
+    'body': 'SetDetailsPrint("textonly");'
+  'SetDetailsView()':
+    'prefix': 'SetDetailsView()'
+    'body': 'SetDetailsView(${1});'
+  'SetDetailsView(hide)':
+    'prefix': 'SetDetailsView(hide)'
+    'body': 'SetDetailsView("hide");'
+  'SetDetailsView(show)':
+    'prefix': 'SetDetailsView(show)'
+    'body': 'SetDetailsView("show");'
+  'SetErrorLevel()':
+    'prefix': 'SetErrorLevel()'
+    'body': 'SetErrorLevel(${1:error_level});'
+  'SetErrors()':
+    'prefix': 'SetErrors()'
+    'body': 'SetErrors(${1});'
+  'SetFileAttributes()':
+    'prefix': 'SetFileAttributes()'
+    'body': 'SetFileAttributes(${1});'
+  'SetFont()':
+    'prefix': 'SetFont()'
+    'body': 'SetFont(${1});'
+  'SetOutPath()':
+    'prefix': 'SetOutPath()'
+    'body': 'SetOutPath(${1});'
+  'SetOverwrite()':
+    'prefix': 'SetOverwrite()'
+    'body': 'SetOverwrite(${1});'
+  'SetOverwrite(ifdiff)':
+    'prefix': 'SetOverwrite(ifdiff)'
+    'body': 'SetOverwrite("ifdiff");'
+  'SetOverwrite(ifnewer)':
+    'prefix': 'SetOverwrite(ifnewer)'
+    'body': 'SetOverwrite("ifnewer");'
+  'SetOverwrite(off)':
+    'prefix': 'SetOverwrite(off)'
+    'body': 'SetOverwrite("off");'
+  'SetOverwrite(on)':
+    'prefix': 'SetOverwrite(on)'
+    'body': 'SetOverwrite("on");'
+  'SetOverwrite(try)':
+    'prefix': 'SetOverwrite(try)'
+    'body': 'SetOverwrite("try");'
+  'SetRebootFlag()':
+    'prefix': 'SetRebootFlag()'
+    'body': 'SetRebootFlag(${1});'
+  'SetRebootFlag(false)':
+    'prefix': 'SetRebootFlag(false)'
+    'body': 'SetRebootFlag("false");'
+  'SetRebootFlag(true)':
+    'prefix': 'SetRebootFlag(true)'
+    'body': 'SetRebootFlag("true");'
+  'SetRegView()':
+    'prefix': 'SetRegView()'
+    'body': 'SetRegView(${1});'
+  'SetRegView(32)':
+    'prefix': 'SetRegView(32)'
+    'body': 'SetRegView("32");'
+  'SetRegView(64)':
+    'prefix': 'SetRegView(64)'
+    'body': 'SetRegView("64");'
+  'SetRegView(lastused)':
+    'prefix': 'SetRegView(lastused)'
+    'body': 'SetRegView("lastused");'
+  'SetShellVarContext()':
+    'prefix': 'SetShellVarContext()'
+    'body': 'SetShellVarContext(${1});'
+  'SetShellVarContext(all)':
+    'prefix': 'SetShellVarContext(all)'
+    'body': 'SetShellVarContext("all");'
+  'SetShellVarContext(current)':
+    'prefix': 'SetShellVarContext(current)'
+    'body': 'SetShellVarContext("current");'
+  'SetSilent()':
+    'prefix': 'SetSilent()'
+    'body': 'SetSilent(${1});'
+  'SetSilent(normal)':
+    'prefix': 'SetSilent(normal)'
+    'body': 'SetSilent("normal");'
+  'SetSilent(silent)':
+    'prefix': 'SetSilent(silent)'
+    'body': 'SetSilent("silent");'
+  'ShowInstDetails()':
+    'prefix': 'ShowInstDetails()'
+    'body': 'ShowInstDetails(${1});'
+  'ShowInstDetails(hide)':
+    'prefix': 'ShowInstDetails(hide)'
+    'body': 'ShowInstDetails("hide");'
+  'ShowInstDetails(nevershow)':
+    'prefix': 'ShowInstDetails(nevershow)'
+    'body': 'ShowInstDetails("show");'
+  'ShowInstDetails(show)':
+    'prefix': 'ShowInstDetails(show)'
+    'body': 'ShowInstDetails("show");'
+  'ShowUninstDetails()':
+    'prefix': 'ShowUninstDetails()'
+    'body': 'ShowUninstDetails(${1});'
+  'ShowUninstDetails(hide)':
+    'prefix': 'ShowUninstDetails(hide)'
+    'body': 'ShowUninstDetails("hide");'
+  'ShowUninstDetails(nevershow)':
+    'prefix': 'ShowUninstDetails(nevershow)'
+    'body': 'ShowUninstDetails("show");'
+  'ShowUninstDetails(show)':
+    'prefix': 'ShowUninstDetails(show)'
+    'body': 'ShowUninstDetails("show");'
+  'ShowWindow()':
+    'prefix': 'ShowWindow()'
+    'body': 'ShowWindow(${1});'
+  'SilentInstall()':
+    'prefix': 'SilentInstall()'
+    'body': 'SilentInstall(${1});'
+  'SilentInstall(normal)':
+    'prefix': 'SilentInstall(normal)'
+    'body': 'SilentInstall("normal");'
+  'SilentInstall(silent)':
+    'prefix': 'SilentInstall(silent)'
+    'body': 'SilentInstall("silent");'
+  'SilentInstall(silentlog)':
+    'prefix': 'SilentInstall(silentlog)'
+    'body': 'SilentInstall("silentlog");'
+  'SilentUninstall()':
+    'prefix': 'SilentUninstall()'
+    'body': 'SilentUninstall(${1});'
+  'SilentUninstall(normal)':
+    'prefix': 'SilentUninstall(normal)'
+    'body': 'SilentUninstall("normal");'
+  'SilentUninstall(silent)':
+    'prefix': 'SilentUninstall(silent)'
+    'body': 'SilentUninstall("silent");'
+  'Sleep()':
+    'prefix': 'Sleep()'
+    'body': 'Sleep(${1:sleeptime_in_ms});'
+  'SpaceTexts()':
+    'prefix': 'SpaceTexts()'
+    'body': 'SpaceTexts(${1});'
+  'StrCmp()':
+    'prefix': 'StrCmp()'
+    'body': 'StrCmp(${1});'
+  'StrCmpS()':
+    'prefix': 'StrCmpS()'
+    'body': 'StrCmpS(${1});'
+  'StrCpy()':
+    'prefix': 'StrCpy()'
+    'body': 'StrCpy(${1});'
+  'StrLen()':
+    'prefix': 'StrLen()'
+    'body': 'StrLen(${1});'
+  'SubCaption()':
+    'prefix': 'SubCaption()'
+    'body': 'SubCaption(${1});'
+  'switch()':
+    'prefix': 'switch()'
+    'body': """
+      switch(\$${1:variable}) {
+      	${2:// your code here}
+      }
+    """
+  'switch():1':
+    'prefix': 'switch():1'
+    'body': """
+      switch(\$${1:variable}) {
+      	case ${2:value}:
+      		${3:// your code here}
+      	default:
+      		${4:// your code here}
+      }
+    """
+  'switch():2':
+    'prefix': 'switch():2'
+    'body': """
+      switch(\$${1:variable}) {
+      	case ${2:value1}:
+      		${3:// your code here}
+      	case ${4:value2}:
+      		${5:// your code here}
+      	default:
+      		${6:// your code here}
+      }
+    """
+  'switch():3':
+    'prefix': 'switch():3'
+    'body': """
+      switch(\$${1:variable}) {
+      	case ${2:value1}:
+      		${3:// your code here}
+      	case ${4:value2}:
+      		${5:// your code here}
+      	case ${6:value3}:
+      		${7:// your code here}
+      	default:
+      		${8:// your code here}
+      }
+    """
+  'switch():4':
+    'prefix': 'switch():4'
+    'body': """
+      switch(\$${1:variable}) {
+      	case ${2:value1}:
+      		${3:// your code here}
+      	case ${4:value2}:
+      		${5:// your code here}
+      	case ${6:value3}:
+      		${7:// your code here}
+      	case ${8:value4}:
+      		${9:// your code here}
+      	default:
+      		${10:// your code here}
+      }
+    """
+  'switch():5':
+    'prefix': 'switch():5'
+    'body': """
+      switch(\$${1:variable}) {
+      	case ${2:value1}:
+      		${3:// your code here}
+      	case ${4:value2}:
+      		${5:// your code here}
+      	case ${6:value3}:
+      		${7:// your code here}
+      	case ${8:value4}:
+      		${9:// your code here}
+      	case ${10:value5}:
+      		${11:// your code here}
+      	default:
+      		${12:// your code here}
+      }
+    """
+  'un.onGUIEnd()':
+    'prefix': 'un.onGUIEnd()'
+    'body': """
+      function un.onGUIEnd(${1}) {
+      	${2:// your code here}
+      }
+    """
+  'un.onGUIInit()':
+    'prefix': 'un.onGUIInit()'
+    'body': """
+      function un.onGUIInit(${1}) {
+      	${2:// your code here}
+      }
+    """
+  'un.onInit()':
+    'prefix': 'un.onInit()'
+    'body': """
+      function un.onInit(${1}) {
+      	${2:// your code here}
+      }
+    """
+  'un.onRebootFailed()':
+    'prefix': 'un.onRebootFailed()'
+    'body': """
+      function un.onRebootFailed(${1}) {
+      	${2:// your code here}
+      }
+    """
+  'un.onSelChange()':
+    'prefix': 'un.onSelChange()'
+    'body': """
+      function un.onSelChange(${1}) {
+      	${2:// your code here}
+      }
+    """
+  'un.onUninstFailed()':
+    'prefix': 'un.onUninstFailed()'
+    'body': """
+      function un.onUninstFailed(${1}) {
+      	${2:// your code here}
+      }
+    """
+  'un.onUninstSuccess()':
+    'prefix': 'un.onUninstSuccess()'
+    'body': """
+      function un.onUninstSuccess(${1}) {
+      	${2:// your code here}
+      }
+    """
+  'un.onUserAbort¡()':
+    'prefix': 'un.onUserAbort¡()'
+    'body': """
+      function un.onUserAbort(${1}) {
+      	${2:// your code here}
+      }
+    """
+  'uninstall page Components()':
+    'prefix': 'uninstall page Components()'
+    'body': """
+      uninstall page Components(${1:function}) {
+      	${2:// your code here}
+      }
+    """
+  'uninstall page Directory()':
+    'prefix': 'uninstall page Directory()'
+    'body': """
+      uninstall page Directory(${1:function}) {
+      	${2:// your code here}
+      }
+    """
+  'uninstall page InstFiles()':
+    'prefix': 'uninstall page InstFiles()'
+    'body': """
+      uninstall page InstFiles(${1:function}) {
+      	${2:// your code here}
+      }
+    """
+  'uninstall page License()':
+    'prefix': 'uninstall page License()'
+    'body': """
+      uninstall page License(${1:function}) {
+      	${2:// your code here}
+      }
+    """
+  'uninstall page uninstConfirm()':
+    'prefix': 'uninstall page uninstConfirm()'
+    'body': """
+      uninstall page uninstConfirm(${1:function}) {
+      	${2:// your code here}
+      }
+    """
+  'UninstallButtonText()':
+    'prefix': 'UninstallButtonText()'
+    'body': 'UninstallButtonText("${1:text}");'
+  'UninstallCaption()':
+    'prefix': 'UninstallCaption()'
+    'body': 'UninstallCaption("${1:caption}");'
+  'UninstallIcon()':
+    'prefix': 'UninstallIcon()'
+    'body': 'UninstallIcon(${1});'
+  'UninstallSubCaption()':
+    'prefix': 'UninstallSubCaption()'
+    'body': 'UninstallSubCaption(${1});'
+  'UninstallText()':
+    'prefix': 'UninstallText()'
+    'body': 'UninstallText("${1:text}"${2:, "${3:subtext}"});'
+  'UnRegDLL()':
+    'prefix': 'UnRegDLL()'
+    'body': 'UnRegDLL(${1});'
+  'VIAddVersionKey()':
+    'prefix': 'VIAddVersionKey()'
+    'body': 'VIAddVersionKey(${1});'
+  'VIProductVersion()':
+    'prefix': 'VIProductVersion()'
+    'body': 'VIProductVersion(${1});'
+  'while()':
+    'prefix': 'while()'
+    'body': """
+      while(${1:condition}) {
+      	${2:// your code here}
+      }
+    """
+  'WindowIcon()':
+    'prefix': 'WindowIcon()'
+    'body': 'WindowIcon(${1});'
+  'WindowIcon(off)':
+    'prefix': 'WindowIcon(off)'
+    'body': 'WindowIcon("off");'
+  'WindowIcon(on)':
+    'prefix': 'WindowIcon(on)'
+    'body': 'WindowIcon("on");'
+  'WriteINIStr()':
+    'prefix': 'WriteINIStr()'
+    'body': 'WriteINIStr(${1});'
+  'WriteRegBin()':
+    'prefix': 'WriteRegBin()'
+    'body': 'WriteRegBin(${1});'
+  'WriteRegDWORD()':
+    'prefix': 'WriteRegDWORD()'
+    'body': 'WriteRegDWORD(${1});'
+  'WriteRegExpandStr()':
+    'prefix': 'WriteRegExpandStr()'
+    'body': 'WriteRegExpandStr(${1});'
+  'WriteRegStr()':
+    'prefix': 'WriteRegStr()'
+    'body': 'WriteRegStr(${1});'
+  'WriteUninstaller()':
+    'prefix': 'WriteUninstaller()'
+    'body': 'WriteUninstaller(${1});'
+  'XPStyle()':
+    'prefix': 'XPStyle()'
+    'body': 'XPStyle(${1});'
+  'XPStyle(off)':
+    'prefix': 'XPStyle(off)'
+    'body': 'XPStyle("off");'
+  'XPStyle(on)':
+    'prefix': 'XPStyle(on)'
+    'body': 'XPStyle("on");'

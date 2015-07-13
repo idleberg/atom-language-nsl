@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "BrandingText()": {
-      "prefix": "BrandingText()",
-      "body": "BrandingText(${1});"
-    }
-  }
-}

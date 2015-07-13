@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "SendMessage()": {
-      "prefix": "SendMessage()",
-      "body": "SendMessage(${1});"
-    }
-  }
-}

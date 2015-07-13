@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "WriteUninstaller()": {
-      "prefix": "WriteUninstaller()",
-      "body": "WriteUninstaller(${1});"
-    }
-  }
-}

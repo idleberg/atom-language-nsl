@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "FileWrite()": {
-      "prefix": "FileWrite()",
-      "body": "FileWrite(${1});"
-    }
-  }
-}

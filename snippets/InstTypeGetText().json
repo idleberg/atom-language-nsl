@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "InstTypeGetText()": {
-      "prefix": "InstTypeGetText()",
-      "body": "InstTypeGetText(${1});"
-    }
-  }
-}

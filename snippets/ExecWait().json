@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "ExecWait()": {
-      "prefix": "ExecWait()",
-      "body": "ExecWait(${1});"
-    }
-  }
-}

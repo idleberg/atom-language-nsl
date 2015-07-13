@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "ExpandEnvStrings()": {
-      "prefix": "ExpandEnvStrings()",
-      "body": "ExpandEnvStrings(${1});"
-    }
-  }
-}

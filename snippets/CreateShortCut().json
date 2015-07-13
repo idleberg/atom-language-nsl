@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "CreateShortCut()": {
-      "prefix": "CreateShortCut()",
-      "body": "CreateShortCut(${1});"
-    }
-  }
-}

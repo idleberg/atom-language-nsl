@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "LicenseLangString()": {
-      "prefix": "LicenseLangString()",
-      "body": "LicenseLangString(${1});"
-    }
-  }
-}

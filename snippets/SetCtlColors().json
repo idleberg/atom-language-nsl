@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "SetCtlColors()": {
-      "prefix": "SetCtlColors()",
-      "body": "SetCtlColors(${1});"
-    }
-  }
-}

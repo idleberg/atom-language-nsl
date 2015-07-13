@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "un.onGUIInit()": {
-      "prefix": "un.onGUIInit()",
-      "body": "function un.onGUIInit(${1}) {\n\t${2:// your code here}\n}"
-    }
-  }
-}

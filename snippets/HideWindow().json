@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "HideWindow()": {
-      "prefix": "HideWindow()",
-      "body": "HideWindow(${1});"
-    }
-  }
-}

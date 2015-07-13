@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "InstallDirRegKey()": {
-      "prefix": "InstallDirRegKey()",
-      "body": "InstallDirRegKey(${1});"
-    }
-  }
-}

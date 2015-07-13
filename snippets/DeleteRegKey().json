@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "DeleteRegKey()": {
-      "prefix": "DeleteRegKey()",
-      "body": "DeleteRegKey(${1});"
-    }
-  }
-}

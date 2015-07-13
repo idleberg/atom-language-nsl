@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "Icon()": {
-      "prefix": "Icon()",
-      "body": "Icon(${1});"
-    }
-  }
-}

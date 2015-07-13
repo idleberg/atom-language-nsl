@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "SectionSetInstTypes()": {
-      "prefix": "SectionSetInstTypes()",
-      "body": "SectionSetInstTypes(${1});"
-    }
-  }
-}

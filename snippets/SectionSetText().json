@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "SectionSetText()": {
-      "prefix": "SectionSetText()",
-      "body": "SectionSetText(${1});"
-    }
-  }
-}

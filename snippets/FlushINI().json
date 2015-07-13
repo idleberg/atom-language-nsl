@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "FlushINI()": {
-      "prefix": "FlushINI()",
-      "body": "FlushINI(${1});"
-    }
-  }
-}

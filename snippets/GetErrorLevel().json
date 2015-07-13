@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "GetErrorLevel()": {
-      "prefix": "GetErrorLevel()",
-      "body": "GetErrorLevel(${1});"
-    }
-  }
-}

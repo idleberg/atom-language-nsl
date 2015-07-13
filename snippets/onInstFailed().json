@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "onInstFailed()": {
-      "prefix": "onInstFailed()",
-      "body": "function .onInstFailed(${1}) {\n\t${2:// your code here}\n}"
-    }
-  }
-}

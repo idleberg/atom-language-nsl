@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "GetCurrentAddress()": {
-      "prefix": "GetCurrentAddress()",
-      "body": "GetCurrentAddress(${1});"
-    }
-  }
-}

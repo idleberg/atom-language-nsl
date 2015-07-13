@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "CompletedText()": {
-      "prefix": "CompletedText()",
-      "body": "CompletedText(${1});"
-    }
-  }
-}

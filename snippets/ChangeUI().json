@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "ChangeUI()": {
-      "prefix": "ChangeUI()",
-      "body": "ChangeUI(${1});"
-    }
-  }
-}

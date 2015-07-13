@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "GetDLLVersionLocal()": {
-      "prefix": "GetDLLVersionLocal()",
-      "body": "GetDLLVersionLocal(${1});"
-    }
-  }
-}

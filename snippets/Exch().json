@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "Exch()": {
-      "prefix": "Exch()",
-      "body": "Exch(${1});"
-    }
-  }
-}

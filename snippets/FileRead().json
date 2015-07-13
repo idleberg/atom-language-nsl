@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "FileRead()": {
-      "prefix": "FileRead()",
-      "body": "FileRead(${1});"
-    }
-  }
-}

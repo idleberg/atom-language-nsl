@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "Pop()": {
-      "prefix": "Pop()",
-      "body": "Pop(${1});"
-    }
-  }
-}

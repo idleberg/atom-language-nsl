@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "LicenseData()": {
-      "prefix": "LicenseData()",
-      "body": "LicenseData(${1});"
-    }
-  }
-}

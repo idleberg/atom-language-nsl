@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "MessageBox()": {
-      "prefix": "MessageBox()",
-      "body": "MessageBox(${1});"
-    }
-  }
-}

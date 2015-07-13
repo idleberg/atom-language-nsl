@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "GetFileTime()": {
-      "prefix": "GetFileTime()",
-      "body": "GetFileTime(${1});"
-    }
-  }
-}

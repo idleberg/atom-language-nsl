@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "BGFont()": {
-      "prefix": "BGFont()",
-      "body": "BGFont(${1});"
-    }
-  }
-}

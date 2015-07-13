@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "ReserveFileRecursive()": {
-      "prefix": "ReserveFileRecursive()",
-      "body": "ReserveFileRecursive(${1});"
-    }
-  }
-}

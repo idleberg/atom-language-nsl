@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "GetLabelAddress()": {
-      "prefix": "GetLabelAddress()",
-      "body": "GetLabelAddress(${1});"
-    }
-  }
-}

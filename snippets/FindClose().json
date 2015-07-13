@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "FindClose()": {
-      "prefix": "FindClose()",
-      "body": "FindClose(${1});"
-    }
-  }
-}

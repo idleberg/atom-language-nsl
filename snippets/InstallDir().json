@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "InstallDir()": {
-      "prefix": "InstallDir()",
-      "body": "InstallDir(${1});"
-    }
-  }
-}

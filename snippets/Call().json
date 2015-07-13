@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "Call()": {
-      "prefix": "Call()",
-      "body": "Call(${1});"
-    }
-  }
-}

@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "onSelChange()": {
-      "prefix": "onSelChange()",
-      "body": "function .onSelChange(${1}) {\n\t${2:// your code here}\n}"
-    }
-  }
-}

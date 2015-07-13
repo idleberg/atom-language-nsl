@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "FileClose()": {
-      "prefix": "FileClose()",
-      "body": "FileClose(${1});"
-    }
-  }
-}

@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "SectionSetFlags()": {
-      "prefix": "SectionSetFlags()",
-      "body": "SectionSetFlags(${1});"
-    }
-  }
-}

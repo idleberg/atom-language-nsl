@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "SpaceTexts()": {
-      "prefix": "SpaceTexts()",
-      "body": "SpaceTexts(${1});"
-    }
-  }
-}

@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "SectionIn()": {
-      "prefix": "SectionIn()",
-      "body": "SectionIn(${1});"
-    }
-  }
-}

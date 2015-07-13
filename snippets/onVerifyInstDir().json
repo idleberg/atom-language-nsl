@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "onVerifyInstDir()": {
-      "prefix": "onVerifyInstDir()",
-      "body": "function .onVerifyInstDir(${1}) {\n\t${2:// your code here}\n}"
-    }
-  }
-}

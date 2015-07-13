@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "ShowWindow()": {
-      "prefix": "ShowWindow()",
-      "body": "ShowWindow(${1});"
-    }
-  }
-}

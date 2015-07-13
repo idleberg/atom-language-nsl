@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "onInit()": {
-      "prefix": "onInit()",
-      "body": "function .onInit(${1}) {\n\t${2:// your code here}\n}"
-    }
-  }
-}

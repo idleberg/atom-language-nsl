@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "GetCurInstType()": {
-      "prefix": "GetCurInstType()",
-      "body": "GetCurInstType(${1});"
-    }
-  }
-}

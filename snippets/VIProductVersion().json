@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "VIProductVersion()": {
-      "prefix": "VIProductVersion()",
-      "body": "VIProductVersion(${1});"
-    }
-  }
-}

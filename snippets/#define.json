@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "#define": {
-      "prefix": "define",
-      "body": "#define ${1:gflag}"
-    }
-  }
-}

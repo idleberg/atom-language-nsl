@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "UninstallSubCaption()": {
-      "prefix": "UninstallSubCaption()",
-      "body": "UninstallSubCaption(${1});"
-    }
-  }
-}

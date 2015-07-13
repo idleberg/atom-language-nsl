@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "StrCmp()": {
-      "prefix": "StrCmp()",
-      "body": "StrCmp(${1});"
-    }
-  }
-}

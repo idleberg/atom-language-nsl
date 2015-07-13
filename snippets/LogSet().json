@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "LogSet()": {
-      "prefix": "LogSet()",
-      "body": "LogSet(${1});"
-    }
-  }
-}

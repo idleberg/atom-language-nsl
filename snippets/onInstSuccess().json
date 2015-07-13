@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "onInstSuccess()": {
-      "prefix": "onInstSuccess()",
-      "body": "function .onInstSuccess(${1}) {\n\t${2:// your code here}\n}"
-    }
-  }
-}

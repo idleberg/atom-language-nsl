@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "IsWindow()": {
-      "prefix": "IsWindow()",
-      "body": "IsWindow(${1});"
-    }
-  }
-}

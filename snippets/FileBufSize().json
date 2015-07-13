@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "FileBufSize()": {
-      "prefix": "FileBufSize()",
-      "body": "FileBufSize(${1});"
-    }
-  }
-}

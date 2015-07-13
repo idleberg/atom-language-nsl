@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "SetCurInstType()": {
-      "prefix": "SetCurInstType()",
-      "body": "SetCurInstType(${1});"
-    }
-  }
-}

@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "ReadRegDWORD()": {
-      "prefix": "ReadRegDWORD()",
-      "body": "ReadRegDWORD(${1});"
-    }
-  }
-}

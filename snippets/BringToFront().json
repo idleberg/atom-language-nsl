@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "BringToFront()": {
-      "prefix": "BringToFront()",
-      "body": "BringToFront(${1});"
-    }
-  }
-}

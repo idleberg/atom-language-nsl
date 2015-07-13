@@ -1,8 +1,0 @@
-{
-  ".source.nsl": {
-    "Reboot()": {
-      "prefix": "Reboot()",
-      "body": "Reboot(${1});"
-    }
-  }
-}
