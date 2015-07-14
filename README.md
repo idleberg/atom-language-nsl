@@ -7,6 +7,10 @@
 
 Atom language support for [nsL Assembler](https://sourceforge.net/projects/nslassembler/)
 
+![Screenshot](https://raw.github.com/idleberg/atom-language-nsl/master/screenshot.png)
+
+*Screenshot of NSIS in Atom with [Hopscotch](https://atom.io/themes/hopscotch) theme*
+
 ## Installation
 
 ### apm
