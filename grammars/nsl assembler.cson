@@ -2,6 +2,7 @@ fileTypes: [
   "nsl"
 ]
 name: "nsL Assembler"
+comment: "comment: "https://github.com/atom/atom-language-nsl""
 patterns: [
   {
     match: "(\\b|^\\s*)(?i)#(define|else|endif|if|ifend|macro|macroend|nsis|nsisend|return)\\b"
