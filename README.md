@@ -1,7 +1,8 @@
 # nsL Assembler for Atom
 
-[![The MIT License](https://img.shields.io/badge/license-MIT-orange.svg?style=flat-square)](http://opensource.org/licenses/MIT)
-[![Version](https://img.shields.io/apm/v/language-nsl.svg?style=flat-square)](https://atom.io/packages/language-nsl)
+[![apm](https://img.shields.io/apm/l/language-nsl.svg?style=flat-square)](https://atom.io/packages/language-nsl)
+[![apm](https://img.shields.io/apm/v/language-nsl.svg?style=flat-square)](https://atom.io/packages/language-nsl)
+[![apm](https://img.shields.io/apm/dm/language-nsl.svg?style=flat-square)](https://atom.io/packages/language-nsl)
 [![Travis](https://img.shields.io/travis/idleberg/atom-language-nsl.svg?style=flat-square)](https://travis-ci.org/idleberg/atom-language-nsl)
 [![David](https://img.shields.io/david/dev/idleberg/atom-language-nsl.svg?style=flat-square)](https://david-dm.org/idleberg/atom-language-nsl#info=devDependencies)
 
