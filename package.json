@@ -1,6 +1,6 @@
 {
   "name": "language-nsl",
-  "version": "1.3.3",
+  "version": "1.3.4",
   "description": "Atom language support for nsL Assembler",
   "author": {
     "name": "Jan T. Sott",
