@@ -5,6 +5,7 @@
 [![apm](https://img.shields.io/apm/dm/language-nsl.svg?style=flat-square)](https://atom.io/packages/language-nsl)
 [![Travis](https://img.shields.io/travis/idleberg/atom-language-nsl.svg?style=flat-square)](https://travis-ci.org/idleberg/atom-language-nsl)
 [![David](https://img.shields.io/david/dev/idleberg/atom-language-nsl.svg?style=flat-square)](https://david-dm.org/idleberg/atom-language-nsl#info=devDependencies)
+[![Gitter](https://img.shields.io/badge/chat-Gitter-ff69b4.svg?style=flat-square)](https://gitter.im/NSIS-Dev)
 
 Atom language support for [nsL Assembler](https://sourceforge.net/projects/nslassembler/)
 
