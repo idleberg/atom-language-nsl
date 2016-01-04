@@ -5,11 +5,11 @@ name: "nsL Assembler"
 comment: "https://github.com/atom/atom-language-nsl"
 patterns: [
   {
-    match: "(\\b|^\\s*)(?i)#(define|else|endif|if|ifend|macro|macroend|nsis|nsisend|return)\\b"
-    name: "string.compiler.nsl"
+    match: "(\\b|^\\s*)(?i)#(define|else|endif|if|ifend|macro|macroend|nsis|nsisend|return|include)\\b"
+    name: "keyword.control.nsl"
   }
   {
-    match: "(\\b|^\\s*)(?i)(Abort|AddBrandingImage|AddSize|AllowRootDirInstall|AllowSkipFiles|AutoCloseWindow|BGFont|BGGradient|BrandingText|BringToFront|CRCCheck|Call|Caption|ChangeUI|CheckBitmap|ClearErrors|CompletedText|ComponentText|CopyFiles|CreateDirectory|CreateFont|CreateShortCut|DeleteINISec|DeleteINIStr|Delete|DeleteRegKey|DeleteRegValue|DetailPrint|DetailsButtonText|DirText|DirVar|DirVerify|EnableWindow|EnumRegKey|EnumRegValue|Exch|Exec|ExecShell|ExecWait|ExpandEnvStrings|FileBufSize|FileClose|FileErrorText|File|FileOpen|FileReadByte|FileRead|FileRecursive|FileSeek|FileWriteByte|FileWrite|FindClose|FindFirst|FindNext|FindWindow|FlushINI|GetCurInstType|GetCurrentAddress|GetDLLVersion|GetDLLVersionLocal|GetDlgItem|GetErrorLevel|GetFileTime|GetFileTimeLocal|GetFunctionAddress|GetInstDirError|GetLabelAddress|GetTempFileName|HideWindow|Icon|IfAbort|IfErrors|IfFileExists|IfRebootFlag|IfSilent|InitPluginsDir|InstProgressFlags|InstTypeGetText|InstType|InstTypeSetText|InstallButtonText|InstallColors|InstallDir|InstallDirRegKey|IntFmt|IsWindow|LangString|LicenseBkColor|LicenseData|LicenseForceSelection|LicenseLangString|LicenseText|LoadLanguageFile|LockWindow|LogSet|LogText|MessageBox|MiscButtonText|Name|OutFile|Pop|Push|Quit|RMDir|RMDirRecursive|ReadEnvStr|ReadINIStr|ReadRegDWORD|ReadRegStr|Reboot|RegDLL|Rename|RequestExecutionLevel|ReserveFile|ReserveFileRecursive|SearchPath|SectionGetFlags|SectionGetInstTypes|SectionGetSize|SectionGetText|SectionIn|SectionSetFlags|SectionSetInstTypes|SectionSetSize|SectionSetText|SendMessage|SetAutoClose|SetBrandingImage|SetCompress|SetCompressorDictSize|SetCompressor|SetCtlColors|SetCurInstType|SetDatablockOptimize|SetDateSave|SetDetailsPrint|SetDetailsView|SetErrorLevel|SetErrors|SetFileAttributes|SetFont|SetOutPath|SetOverwrite|SetRebootFlag|SetRegView|SetShellVarContext|SetSilent|ShowInstDetails|ShowUninstDetails|ShowWindow|SilentInstall|SilentUninstall|Sleep|SpaceTexts|StrCmp|StrCmpS|StrCpy|StrLen|SubCaption|UnRegDLL|UninstallButtonText|UninstallCaption|UninstallIcon|UninstallSubCaption|UninstallText|VIAddVersionKey|VIProductVersion|WindowIcon|WriteINIStr|WriteRegBin|WriteRegDWORD|WriteRegExpandStr|WriteRegStr|WriteUninstaller|XPStyle)\\b"
+    match: "(\\b|^\\s*)(?i)(AddIncludeDir|Include|AddPluginDir|Abort|AddBrandingImage|AddSize|AllowRootDirInstall|AllowSkipFiles|AutoCloseWindow|BGFont|BGGradient|BrandingText|BringToFront|CRCCheck|Call|Caption|ChangeUI|CheckBitmap|ClearErrors|CompletedText|ComponentText|CopyFiles|CreateDirectory|CreateFont|CreateShortCut|DeleteINISec|DeleteINIStr|Delete|DeleteRegKey|DeleteRegValue|DetailPrint|DetailsButtonText|DirText|DirVar|DirVerify|EnableWindow|EnumRegKey|EnumRegValue|Exch|Exec|ExecShell|ExecWait|ExpandEnvStrings|FileBufSize|FileClose|FileErrorText|File|FileOpen|FileReadByte|FileRead|FileRecursive|FileSeek|FileWriteByte|FileWrite|FindClose|FindFirst|FindNext|FindWindow|FlushINI|GetCurInstType|GetCurrentAddress|GetDLLVersion|GetDLLVersionLocal|GetDlgItem|GetErrorLevel|GetFileTime|GetFileTimeLocal|GetFunctionAddress|GetInstDirError|GetLabelAddress|GetTempFileName|HideWindow|Icon|IfAbort|IfErrors|IfFileExists|IfRebootFlag|IfSilent|InitPluginsDir|InstProgressFlags|InstTypeGetText|InstType|InstTypeSetText|InstallButtonText|InstallColors|InstallDir|InstallDirRegKey|IntFmt|IsWindow|LangString|LicenseBkColor|LicenseData|LicenseForceSelection|LicenseLangString|LicenseText|LoadLanguageFile|LockWindow|LogSet|LogText|MessageBox|MiscButtonText|Name|OutFile|Pop|Push|Quit|RMDir|RMDirRecursive|ReadEnvStr|ReadINIStr|ReadRegDWORD|ReadRegStr|Reboot|RegDLL|Rename|RequestExecutionLevel|ReserveFile|ReserveFileRecursive|SearchPath|SectionGetFlags|SectionGetInstTypes|SectionGetSize|SectionGetText|SectionIn|SectionSetFlags|SectionSetInstTypes|SectionSetSize|SectionSetText|SendMessage|SetAutoClose|SetBrandingImage|SetCompress|SetCompressorDictSize|SetCompressor|SetCtlColors|SetCurInstType|SetDatablockOptimize|SetDateSave|SetDetailsPrint|SetDetailsView|SetErrorLevel|SetErrors|SetFileAttributes|SetFont|SetOutPath|SetOverwrite|SetRebootFlag|SetRegView|SetShellVarContext|SetSilent|ShowInstDetails|ShowUninstDetails|ShowWindow|SilentInstall|SilentUninstall|Sleep|SpaceTexts|StrCmp|StrCmpS|StrCpy|StrLen|SubCaption|UnRegDLL|UninstallButtonText|UninstallCaption|UninstallIcon|UninstallSubCaption|UninstallText|VIAddVersionKey|VIProductVersion|WindowIcon|WriteINIStr|WriteRegBin|WriteRegDWORD|WriteRegExpandStr|WriteRegStr|WriteUninstaller|XPStyle)\\b"
     name: "keyword.command.nsl"
   }
   {
@@ -35,6 +35,10 @@ patterns: [
   {
     match: "\\b((0(x|X)[0-9a-fA-F])|([0-9\\.\\,]+))\\b"
     name: "constant.numeric.nsl"
+  }
+  {
+    match: "@\\$[\\w]+"
+    name: "variable.name.unchecked.nsl"
   }
   {
     match: "\\$[\\w]+"
