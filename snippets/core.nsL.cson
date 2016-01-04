@@ -38,6 +38,12 @@
   'AddBrandingImage()':
     'prefix': 'AddBrandingImage()'
     'body': 'AddBrandingImage(${1});'
+  'AddIncludeDir()':
+    'prefix': 'AddIncludeDir()'
+    'body': 'AddIncludeDir(${1});'
+  'AddPluginDir()':
+    'prefix': 'AddPluginDir()'
+    'body': 'AddPluginDir(${1});'
   'AddSize()':
     'prefix': 'AddSize()'
     'body': 'AddSize(${1});'
@@ -331,6 +337,9 @@
   'IfSilent()':
     'prefix': 'IfSilent()'
     'body': 'IfSilent(${1});'
+  'Include()':
+    'prefix': 'Include()'
+    'body': 'Include(${1});'
   'InitPluginsDir()':
     'prefix': 'InitPluginsDir()'
     'body': 'InitPluginsDir(${1});'
