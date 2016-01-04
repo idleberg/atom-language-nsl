@@ -31,6 +31,3 @@ This work is licensed under the [The MIT License](LICENSE.md).
 ## Donate
 
 You are welcome support this project using [Flattr](https://flattr.com/submit/auto?user_id=idleberg&url=https://github.com/idleberg/atom-language-nsl) or Bitcoin `17CXJuPsmhuTzFV2k4RKYwpEHVjskJktRd`
-
-## Special Functions
-The Special Functionalities, like AddIncludeDir or UncheckedVariables only works with this version of nsl-assembler: https://github.com/Frisch12/nsl-assembler
