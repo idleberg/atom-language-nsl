@@ -38,7 +38,7 @@ patterns: [
   }
   {
     match: "@\\$[\\w]+"
-    name: "variable.name.nsl"
+    name: "variable.name.unchecked.nsl"
   }
   {
     match: "\\$[\\w]+"
