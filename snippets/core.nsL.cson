@@ -1028,7 +1028,7 @@
     'body': 'UninstallSubCaption(${1});$2'
   'UninstallText()':
     'prefix': 'UninstallText()'
-    'body': 'UninstallText("${1:text}"${2:, "${3:subtext}"});$2'
+    'body': 'UninstallText("${1:text}"${2:, "${3:subtext}"});$4'
   'UnRegDLL()':
     'prefix': 'UnRegDLL()'
     'body': 'UnRegDLL(${1});$2'
