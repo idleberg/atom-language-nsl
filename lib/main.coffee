@@ -42,7 +42,7 @@ module.exports = NslCore =
   getPath: (callback) ->
     @getPlatform()
 
-    # Find nsL.jar
+    # Find Java
     exec "\"#{@which}\" java", (error, stdout, stderr) ->
       if error isnt null
         atom.notifications.addError("**language-nsl**: Java is not in your `PATH` [environmental variable](http://superuser.com/a/284351/195953)", dismissable: true)
