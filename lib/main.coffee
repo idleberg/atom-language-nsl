@@ -25,6 +25,9 @@ module.exports = NslCore =
 
       @getPath (stdout) ->
         nslJar  = atom.config.get('language-nsl.pathToJar')
+        if !nslJar?
+          atom.notifications.addError("**language-nsl**: no valid `nsL.jar` was specified in your config", dismissable: false)
+          return
 
         exec "\"java\" -jar \"#{nslJar}\" \"#{script}\"", (error, stdout, stderr) ->
           if error isnt null
@@ -39,16 +42,10 @@ module.exports = NslCore =
   getPath: (callback) ->
     @getPlatform()
 
-    # If stored, return pathToJar
-    pathToJar = atom.config.get('language-nsl.pathToJar')
-    if pathToJar?
-      callback pathToJar
-      return
-
     # Find nsL.jar
     exec "\"#{@which}\" java", (error, stdout, stderr) ->
       if error isnt null
-        atom.notifications.addError("**language-nsl**: Java is not in your `PATH` [environmental variable](http://superuser.com/a/284351/195953)", dismissable: false)
+        atom.notifications.addError("**language-nsl**: Java is not in your `PATH` [environmental variable](http://superuser.com/a/284351/195953)", dismissable: true)
       else
         callback stdout
       return
