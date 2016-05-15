@@ -17,6 +17,12 @@
     "type": "git",
     "url": "https://github.com/idleberg/atom-language-nsl"
   },
+  "main": "lib/main.coffee",
+  "activationCommands": {
+    "atom-workspace": [
+      "nsl-assembler:save-&-compile"
+    ]
+  },
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
