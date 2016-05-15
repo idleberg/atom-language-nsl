@@ -11,7 +11,7 @@ Atom language support for [nsL Assembler](https://sourceforge.net/projects/nslas
 
 ![Screenshot](https://raw.github.com/idleberg/atom-language-nsl/master/screenshot.png)
 
-*Screenshot of NSIS in Atom with [Hopscotch](https://atom.io/themes/hopscotch) theme*
+*Screenshot of nsL Assembler in Atom with [Hopscotch](https://atom.io/themes/hopscotch) theme*
 
 ## Installation
 
@@ -23,6 +23,23 @@ Atom language support for [nsL Assembler](https://sourceforge.net/projects/nslas
 
 1. Change directory `cd ~/.atom/packages/`
 2. Clone repository `git clone https://github.com/idleberg/atom-language-nsl language-nsl`
+
+### Building
+
+As of recently, this package contains a rudimentary build system to translate nsL code into NSIS script and compile it. To do so, select *Nsl Assembler: Save & Compile”* from the [command-palette](https://atom.io/docs/latest/getting-started-atom-basics#command-palette) or use the keyboard shortcut.
+
+Make sure to specify the path for `nsL.jar` in your `config.cson`.
+
+**Example:**
+
+```cson
+"language-nsl":
+  pathToJar: "/full/path/to/nsL.jar"
+```
+
+#### Third-party packages
+
+Should you already use the [build](https://atom.io/packages/build) package, you can install the [build-nsl](https://atom.io/packages/build-nsl) provider to build your code.
 
 ## License
 
