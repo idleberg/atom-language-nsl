@@ -7,7 +7,7 @@
 [![David](https://img.shields.io/david/dev/idleberg/atom-language-nsl.svg?style=flat-square)](https://david-dm.org/idleberg/atom-language-nsl#info=devDependencies)
 [![Gitter](https://img.shields.io/badge/chat-Gitter-ff69b4.svg?style=flat-square)](https://gitter.im/NSIS-Dev/Atom)
 
-Atom language support for [nsL Assembler](https://sourceforge.net/projects/nslassembler/)
+Atom language support for [nsL Assembler](https://sourceforge.net/projects/nslassembler/), including grammar, snippets and a rudimentary build system
 
 ![Screenshot](https://raw.github.com/idleberg/atom-language-nsl/master/screenshot.png)
 
