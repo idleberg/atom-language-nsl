@@ -15,6 +15,9 @@ module.exports = NslCore =
     # Register commands
     @subscriptions.add atom.commands.add 'atom-workspace', 'nsl-assembler:save-&-compile': => @buildScript()
 
+  deactivate: ->
+    @subscriptions.dispose()
+
   buildScript: ->
     editor = atom.workspace.getActiveTextEditor()
     script = editor.getPath()
