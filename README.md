@@ -21,8 +21,19 @@ Atom language support for [nsL Assembler](https://sourceforge.net/projects/nslas
 
 ### GitHub
 
-1. Change directory `cd ~/.atom/packages/`
-2. Clone repository `git clone https://github.com/idleberg/atom-language-nsl language-nsl`
+Change to your Atom packages directory:
+
+```bash
+# Windows
+$ cd %USERPROFILE%\.atom\packages
+
+# Mac OS X & Linux
+$ cd ~/.atom/packages/
+```
+
+Clone repository as `language-nsl`:
+
+`$ git clone https://github.com/idleberg/atom-language-nsl language-nsl`
 
 ### Building
 
