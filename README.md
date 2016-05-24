@@ -35,11 +35,13 @@ Clone repository as `language-nsl`:
 
 `$ git clone https://github.com/idleberg/atom-language-nsl language-nsl`
 
+## Usage
+
 ### Building
 
 As of recently, this package contains a rudimentary build system to translate nsL code into NSIS script and compile it. To do so, select *Nsl Assembler: Save & Compile”* from the [command-palette](https://atom.io/docs/latest/getting-started-atom-basics#command-palette) or use the keyboard shortcut.
 
-Make sure to specify the path for `nsL.jar` in your `config.cson`.
+Make sure to specify the path for `nsL.jar` in your Atom [configuration](http://flight-manual.atom.io/using-atom/sections/basic-customization/#_global_configuration_settings).
 
 **Example:**
 
