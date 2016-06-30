@@ -24,7 +24,7 @@ module.exports = NslCore =
     scope  = editor.getGrammar().scopeName
 
     if script? and scope.startsWith 'source.nsl'
-      editor.save()
+      editor.save() if editor.isModified()
 
       @getPath (stdout) ->
         nslJar  = atom.config.get('language-nsl.pathToJar')
