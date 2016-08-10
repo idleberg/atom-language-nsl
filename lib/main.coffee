@@ -45,7 +45,7 @@ module.exports = NslCore =
 
       @getPath (stdout) ->
         nslJar  = atom.config.get('language-nsl.pathToJar')
-        if !nslJar?
+        if not nslJar
           atom.notifications.addError("**language-nsl**: no valid `nsL.jar` was specified in your config", dismissable: false)
           return
 
