@@ -34,8 +34,8 @@ module.exports = NslCore =
     editor = atom.workspace.getActiveTextEditor()
 
     unless editor?
-       atom.notifications.addWarning("**language-nsl**: No active editor", dismissable: false)
-       return
+      atom.notifications.addWarning("**language-nsl**: No active editor", dismissable: false)
+      return
 
     script = editor.getPath()
     scope  = editor.getGrammar().scopeName
