@@ -25,7 +25,7 @@ patterns: [
     name: "constant.helpers.nsl"
   }
   {
-    match: "[\\\\A-Za-z_.][\\\\A-Za-z_0-9]*(?=\\s*\\()"
+    match: "[\\w\\.]+[\\w]*(\\(.*?\\))+"
     name: "meta.function.nsl"
   }
   {
