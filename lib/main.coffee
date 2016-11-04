@@ -2,12 +2,6 @@
 {exec} = require 'child_process'
 os = require 'os'
 
-# Set platform defaults
-if os.platform() is 'win32'
-  which  = "where"
-else
-  which  = "which"
-
 module.exports = NslCore =
   config:
     pathToJar:
@@ -45,11 +39,17 @@ module.exports = NslCore =
 
       @getPath (stdout) ->
         nslJar  = atom.config.get('language-nsl.pathToJar')
+
         if not nslJar
           atom.notifications.addError("**language-nsl**: no valid `nsL.jar` was specified in your config", dismissable: false)
           return
 
-        exec "\"java\" -jar \"#{nslJar}\" \"#{script}\"", (error, stdout, stderr) ->
+        if os.platform() is 'win32'
+          nslCmd = "java -jar \"#{nslJar}\" /nopause /nomake \"#{script}\""
+        else
+          nslCmd = "java -jar #{nslJar} /nopause /nomake #{script}"
+
+        exec nslCmd, (error, stdout, stderr) ->
           if error isnt null
             # nslJar error from stdout, not error!
             atom.notifications.addError("**#{script}**", detail: error, dismissable: true)
@@ -60,7 +60,11 @@ module.exports = NslCore =
       atom.beep()
 
   getPath: (callback) ->
-    
+    if os.platform() is 'win32'
+      which  = "where"
+    else
+      which  = "which"
+
     # Find Java
     exec "\"#{which}\" java", (error, stdout, stderr) ->
       if error isnt null
