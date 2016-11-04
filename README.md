@@ -19,7 +19,7 @@ Atom language support for [nsL Assembler](https://sourceforge.net/projects/nslas
 
 * Install package `apm install language-nsl` (or use the GUI)
 
-### GitHub
+### Using Git
 
 Change to your Atom packages directory:
 
