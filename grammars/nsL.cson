@@ -2,64 +2,66 @@ fileTypes: [
   "nsl"
 ]
 name: "nsL Assembler"
-comment: "https://github.com/atom/atom-language-nsl"
 patterns: [
   {
-    match: "^\\s*(?i)#(define|else|endif|if|ifend|macro|macroend|nsis|nsisend|return|include)\\b"
+    match: "\\b(Abort|AddBrandingImage|AddIncludeDir|AddPluginDir|AddSize|AllowRootDirInstall|AllowSkipFiles|AutoCloseWindow|BGFont|BGGradient|BrandingText|BringToFront|Call|Caption|ChangeUI|CheckBitmap|ClearErrors|CompletedText|ComponentText|CopyFiles|CRCCheck|CreateDirectory|CreateFont|CreateShortCut|Delete|DeleteINISec|DeleteINIStr|DeleteRegKey|DeleteRegValue|DetailPrint|DetailsButtonText|DirText|DirVar|DirVerify|EnableWindow|EnumRegKey|EnumRegValue|Exch|Exec|ExecShell|ExecWait|ExpandEnvStrings|File|FileBufSize|FileClose|FileErrorText|FileOpen|FileRead|FileReadByte|FileRecursive|FileSeek|FileWrite|FileWriteByte|FindClose|FindFirst|FindNext|FindWindow|FlushINI|GetCurInstType|GetCurrentAddress|GetDlgItem|GetDLLVersion|GetDLLVersionLocal|GetErrorLevel|GetFileTime|GetFileTimeLocal|GetFunctionAddress|GetInstDirError|GetLabelAddress|GetTempFileName|HideWindow|Icon|IfAbort|IfErrors|IfFileExists|IfRebootFlag|IfSilent|Include|InitPluginsDir|InstallButtonText|InstallColors|InstallDir|InstallDirRegKey|InstProgressFlags|InstType|InstTypeGetText|InstTypeSetText|IntFmt|IsWindow|LangString|LicenseBkColor|LicenseData|LicenseForceSelection|LicenseLangString|LicenseText|LoadLanguageFile|LockWindow|LogSet|LogText|MessageBox|MiscButtonText|Name|OutFile|Pop|Push|Quit|ReadEnvStr|ReadINIStr|ReadRegDWORD|ReadRegStr|Reboot|RegDLL|Rename|RequestExecutionLevel|ReserveFile|ReserveFileRecursive|RMDir|RMDirRecursive|SearchPath|SectionGetFlags|SectionGetInstTypes|SectionGetSize|SectionGetText|SectionIn|SectionSetFlags|SectionSetInstTypes|SectionSetSize|SectionSetText|SendMessage|SetAutoClose|SetBrandingImage|SetCompress|SetCompressor|SetCompressorDictSize|SetCtlColors|SetCurInstType|SetDatablockOptimize|SetDateSave|SetDetailsPrint|SetDetailsView|SetErrorLevel|SetErrors|SetFileAttributes|SetFont|SetOutPath|SetOverwrite|SetRebootFlag|SetRegView|SetShellVarContext|SetSilent|ShowInstDetails|ShowUninstDetails|ShowWindow|SilentInstall|SilentUninstall|Sleep|SpaceTexts|StrCmp|StrCmpS|StrCpy|StrLen|SubCaption|UninstallButtonText|UninstallCaption|UninstallIcon|UninstallSubCaption|UninstallText|UnRegDLL|VIAddVersionKey|VIProductVersion|WindowIcon|WriteINIStr|WriteRegBin|WriteRegDWORD|WriteRegExpandStr|WriteRegStr|WriteUninstaller|XPStyle)\\b"
+    name: "keyword.nsl"
+  }
+  {
+    match: "^\\s*(?i)(uninstall\\s)?(function|page|section)\\b"
     name: "keyword.control.nsl"
   }
   {
-    match: "^\\s*(?i)(Abort|AddBrandingImage|AddIncludeDir|AddPluginDir|AddSize|AllowRootDirInstall|AllowSkipFiles|AutoCloseWindow|BGFont|BGGradient|BrandingText|BringToFront|Call|Caption|ChangeUI|CheckBitmap|ClearErrors|CompletedText|ComponentText|CopyFiles|CRCCheck|CreateDirectory|CreateFont|CreateShortCut|Delete|DeleteINISec|DeleteINIStr|DeleteRegKey|DeleteRegValue|DetailPrint|DetailsButtonText|DirText|DirVar|DirVerify|EnableWindow|EnumRegKey|EnumRegValue|Exch|Exec|ExecShell|ExecWait|ExpandEnvStrings|File|FileBufSize|FileClose|FileErrorText|FileOpen|FileRead|FileReadByte|FileRecursive|FileSeek|FileWrite|FileWriteByte|FindClose|FindFirst|FindNext|FindWindow|FlushINI|GetCurInstType|GetCurrentAddress|GetDlgItem|GetDLLVersion|GetDLLVersionLocal|GetErrorLevel|GetFileTime|GetFileTimeLocal|GetFunctionAddress|GetInstDirError|GetLabelAddress|GetTempFileName|HideWindow|Icon|IfAbort|IfErrors|IfFileExists|IfRebootFlag|IfSilent|Include|InitPluginsDir|InstallButtonText|InstallColors|InstallDir|InstallDirRegKey|InstProgressFlags|InstType|InstTypeGetText|InstTypeSetText|IntFmt|IsWindow|LangString|LicenseBkColor|LicenseData|LicenseForceSelection|LicenseLangString|LicenseText|LoadLanguageFile|LockWindow|LogSet|LogText|MessageBox|MiscButtonText|Name|OutFile|Pop|Push|Quit|ReadEnvStr|ReadINIStr|ReadRegDWORD|ReadRegStr|Reboot|RegDLL|Rename|RequestExecutionLevel|ReserveFile|ReserveFileRecursive|RMDir|RMDirRecursive|SearchPath|SectionGetFlags|SectionGetInstTypes|SectionGetSize|SectionGetText|SectionIn|SectionSetFlags|SectionSetInstTypes|SectionSetSize|SectionSetText|SendMessage|SetAutoClose|SetBrandingImage|SetCompress|SetCompressor|SetCompressorDictSize|SetCtlColors|SetCurInstType|SetDatablockOptimize|SetDateSave|SetDetailsPrint|SetDetailsView|SetErrorLevel|SetErrors|SetFileAttributes|SetFont|SetOutPath|SetOverwrite|SetRebootFlag|SetRegView|SetShellVarContext|SetSilent|ShowInstDetails|ShowUninstDetails|ShowWindow|SilentInstall|SilentUninstall|Sleep|SpaceTexts|StrCmp|StrCmpS|StrCpy|StrLen|SubCaption|UninstallButtonText|UninstallCaption|UninstallIcon|UninstallSubCaption|UninstallText|UnRegDLL|VIAddVersionKey|VIProductVersion|WindowIcon|WriteINIStr|WriteRegBin|WriteRegDWORD|WriteRegExpandStr|WriteRegStr|WriteUninstaller|XPStyle)\\b"
-    name: "keyword.command.nsl"
+    match: "^\\s*#(define|else|endif|if|ifend|macro|macroend|nsis|nsisend|return)\\b"
+    name: "keyword.other.nsl"
   }
   {
     match: "\\w+\\:\\:\\w+"
-    name: "keyword.function.nsl"
+    name: "support.class.nsl"
   }
   {
-    match: "^\\s*(?i)(break|case|default|do|else|for|function|if|page|return|section|switch|uninstall function|uninstall page|uninstall section|while)\\b"
-    name: "support.function.nsl"
+    match: "^\\s*(?i)(break|case|default|do|else|for|if|return|switch|while)\\b"
+    name: "entity.name.section.nsl"
   }
   {
     match: "\\b(?i)(MB_DEFBUTTON1|MB_DEFBUTTON2|MB_DEFBUTTON3|MB_DEFBUTTON4|MB_ICONEXCLAMATION|MB_ICONINFORMATION|MB_ICONQUESTION|MB_ICONSTOP|MB_OK|MB_OKCANCEL|MB_RETRYCANCEL|MB_RIGHT|MB_RTLREADING|MB_SETFOREGROUND|MB_TOPMOST|MB_USERICON|MB_YESNO|MB_YESNOCANCEL|IDABORT|IDCANCEL|IDIGNORE|IDNO|IDOK|IDRETRY|IDYES)\\b"
-    name: "constant.helpers.nsl"
+    name: "entity.other.attribute-name.nsl"
   }
   {
-    match: "[\\w\\.]+[\\w]*(\\(.*?\\))+"
-    name: "meta.function.nsl"
+    match: "[\\\\A-Za-z_.][\\\\A-Za-z_0-9]*(?=\\s*\\()"
+    name: "entity.name.function.nsl"
   }
   {
     match: "\\b(admin|all|auto|both|current|false|force|hide|highest|ifdiff|ifnewer|lastused|listonly|nevershow|none|normal|off|on|show|silent|silentlog|textonly|true|user)\\b"
-    name: "constant.flags.nsl"
+    name: "constant.language.nsl"
   }
   {
-    match: "\\b((0(x|X)[0-9a-fA-F])|([0-9\\.\\,]+))\\b"
+    match: "\\b((0(x|X)[0-9a-fA-F]+)|([0-9]+(\\.[0-9]+)?))\\b"
     name: "constant.numeric.nsl"
   }
   {
-    match: "@\\$[\\w]+"
-    name: "variable.name.unchecked.nsl"
+    match: "@\\\\$[\\\\w]+"
+    name: "constant.character.escape.nsl"
   }
   {
-    match: "\\$[\\w]+"
-    name: "variable.name.nsl"
+    match: "\\$\\([\\w\\.:\\^-]+\\)"
+    name: "constant.other.nsl"
   }
   {
-    begin: "`"
-    beginCaptures:
-      "0":
-        name: "punctuation.definition.string.begin.nsl"
-    end: "(`)|(\\n)"
-    endCaptures:
-      "0":
-        name: "punctuation.definition.string.end.nsl"
-    name: "string.quoted.back.nsl"
-    patterns: [
-      {
-        match: "\\$\\\\."
-        name: "constant.character.escape.nsl"
-      }
-    ]
+    match: "\\$\\([\\w\\.:\\^-]+\\)"
+    name: "constant.other.nsl"
+  }
+  {
+    match: "\\$\\{[\\w\\.:\\^-]+\\}"
+    name: "constant.other.nsl"
+  }
+  {
+    match: "\\$\\w+"
+    name: "variable.other.nsl"
+  }
+  {
+    match: "\\$(\\{__DATE__\\}|\\{__FILE__\\}|\\{__FILEDIR__\\}|\\{__LINE__\\}|\\{__TIME__\\}|\\{__TIMESTAMP__\\}|ADMINTOOLS|APPDATA|CDBURN_AREA|CMDLINE|COMMONFILES|COOKIES|DESKTOP|DOCUMENTS|EXEDIR|EXEFILE|EXEPATH|FAVORITES|FONTS|HISTORY|HWNDPARENT|INSTDIR|INTERNET_CACHE|LANGUAGE|LOCALAPPDATA|MUSIC|NETHOOD|NSIS_MAX_STRLEN|NSIS_VERSION|NSISDIR|OUTDIR|PICTURES|PLUGINSDIR|PRINTHOOD|PROFILE|PROGRAMFILES(32|64)?|QUICKLAUNCH|RECENT|RESOURCES_LOCALIZED|RESOURCES|SENDTO|SMPROGRAMS|SMSTARTUP|STARTMENU|SYSDIR|TEMP|TEMPLATES|VIDEOS|WINDIR)"
+    name: "variable.language.nsl"
   }
   {
     begin: "\""
@@ -75,6 +77,22 @@ patterns: [
       {
         match: "\\$\\\\."
         name: "constant.character.escape.nsl"
+      }
+      {
+        match: "\\${[\\w\\.:\\^-]+}"
+        name: "constant.other.nsl"
+      }
+      {
+        match: "\\$\\([\\w\\.:\\^-]+\\)"
+        name: "constant.other.nsl"
+      }
+      {
+        match: "\\$\\w+"
+        name: "variable.other.nsl"
+      }
+      {
+        match: "\\b\\$(\\{__DATE__\\}|\\{__FILE__\\}|\\{__FILEDIR__\\}|\\{__LINE__\\}|\\{__TIME__\\}|\\{__TIMESTAMP__\\}|ADMINTOOLS|APPDATA|CDBURN_AREA|CMDLINE|COMMONFILES|COOKIES|DESKTOP|DOCUMENTS|EXEDIR|EXEFILE|EXEPATH|FAVORITES|FONTS|HISTORY|HWNDPARENT|INSTDIR|INTERNET_CACHE|LANGUAGE|LOCALAPPDATA|MUSIC|NETHOOD|NSIS_MAX_STRLEN|NSIS_VERSION|NSISDIR|OUTDIR|PICTURES|PLUGINSDIR|PRINTHOOD|PROFILE|PROGRAMFILES(32|64)?|QUICKLAUNCH|RECENT|RESOURCES_LOCALIZED|RESOURCES|SENDTO|SMPROGRAMS|SMSTARTUP|STARTMENU|SYSDIR|TEMP|TEMPLATES|VIDEOS|WINDIR)\\b"
+        name: "variable.language.nsl"
       }
     ]
   }
@@ -92,6 +110,55 @@ patterns: [
       {
         match: "\\$\\\\."
         name: "constant.character.escape.nsl"
+      }
+      {
+        match: "\\${[\\w\\.:\\^-]+}"
+        name: "constant.other.nsl"
+      }
+      {
+        match: "\\$\\([\\w\\.:\\^-]+\\)"
+        name: "constant.other.nsl"
+      }
+      {
+        match: "\\$\\w+"
+        name: "variable.other.nsl"
+      }
+      {
+        match: "\\b\\$(\\{__DATE__\\}|\\{__FILE__\\}|\\{__FILEDIR__\\}|\\{__LINE__\\}|\\{__TIME__\\}|\\{__TIMESTAMP__\\}|ADMINTOOLS|APPDATA|CDBURN_AREA|CMDLINE|COMMONFILES|COOKIES|DESKTOP|DOCUMENTS|EXEDIR|EXEFILE|EXEPATH|FAVORITES|FONTS|HISTORY|HWNDPARENT|INSTDIR|INTERNET_CACHE|LANGUAGE|LOCALAPPDATA|MUSIC|NETHOOD|NSIS_MAX_STRLEN|NSIS_VERSION|NSISDIR|OUTDIR|PICTURES|PLUGINSDIR|PRINTHOOD|PROFILE|PROGRAMFILES(32|64)?|QUICKLAUNCH|RECENT|RESOURCES_LOCALIZED|RESOURCES|SENDTO|SMPROGRAMS|SMSTARTUP|STARTMENU|SYSDIR|TEMP|TEMPLATES|VIDEOS|WINDIR)\\b"
+        name: "variable.language.nsl"
+      }
+    ]
+  }
+  {
+    begin: "`"
+    beginCaptures:
+      "0":
+        name: "punctuation.definition.string.begin.nsl"
+    end: "(`)|(\\n)"
+    endCaptures:
+      "0":
+        name: "punctuation.definition.string.end.nsl"
+    name: "string.quoted.back.nsl"
+    patterns: [
+      {
+        match: "\\$\\\\."
+        name: "constant.character.escape.nsl"
+      }
+      {
+        match: "\\${[\\w\\.:\\^-]+}"
+        name: "constant.other.nsl"
+      }
+      {
+        match: "\\$\\([\\w\\.:\\^-]+\\)"
+        name: "constant.other.nsl"
+      }
+      {
+        match: "\\$\\w+"
+        name: "variable.other.nsl"
+      }
+      {
+        match: "\\b\\$(\\{__DATE__\\}|\\{__FILE__\\}|\\{__FILEDIR__\\}|\\{__LINE__\\}|\\{__TIME__\\}|\\{__TIMESTAMP__\\}|ADMINTOOLS|APPDATA|CDBURN_AREA|CMDLINE|COMMONFILES|COOKIES|DESKTOP|DOCUMENTS|EXEDIR|EXEFILE|EXEPATH|FAVORITES|FONTS|HISTORY|HWNDPARENT|INSTDIR|INTERNET_CACHE|LANGUAGE|LOCALAPPDATA|MUSIC|NETHOOD|NSIS_MAX_STRLEN|NSIS_VERSION|NSISDIR|OUTDIR|PICTURES|PLUGINSDIR|PRINTHOOD|PROFILE|PROGRAMFILES(32|64)?|QUICKLAUNCH|RECENT|RESOURCES_LOCALIZED|RESOURCES|SENDTO|SMPROGRAMS|SMSTARTUP|STARTMENU|SYSDIR|TEMP|TEMPLATES|VIDEOS|WINDIR)\\b"
+        name: "variable.language.nsl"
       }
     ]
   }
