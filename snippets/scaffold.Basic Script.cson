@@ -1,30 +1,31 @@
 # Generated with Atomizr – https://atom.io/packages/atomizr
 ".source.nsl":
-	"scaffold:Basic Script":
-		body: '''
-			// Scaffolding by https://github.com/idleberg/atom-language-nsl
+  "scaffold:Basic Script":
+    body: '''
+      // Scaffolding by https://github.com/idleberg/atom-language-nsl
 
-			// Settings ---------------------------------
-			Name("${1:installer_name}");
-			OutFile("${2:${1:installer_name}}.exe");
-			RequestExecutionLevel("${3:user}");
-			InstallDir(\\$PROGRAMFILES . "\\\\\\\\${4:${1:installer_name}}");
+      // Settings ---------------------------------
+      Name("${1:installer_name}");
+      OutFile("${2:${1:installer_name}}.exe");
+      RequestExecutionLevel("${3:user}");
+      InstallDir(\\$PROGRAMFILES . "\\\\\\\\${4:${1:installer_name}}");
 
-			// Includes ---------------------------------
-			$5
-			// Pages ------------------------------------
-			page Components();
-			page Directory();
-			page InstFiles();
+      // Includes ---------------------------------
+      $5
 
-			// Sections ---------------------------------
-			section ${6:section_index}("${7:section_name}") {
+      // Pages ------------------------------------
+      page Components();
+      page Directory();
+      page InstFiles();
 
-				${8:// your code here}
+      // Sections ---------------------------------
+      section ${6:section_index}("${7:section_name}") {
 
-			}
+      \t${8:// your code here}
 
-			// Functions --------------------------------
-			$9$0
-		'''
-		prefix: "scaffold-Basic Script"
+      }
+
+      // Functions --------------------------------
+      $9$0
+    '''
+    prefix: "scaffold-Basic Script"
