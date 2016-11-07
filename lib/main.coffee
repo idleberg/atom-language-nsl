@@ -1,3 +1,5 @@
+meta = require '../package.json'
+
 # Dependencies
 {spawn} = require 'child_process'
 os = require 'os'
@@ -19,6 +21,8 @@ module.exports = NslCore =
   subscriptions: null
 
   activate: (state) ->
+    require('atom-package-deps').install(meta.name)
+
     {CompositeDisposable} = require 'atom'
 
     # Events subscribed to in atom's system can be easily cleaned up with a CompositeDisposable
@@ -35,7 +39,7 @@ module.exports = NslCore =
     editor = atom.workspace.getActiveTextEditor()
 
     unless editor?
-      atom.notifications.addWarning("**language-nsl**: No active editor", dismissable: false)
+      atom.notifications.addWarning("**#{meta.name}**: No active editor", dismissable: false)
       return
 
     script = editor.getPath()
@@ -48,7 +52,7 @@ module.exports = NslCore =
         nslJar  = atom.config.get('language-nsl.pathToJar')
 
         if not nslJar
-          atom.notifications.addError("**language-nsl**: no valid `nsL.jar` was specified in your config", dismissable: false)
+          atom.notifications.addError("**#{meta.name}**: no valid `nsL.jar` was specified in your config", dismissable: false)
           return
 
         defaultArguments = ["-jar", nslJar]
@@ -75,15 +79,15 @@ module.exports = NslCore =
 
   getPath: (callback) ->
     if os.platform() is 'win32'
-      whichJava = spawn('where', ['java'])
+      whichCmd = spawn('where', ['java'])
     else
-      whichJava = spawn('which', ['java'])
+      whichCmd = spawn('which', ['java'])
 
     # Find Java
-    whichJava.stderr.on 'data', (data) ->
-      atom.notifications.addError("**language-nsl**: Java is not in your `PATH` [environmental variable](http://superuser.com/a/284351/195953)", dismissable: true)
+    whichCmd.stderr.on 'data', (data) ->
+      atom.notifications.addError("**#{meta.name}**: Java is not in your `PATH` [environmental variable](http://superuser.com/a/284351/195953)", dismissable: true)
       return
 
-    whichJava.stdout.on 'data', (data) ->
+    whichCmd.stdout.on 'data', (data) ->
       callback data
       return

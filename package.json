@@ -26,6 +26,9 @@
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
+  "package-deps": [
+    "language-nsis"
+  ],
   "devDependencies": {
     "coffeelint-stylish": "^0.1.2",
     "gulp": "^3.9.1",
