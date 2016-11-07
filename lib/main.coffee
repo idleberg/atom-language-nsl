@@ -1,7 +1,7 @@
 meta = require '../package.json'
 
 # Dependencies
-{spawn} = require 'child_process'
+{exec} = require 'child_process'
 os = require 'os'
 
 module.exports = NslCore =
@@ -48,46 +48,44 @@ module.exports = NslCore =
     if script? and scope.startsWith 'source.nsl'
       editor.save() if editor.isModified()
 
-      @getPath (data) ->
+      @getPath (javaBin) ->
         nslJar  = atom.config.get('language-nsl.pathToJar')
 
         if not nslJar
           atom.notifications.addError("**#{meta.name}**: no valid `nsL.jar` was specified in your config", dismissable: false)
           return
 
-        defaultArguments = ["-jar", nslJar]
+        defaultArguments = ["java", "-jar", "\"#{nslJar}\""]
         customArguments = atom.config.get('language-nsl.customArguments').trim().split(" ")
+        customArguments.push("\"#{script}\"")
 
-        if os.platform() is 'win32'
-          customArguments.push("\"#{script}\"")
-        else
-          customArguments.push(script)
+        nslCmd = defaultArguments.concat(customArguments).join(" ")
 
-        args = defaultArguments.concat(customArguments)
-        nslCmd = spawn('java', args)
+        exec nslCmd, (error, stdout, stderr) ->
+          if error or stderr
+            if error
+              atom.notifications.addError("Transpiling failed", detail: error, dismissable: true)
 
-        nslCmd.stderr.on 'data', (data) ->
-          atom.notifications.addError("Transpiling failed", detail: data, dismissable: true)
-          return
+            if stderr
+              atom.notifications.addError("Transpiling failed", detail: stderr, dismissable: true)
 
-        nslCmd.stdout.on 'data', (data) ->
-          atom.notifications.addSuccess("Transpiled successfully", detail: data, dismissable: false)
-          return
+            return
+
+          atom.notifications.addSuccess("Transpiled successfully", detail: stdout, dismissable: false)
     else
       # Something went wrong
       atom.beep()
 
   getPath: (callback) ->
     if os.platform() is 'win32'
-      whichCmd = spawn('where', ['java'])
+      whichJava  = "where java"
     else
-      whichCmd = spawn('which', ['java'])
+      whichJava  = "which java"
 
     # Find Java
-    whichCmd.stderr.on 'data', (data) ->
-      atom.notifications.addError("**#{meta.name}**: Java is not in your `PATH` [environmental variable](http://superuser.com/a/284351/195953)", dismissable: true)
-      return
-
-    whichCmd.stdout.on 'data', (data) ->
-      callback data
+    exec whichJava, (error, stdout, stderr) ->
+      if error isnt null
+        atom.notifications.addError("**#{meta.name}**: Java is not in your `PATH` [environmental variable](http://superuser.com/a/284351/195953)", dismissable: true)
+      else
+        callback stdout
       return
