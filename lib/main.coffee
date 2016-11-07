@@ -60,7 +60,7 @@ module.exports = NslCore =
           customArguments.push(script)
 
         args = defaultArguments.concat(customArguments)
-        nslCmd = spawn('java', args);
+        nslCmd = spawn('java', args)
 
         nslCmd.stderr.on 'data', (data) ->
           atom.notifications.addError("Transpiling failed", detail: data, dismissable: true)
@@ -75,9 +75,9 @@ module.exports = NslCore =
 
   getPath: (callback) ->
     if os.platform() is 'win32'
-      whichJava = spawn('where', ['java']);
+      whichJava = spawn('where', ['java'])
     else
-      whichJava = spawn('which', ['java']);
+      whichJava = spawn('which', ['java'])
 
     # Find Java
     whichJava.stderr.on 'data', (data) ->
