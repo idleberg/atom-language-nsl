@@ -25,7 +25,7 @@ module.exports = NslCore =
     @subscriptions = new CompositeDisposable
 
     # Register commands
-    @subscriptions.add atom.commands.add 'atom-workspace', 'nsl-assembler:save-&-compile': => @buildScript()
+    @subscriptions.add atom.commands.add 'atom-workspace', 'nsl-assembler:save-&-transpile': => @buildScript()
 
   deactivate: ->
     @subscriptions?.dispose()
@@ -63,11 +63,11 @@ module.exports = NslCore =
         nslCmd = spawn('java', args);
 
         nslCmd.stderr.on 'data', (data) ->
-          atom.notifications.addError("Compilation error", detail: data, dismissable: true)
+          atom.notifications.addError("Transpiling failed", detail: data, dismissable: true)
           return
 
         nslCmd.stdout.on 'data', (data) ->
-          atom.notifications.addSuccess("Compiled successfully", detail: data, dismissable: false)
+          atom.notifications.addSuccess("Transpiled successfully", detail: data, dismissable: false)
           return
     else
       # Something went wrong
