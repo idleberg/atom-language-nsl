@@ -1,5 +1,5 @@
 # Dependencies
-{exec} = require 'child_process'
+{spawn} = require 'child_process'
 os = require 'os'
 
 module.exports = NslCore =
@@ -44,14 +44,14 @@ module.exports = NslCore =
     if script? and scope.startsWith 'source.nsl'
       editor.save() if editor.isModified()
 
-      @getPath (stdout) ->
+      @getPath (data) ->
         nslJar  = atom.config.get('language-nsl.pathToJar')
 
         if not nslJar
           atom.notifications.addError("**language-nsl**: no valid `nsL.jar` was specified in your config", dismissable: false)
           return
 
-        defaultArguments = ["java", "-jar", nslJar]
+        defaultArguments = ["-jar", nslJar]
         customArguments = atom.config.get('language-nsl.customArguments').trim().split(" ")
 
         if os.platform() is 'win32'
@@ -59,28 +59,31 @@ module.exports = NslCore =
         else
           customArguments.push(script)
 
-        nslCmd = defaultArguments.concat(customArguments)
+        args = defaultArguments.concat(customArguments)
+        nslCmd = spawn('java', args);
 
-        exec nslCmd.join(" "), (error, stdout, stderr) ->
-          if error isnt null
-            # nslJar error from stdout, not error!
-            atom.notifications.addError("**#{script}**", detail: error, dismissable: true)
-          else
-            atom.notifications.addSuccess("Compiled successfully", detail: stdout, dismissable: false)
+        nslCmd.stderr.on 'data', (data) ->
+          atom.notifications.addError("Compilation error", detail: data, dismissable: true)
+          return
+
+        nslCmd.stdout.on 'data', (data) ->
+          atom.notifications.addSuccess("Compiled successfully", detail: data, dismissable: false)
+          return
     else
       # Something went wrong
       atom.beep()
 
   getPath: (callback) ->
     if os.platform() is 'win32'
-      which  = "where"
+      whichJava = spawn('where', ['java']);
     else
-      which  = "which"
+      whichJava = spawn('which', ['java']);
 
     # Find Java
-    exec "\"#{which}\" java", (error, stdout, stderr) ->
-      if error isnt null
-        atom.notifications.addError("**language-nsl**: Java is not in your `PATH` [environmental variable](http://superuser.com/a/284351/195953)", dismissable: true)
-      else
-        callback stdout
+    whichJava.stderr.on 'data', (data) ->
+      atom.notifications.addError("**language-nsl**: Java is not in your `PATH` [environmental variable](http://superuser.com/a/284351/195953)", dismissable: true)
+      return
+
+    whichJava.stdout.on 'data', (data) ->
+      callback data
       return
