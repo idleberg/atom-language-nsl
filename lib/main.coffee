@@ -14,7 +14,7 @@ module.exports = NslCore =
       order: 0
     customArguments:
       title: "Custom Arguments"
-      description: "Specify your preferred arguments for BridleNSIS"
+      description: "Specify your preferred arguments for nsL Assembler"
       type: "string"
       default: "/nopause /nomake"
       order: 1
