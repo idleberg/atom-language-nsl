@@ -9,6 +9,13 @@ module.exports = NslCore =
       description: "Specify the full path to `nsL.jar`"
       type: "string"
       default: ""
+      order: 0
+    customArguments:
+      title: "Custom Arguments"
+      description: "Specify your preferred arguments for BridleNSIS"
+      type: "string"
+      default: "/nopause /nomake"
+      order: 1
   subscriptions: null
 
   activate: (state) ->
@@ -44,12 +51,17 @@ module.exports = NslCore =
           atom.notifications.addError("**language-nsl**: no valid `nsL.jar` was specified in your config", dismissable: false)
           return
 
-        if os.platform() is 'win32'
-          nslCmd = "java -jar \"#{nslJar}\" /nopause /nomake \"#{script}\""
-        else
-          nslCmd = "java -jar #{nslJar} /nopause /nomake #{script}"
+        defaultArguments = ["java", "-jar", nslJar]
+        customArguments = atom.config.get('language-nsl.customArguments').trim().split(" ")
 
-        exec nslCmd, (error, stdout, stderr) ->
+        if os.platform() is 'win32'
+          customArguments.push("\"#{script}\"")
+        else
+          customArguments.push(script)
+
+        nslCmd = defaultArguments.concat(customArguments)
+
+        exec nslCmd.join(" "), (error, stdout, stderr) ->
           if error isnt null
             # nslJar error from stdout, not error!
             atom.notifications.addError("**#{script}**", detail: error, dismissable: true)
