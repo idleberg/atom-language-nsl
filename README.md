@@ -43,13 +43,14 @@ $ git clone https://github.com/idleberg/atom-language-nsl language-nsl
 
 As of recently, this package contains a rudimentary build system to translate nsL code into NSIS script and transpile it. To do so, select *Nsl Assembler: Save & Transpile”* from the [command-palette](https://atom.io/docs/latest/getting-started-atom-basics#command-palette) or use the keyboard shortcut.
 
-Make sure to specify the path for `nsL.jar` in the package settings.
+Make sure to specify the path for `nsL.jar` in the package settings. There you can also customize the flags for the transpiler.
 
 **Example:**
 
 ```cson
 "language-nsl":
   pathToJar: "/full/path/to/nsL.jar"
+  customArguments: "/nopause /nomake"
 ```
 
 #### Third-party packages
