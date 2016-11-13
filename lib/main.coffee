@@ -4,7 +4,7 @@ meta = require '../package.json'
 {exec} = require 'child_process'
 os = require 'os'
 
-module.exports = NslCore =
+module.exports =
   config:
     pathToJar:
       title: "Path To JAR"
@@ -16,12 +16,11 @@ module.exports = NslCore =
       title: "Custom Arguments"
       description: "Specify your preferred arguments for nsL Assembler"
       type: "string"
-      default: "/nopause /nomake"
+      default: "/nomake"
       order: 1
   subscriptions: null
 
   activate: (state) ->
-    require('atom-package-deps').install(meta.name)
 
     {CompositeDisposable} = require 'atom'
 
@@ -30,6 +29,7 @@ module.exports = NslCore =
 
     # Register commands
     @subscriptions.add atom.commands.add 'atom-workspace', 'nsl-assembler:save-&-transpile': => @buildScript()
+    require('atom-package-deps').install(meta.name)
 
   deactivate: ->
     @subscriptions?.dispose()
