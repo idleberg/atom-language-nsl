@@ -21,6 +21,7 @@ module.exports =
   subscriptions: null
 
   activate: (state) ->
+    require('atom-package-deps').install(meta.name)
 
     {CompositeDisposable} = require 'atom'
 
@@ -29,7 +30,6 @@ module.exports =
 
     # Register commands
     @subscriptions.add atom.commands.add 'atom-workspace', 'nsl-assembler:save-&-transpile': => @buildScript()
-    require('atom-package-deps').install(meta.name)
 
   deactivate: ->
     @subscriptions?.dispose()
