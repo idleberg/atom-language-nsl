@@ -64,7 +64,7 @@ module.exports =
         exec nslCmd, (error, stdout, stderr) ->
           if error or stderr
             detail = unless stderr then error else stderr
-            atom.notifications.addError("Transpile failed", detail: stderr, dismissable: true)
+            atom.notifications.addError("Transpile failed", detail: detail, dismissable: true)
             return
 
           atom.notifications.addSuccess("Transpiled successfully", detail: stdout, dismissable: false)
