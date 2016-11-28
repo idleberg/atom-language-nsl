@@ -65,7 +65,6 @@ module.exports =
           if error or stderr
             detail = unless stderr then error else stderr
             atom.notifications.addError("Transpile failed", detail: stderr, dismissable: true)
-
             return
 
           atom.notifications.addSuccess("Transpiled successfully", detail: stdout, dismissable: false)
