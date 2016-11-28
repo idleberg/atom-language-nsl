@@ -1,7 +1,7 @@
 meta = require '../package.json'
 
 # Dependencies
-{exec} = require 'child_process'
+{exec, spawn} = require 'child_process'
 os = require 'os'
 
 module.exports =
@@ -16,7 +16,7 @@ module.exports =
       title: "Custom Arguments"
       description: "Specify your preferred arguments for nsL Assembler"
       type: "string"
-      default: "/nomake"
+      default: "/nomake /nopause"
       order: 1
   subscriptions: null
 
@@ -63,11 +63,8 @@ module.exports =
 
         exec nslCmd, (error, stdout, stderr) ->
           if error or stderr
-            if error
-              atom.notifications.addError("Transpile failed", detail: error, dismissable: true)
-
-            if stderr
-              atom.notifications.addError("Transpile failed", detail: stderr, dismissable: true)
+            detail = unless stderr then error else stderr
+            atom.notifications.addError("Transpile failed", detail: stderr, dismissable: true)
 
             return
 
@@ -78,14 +75,17 @@ module.exports =
 
   getPath: (callback) ->
     if os.platform() is 'win32'
-      whichJava  = "where java"
+      whichCmd  = "where"
     else
-      whichJava  = "which java"
+      whichCmd  = "which"
 
     # Find Java
-    exec whichJava, (error, stdout, stderr) ->
-      if error isnt null
+    which = spawn whichCmd, ["java"]
+
+    which.stdout.on 'data', ( data ) ->
+      path = data.toString().trim()
+      return callback(path)
+
+    which.on 'close', ( errorCode ) ->
+      if errorCode > 0
         atom.notifications.addError("**#{meta.name}**: Java is not in your `PATH` [environmental variable](http://superuser.com/a/284351/195953)", dismissable: true)
-      else
-        callback stdout
-      return
