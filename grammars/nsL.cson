@@ -24,7 +24,7 @@ patterns: [
     name: "keyword.nsl"
   }
   {
-    match: "^\\s*(?i)(uninstall\\s)?(function|page|section)(?=\\s*\\()"
+    match: "^\\s*(?i)(uninstall\\s)?(function|page|section)\\b"
     name: "keyword.control.nsl"
   }
   {
