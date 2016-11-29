@@ -36,7 +36,7 @@ patterns: [
     name: "support.class.nsl"
   }
   {
-    match: "^\\s*(?i)(break|case|default|do|else|for|if|return|switch|while)(?=\\s*\\()"
+    match: "^\\s*(?i)(break|case|default|do|else|for|if|return|switch|while)(?=\\s*\\()?"
     name: "entity.name.section.nsl"
   }
   {
