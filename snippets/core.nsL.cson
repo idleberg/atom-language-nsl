@@ -29,7 +29,7 @@
     'prefix': 'nsis'
     'body': """
       #nsis
-      	${1:// your code here}
+      	${1:# your code here}
       #nsisend$2
     """
   'Abort()':
