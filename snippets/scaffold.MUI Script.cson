@@ -16,12 +16,12 @@
       InstallDir(\\$PROGRAMFILES . "\\\\\\\\${4:${1:installer_name}}");
 
       #nsis
-      \t// Pages ------------------------------------
+      \t# Pages ------------------------------------
       \t!insertmacro MUI_PAGE_COMPONENTS
       \t!insertmacro MUI_PAGE_DIRECTORY
       \t!insertmacro MUI_PAGE_INSTFILES
 
-      \t// Languages --------------------------------
+      \t# Languages --------------------------------
       \t!insertmacro MUI_LANGUAGE "${5:English}"
       #nsisend
 
