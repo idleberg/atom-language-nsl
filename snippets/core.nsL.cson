@@ -6,30 +6,30 @@
     'prefix': 'if..#else'
     'body': """
       #if
-      	${1:// your code here}
+      \t${1:// your code here}
       #else
-      	${2:// your code here}
+      \t${2:// your code here}
       #ifend$3
     """
   '#if':
     'prefix': 'if'
     'body': """
       #if
-      	${1:// your code here}
+      \t${1:// your code here}
       #ifend$2
     """
   '#macro':
     'prefix': 'macro'
     'body': """
       #macro
-      	${1:// your code here}
+      \t${1:// your code here}
       #macroend$2
     """
   '#nsis':
     'prefix': 'nsis'
     'body': """
       #nsis
-      	${1:# your code here}
+      \t${1:# your code here}
       #nsisend$2
     """
   'Abort()':
@@ -96,7 +96,7 @@
     'prefix': 'case'
     'body': """
       case ${1:value}:
-      	${2:// your code here}
+      \t${2:// your code here}
     """
   'ChangeUI()':
     'prefix': 'ChangeUI()'
@@ -234,14 +234,14 @@
     'prefix': 'for()'
     'body': """
       for(${1:condition}) {
-      	${2:// your code here}
+      \t${2:// your code here}
       }
     """
   'function()':
     'prefix': 'function()'
     'body': """
       function ${1:function_name}(${2}) {
-      	${3:// your code here}
+      \t${3:// your code here}
       }
     """
   'GetCurInstType()':
@@ -290,36 +290,36 @@
     'prefix': 'if()..else'
     'body': """
       if (${1:condition}) {
-      	${2:// your code here}
+      \t${2:// your code here}
       } else {
-      	${3:// your code here}
+      \t${3:// your code here}
       }
     """
   'if()..else if()..else':
     'prefix': 'if()..else if()..else'
     'body': """
       if (${1:condition}) {
-      	${2:// your code here}
+      \t${2:// your code here}
       } else if (${3:condition}) {
-      	${4:// your code here}
+      \t${4:// your code here}
       } else {
-      	${5:// your code here}
+      \t${5:// your code here}
       }
     """
   'if()..else if()':
     'prefix': 'if()..else if()'
     'body': """
       if (${1:condition}) {
-      	${2:// your code here}
+      \t${2:// your code here}
       } else if (${3:condition}) {
-      	${4:// your code here}
+      \t${4:// your code here}
       }
     """
   'if()':
     'prefix': 'if()'
     'body': """
       if (${1:condition}) {
-      	${2:// your code here}
+      \t${2:// your code here}
       }
     """
   'IfAbort()':
@@ -416,70 +416,70 @@
     'prefix': 'onGUIEnd()'
     'body': """
       function .onGUIEnd(${1}) {
-      	${2:// your code here}
+      \t${2:// your code here}
       }
     """
   'onGUIInit()':
     'prefix': 'onGUIInit()'
     'body': """
       function .onGUIInit(${1}) {
-      	${2:// your code here}
+      \t${2:// your code here}
       }
     """
   'onInit()':
     'prefix': 'onInit()'
     'body': """
       function .onInit(${1}) {
-      	${2:// your code here}
+      \t${2:// your code here}
       }
     """
   'onInstFailed()':
     'prefix': 'onInstFailed()'
     'body': """
       function .onInstFailed(${1}) {
-      	${2:// your code here}
+      \t${2:// your code here}
       }
     """
   'onInstSuccess()':
     'prefix': 'onInstSuccess()'
     'body': """
       function .onInstSuccess(${1}) {
-      	${2:// your code here}
+      \t${2:// your code here}
       }
     """
   'onMouseOverSection()':
     'prefix': 'onMouseOverSection()'
     'body': """
       function .onMouseOverSection(${1}) {
-      	${2:// your code here}
+      \t${2:// your code here}
       }
     """
   'onRebootFailed()':
     'prefix': 'onRebootFailed()'
     'body': """
       function .onRebootFailed(${1}) {
-      	${2:// your code here}
+      \t${2:// your code here}
       }
     """
   'onSelChange()':
     'prefix': 'onSelChange()'
     'body': """
       function .onSelChange(${1}) {
-      	${2:// your code here}
+      \t${2:// your code here}
       }
     """
   'onUserAbort()':
     'prefix': 'onUserAbort()'
     'body': """
       function .onUserAbort(${1}) {
-      	${2:// your code here}
+      \t${2:// your code here}
       }
     """
   'onVerifyInstDir()':
     'prefix': 'onVerifyInstDir()'
     'body': """
       function .onVerifyInstDir(${1}) {
-      	${2:// your code here}
+      \t${2:// your code here}
       }
     """
   'OutFile()':
@@ -489,42 +489,42 @@
     'prefix': 'page()'
     'body': """
       page ${1:PageType}(${2:function}) {
-      	${3:// your code here}
+      \t${3:// your code here}
       }
     """
   'page Components()':
     'prefix': 'page Components()'
     'body': """
       page Components(${1:function}) {
-      	${2:// your code here}
+      \t${2:// your code here}
       }
     """
   'page Directory()':
     'prefix': 'page Directory()'
     'body': """
       page Directory(${1:function}) {
-      	${2:// your code here}
+      \t${2:// your code here}
       }
     """
   'page InstConfirm()':
     'prefix': 'page InstConfirm()'
     'body': """
       page InstConfirm(${1:function}) {
-      	${2:// your code here}
+      \t${2:// your code here}
       }
     """
   'page InstFiles()':
     'prefix': 'page InstFiles()'
     'body': """
       page InstFiles(${1:function}) {
-      	${2:// your code here}
+      \t${2:// your code here}
       }
     """
   'page License()':
     'prefix': 'page License()'
     'body': """
       page License(${1:function}) {
-      	${2:// your code here}
+      \t${2:// your code here}
       }
     """
   'Pop()':
@@ -591,7 +591,7 @@
     'prefix': 'section()'
     'body': """
       section ${1:section_index}("${2:section_name}"${3}) {
-      	${4:// your code here}
+      \t${4:// your code here}
       }$5
     """
   'SectionGetFlags()':
@@ -850,168 +850,168 @@
     'prefix': 'switch()'
     'body': """
       switch(\$${1:variable}) {
-      	${2:// your code here}
+      \t${2:// your code here}
       }$3
     """
   'switch():1':
     'prefix': 'switch():1'
     'body': """
       switch(\$${1:variable}) {
-      	case ${2:value}:
-      		${3:// your code here}
-      	default:
-      		${4:// your code here}
+      \tcase ${2:value}:
+      \t\t${3:// your code here}
+      \tdefault:
+      \t\t${4:// your code here}
       }$5
     """
   'switch():2':
     'prefix': 'switch():2'
     'body': """
       switch(\$${1:variable}) {
-      	case ${2:value1}:
-      		${3:// your code here}
-      	case ${4:value2}:
-      		${5:// your code here}
-      	default:
-      		${6:// your code here}
+      \tcase ${2:value1}:
+      \t\t${3:// your code here}
+      \tcase ${4:value2}:
+      \t\t${5:// your code here}
+      \tdefault:
+      \t\t${6:// your code here}
       }$7
     """
   'switch():3':
     'prefix': 'switch():3'
     'body': """
       switch(\$${1:variable}) {
-      	case ${2:value1}:
-      		${3:// your code here}
-      	case ${4:value2}:
-      		${5:// your code here}
-      	case ${6:value3}:
-      		${7:// your code here}
-      	default:
-      		${8:// your code here}
+      \tcase ${2:value1}:
+      \t\t${3:// your code here}
+      \tcase ${4:value2}:
+      \t\t${5:// your code here}
+      \tcase ${6:value3}:
+      \t\t${7:// your code here}
+      \tdefault:
+      \t\t${8:// your code here}
       }$9
     """
   'switch():4':
     'prefix': 'switch():4'
     'body': """
       switch(\$${1:variable}) {
-      	case ${2:value1}:
-      		${3:// your code here}
-      	case ${4:value2}:
-      		${5:// your code here}
-      	case ${6:value3}:
-      		${7:// your code here}
-      	case ${8:value4}:
-      		${9:// your code here}
-      	default:
-      		${10:// your code here}
+      \tcase ${2:value1}:
+      \t\t${3:// your code here}
+      \tcase ${4:value2}:
+      \t\t${5:// your code here}
+      \tcase ${6:value3}:
+      \t\t${7:// your code here}
+      \tcase ${8:value4}:
+      \t\t${9:// your code here}
+      \tdefault:
+      \t\t${10:// your code here}
       }$11
     """
   'switch():5':
     'prefix': 'switch():5'
     'body': """
       switch(\$${1:variable}) {
-      	case ${2:value1}:
-      		${3:// your code here}
-      	case ${4:value2}:
-      		${5:// your code here}
-      	case ${6:value3}:
-      		${7:// your code here}
-      	case ${8:value4}:
-      		${9:// your code here}
-      	case ${10:value5}:
-      		${11:// your code here}
-      	default:
-      		${12:// your code here}
+      \tcase ${2:value1}:
+      \t\t${3:// your code here}
+      \tcase ${4:value2}:
+      \t\t${5:// your code here}
+      \tcase ${6:value3}:
+      \t\t${7:// your code here}
+      \tcase ${8:value4}:
+      \t\t${9:// your code here}
+      \tcase ${10:value5}:
+      \t\t${11:// your code here}
+      \tdefault:
+      \t\t${12:// your code here}
       }$13
     """
   'un.onGUIEnd()':
     'prefix': 'un.onGUIEnd()'
     'body': """
       function un.onGUIEnd(${1}) {
-      	${2:// your code here}
+      \t${2:// your code here}
       }$3
     """
   'un.onGUIInit()':
     'prefix': 'un.onGUIInit()'
     'body': """
       function un.onGUIInit(${1}) {
-      	${2:// your code here}
+      \t${2:// your code here}
       }$3
     """
   'un.onInit()':
     'prefix': 'un.onInit()'
     'body': """
       function un.onInit(${1}) {
-      	${2:// your code here}
+      \t${2:// your code here}
       }$3
     """
   'un.onRebootFailed()':
     'prefix': 'un.onRebootFailed()'
     'body': """
       function un.onRebootFailed(${1}) {
-      	${2:// your code here}
+      \t${2:// your code here}
       }$3
     """
   'un.onSelChange()':
     'prefix': 'un.onSelChange()'
     'body': """
       function un.onSelChange(${1}) {
-      	${2:// your code here}
+      \t${2:// your code here}
       }$3
     """
   'un.onUninstFailed()':
     'prefix': 'un.onUninstFailed()'
     'body': """
       function un.onUninstFailed(${1}) {
-      	${2:// your code here}
+      \t${2:// your code here}
       }$3
     """
   'un.onUninstSuccess()':
     'prefix': 'un.onUninstSuccess()'
     'body': """
       function un.onUninstSuccess(${1}) {
-      	${2:// your code here}
+      \t${2:// your code here}
       }$3
     """
   'un.onUserAbort¡()':
     'prefix': 'un.onUserAbort¡()'
     'body': """
       function un.onUserAbort(${1}) {
-      	${2:// your code here}
+      \t${2:// your code here}
       }$3
     """
   'uninstall page Components()':
     'prefix': 'uninstall page Components()'
     'body': """
       uninstall page Components(${1:function}) {
-      	${2:// your code here}
+      \t${2:// your code here}
       }$3
     """
   'uninstall page Directory()':
     'prefix': 'uninstall page Directory()'
     'body': """
       uninstall page Directory(${1:function}) {
-      	${2:// your code here}
+      \t${2:// your code here}
       }$3
     """
   'uninstall page InstFiles()':
     'prefix': 'uninstall page InstFiles()'
     'body': """
       uninstall page InstFiles(${1:function}) {
-      	${2:// your code here}
+      \t${2:// your code here}
       }$3
     """
   'uninstall page License()':
     'prefix': 'uninstall page License()'
     'body': """
       uninstall page License(${1:function}) {
-      	${2:// your code here}
+      \t${2:// your code here}
       }$3
     """
   'uninstall page uninstConfirm()':
     'prefix': 'uninstall page uninstConfirm()'
     'body': """
       uninstall page uninstConfirm(${1:function}) {
-      	${2:// your code here}
+      \t${2:// your code here}
       }$3
     """
   'UninstallButtonText()':
@@ -1042,7 +1042,7 @@
     'prefix': 'while()'
     'body': """
       while(${1:condition}) {
-      	${2:// your code here}
+      \t${2:// your code here}
       }$3
     """
   'WindowIcon()':
