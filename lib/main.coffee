@@ -73,7 +73,7 @@ module.exports =
       hasError = false
 
       nslCmd.stdout.on 'data', (data) ->
-        consolePanel.log(data.toString(), lineEnding="\n")
+        consolePanel.log(data.toString())
 
       nslCmd.stderr.on 'data', (data) ->
         hasError = true
