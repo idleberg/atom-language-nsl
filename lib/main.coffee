@@ -1,7 +1,7 @@
 meta = require '../package.json'
 
 # Dependencies
-{exec, spawn} = require 'child_process'
+{spawn} = require 'child_process'
 os = require 'os'
 
 module.exports =
