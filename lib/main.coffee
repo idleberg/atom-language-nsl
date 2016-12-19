@@ -18,6 +18,11 @@ module.exports =
       type: "string"
       default: "/nomake /nopause"
       order: 1
+    showBuildNotifications:
+      title: "Show Build Notifications"
+      type: "boolean"
+      default: true
+      order: 2
   subscriptions: null
 
   activate: (state) ->
@@ -29,13 +34,15 @@ module.exports =
     @subscriptions = new CompositeDisposable
 
     # Register commands
-    @subscriptions.add atom.commands.add 'atom-workspace', 'nsl-assembler:save-&-transpile': => @buildScript()
+    @subscriptions.add atom.commands.add 'atom-workspace', 'nsl-assembler:save-&-transpile': => @buildScript(@consolePanel)
 
   deactivate: ->
     @subscriptions?.dispose()
     @subscriptions = null
 
-  buildScript: ->
+  consumeConsolePanel: (@consolePanel) ->
+
+  buildScript: (consolePanel) ->
     editor = atom.workspace.getActiveTextEditor()
 
     unless editor?
@@ -47,44 +54,36 @@ module.exports =
 
     if script? and scope.startsWith 'source.nsl'
       editor.save() if editor.isModified()
+      
+      nslJar  = atom.config.get('language-nsl.pathToJar')
 
-      @getPath (javaBin) ->
-        nslJar  = atom.config.get('language-nsl.pathToJar')
+      if not nslJar
+        atom.notifications.addError("**#{meta.name}**: no valid `nsL.jar` was specified in your config", dismissable: false)
+        return
 
-        if not nslJar
-          atom.notifications.addError("**#{meta.name}**: no valid `nsL.jar` was specified in your config", dismissable: false)
-          return
+      defaultArguments = ["-jar", "#{nslJar}"]
+      customArguments = atom.config.get('language-nsl.customArguments').trim().split(" ")
+      customArguments.push(script)
+      args = defaultArguments.concat(customArguments)
 
-        defaultArguments = ["java", "-jar", "\"#{nslJar}\""]
-        customArguments = atom.config.get('language-nsl.customArguments').trim().split(" ")
-        customArguments.push("\"#{script}\"")
+      consolePanel.clear()
 
-        nslCmd = defaultArguments.concat(customArguments).join(" ")
+      # Let's go
+      nslCmd = spawn "java", args
+      hasError = false
 
-        exec nslCmd, (error, stdout, stderr) ->
-          if error or stderr
-            detail = unless stderr then error else stderr
-            atom.notifications.addError("Transpile failed", detail: detail, dismissable: true)
-            return
+      nslCmd.stdout.on 'data', (data) ->
+        consolePanel.log(data.toString(), lineEnding="\n")
 
-          atom.notifications.addSuccess("Transpiled successfully", detail: stdout, dismissable: false)
+      nslCmd.stderr.on 'data', (data) ->
+        hasError = true
+        consolePanel.error(data.toString())
+
+      nslCmd.on 'close', ( errorCode ) ->
+        if errorCode is 0 and hasError is false
+          return atom.notifications.addSuccess("Transpiled successfully", dismissable: false) if atom.config.get('language-nsl.showBuildNotifications')
+
+        return atom.notifications.addError("Transpile failed", dismissable: false) if atom.config.get('language-nsl.showBuildNotifications')
     else
       # Something went wrong
       atom.beep()
-
-  getPath: (callback) ->
-    if os.platform() is 'win32'
-      whichCmd  = "where"
-    else
-      whichCmd  = "which"
-
-    # Find Java
-    which = spawn whichCmd, ["java"]
-
-    which.stdout.on 'data', ( data ) ->
-      path = data.toString().trim()
-      return callback(path)
-
-    which.on 'close', ( errorCode ) ->
-      if errorCode > 0
-        atom.notifications.addError("**#{meta.name}**: Java is not in your `PATH` [environmental variable](http://superuser.com/a/284351/195953)", dismissable: true)

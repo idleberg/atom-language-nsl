@@ -23,14 +23,22 @@
     "atom": ">=1.0.0 <2.0.0"
   },
   "package-deps": [
+    "console-panel",
     "language-nsis"
   ],
+  "consumedServices": {
+    "console-panel": {
+      "versions": {
+        "^1.0.0": "consumeConsolePanel"
+      }
+    }
+  },
   "dependencies": {
     "atom-package-deps": "^4.3.1"
   },
   "devDependencies": {
     "coffeelint-stylish": "^0.1.2",
-    "gulp": "^3.9.1",
+    "gulp": "github:gulpjs/gulp#4.0",
     "gulp-coffeelint": "^0.6.0",
     "gulp-debug": "^3.0.0",
     "gulp-jshint": "^2.0.1",
