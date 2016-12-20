@@ -18,11 +18,18 @@ module.exports =
       type: "string"
       default: "/nomake /nopause"
       order: 1
-    showBuildNotifications:
-      title: "Show Build Notifications"
+    alwaysShowOutput:
+      title: "Always Show Output"
+      description: "Displays compiler output in console panel. When deactivated, it will only show on errors"
       type: "boolean"
       default: true
       order: 2
+    showBuildNotifications:
+      title: "Show Build Notifications"
+      description: "Displays color-coded notifications that close automatically after 5 seconds"
+      type: "boolean"
+      default: true
+      order: 3
   subscriptions: null
 
   activate: (state) ->
@@ -73,7 +80,7 @@ module.exports =
       hasError = false
 
       nslCmd.stdout.on 'data', (data) ->
-        consolePanel.log(data.toString())
+        consolePanel.log(data.toString()) if atom.config.get('language-nsl.alwaysShowOutput')
 
       nslCmd.stderr.on 'data', (data) ->
         hasError = true
