@@ -30,6 +30,12 @@ module.exports =
       type: "boolean"
       default: true
       order: 3
+    clearConsole:
+      title: "Clear Console"
+      description: "When `console-panel` isn't available, build logs will be printed using `console.log()`. This setting clears the console prior to building."
+      type: "boolean"
+      default: true
+      order: 4
   subscriptions: null
 
   activate: (state) ->
@@ -73,18 +79,27 @@ module.exports =
       customArguments.push(script)
       args = defaultArguments.concat(customArguments)
 
-      consolePanel.clear()
+      try
+        consolePanel.clear()
+      catch
+        console.clear() if atom.config.get('language-nsl.clearConsole')
 
       # Let's go
       nslCmd = spawn "java", args
       hasError = false
 
       nslCmd.stdout.on 'data', (data) ->
-        consolePanel.log(data.toString()) if atom.config.get('language-nsl.alwaysShowOutput')
+        try
+          consolePanel.log(data.toString()) if atom.config.get('language-nsl.alwaysShowOutput')
+        catch
+          console.log(data.toString())
 
       nslCmd.stderr.on 'data', (data) ->
         hasError = true
-        consolePanel.error(data.toString())
+        try
+          consolePanel.error(data.toString()) if atom.config.get('language-nsl.alwaysShowOutput')
+        catch
+          console.error(data.toString())
 
       nslCmd.on 'close', ( errorCode ) ->
         if errorCode is 0 and hasError is false
