@@ -37,6 +37,10 @@ Clone repository as `language-nsl`:
 $ git clone https://github.com/idleberg/atom-language-nsl language-nsl
 ```
 
+### Package Dependencies
+
+This package automatically installs third-party packages it depends on. You can prevent this by disabling the *Manage Dependencies* option in the package settings.
+
 ## Usage
 
 ### Building
