@@ -36,6 +36,12 @@ module.exports =
       type: "boolean"
       default: true
       order: 4
+    manageDependencies:
+      title: "Manage Dependencies"
+      description: "When enabled, this will automatically install third-party dependencies"
+      type: "boolean"
+      default: true
+      order: 5
   subscriptions: null
 
   activate: (state) ->
@@ -49,9 +55,20 @@ module.exports =
     # Register commands
     @subscriptions.add atom.commands.add 'atom-workspace', 'nsl-assembler:save-&-transpile': => @buildScript(@consolePanel)
 
+    if atom.config.get('language-nsl.manageDependencies')
+      @setupPackageDeps()
+
   deactivate: ->
     @subscriptions?.dispose()
     @subscriptions = null
+
+  setupPackageDeps: () ->
+    require('atom-package-deps').install(meta.name)
+
+    for k, v of meta["package-deps"]
+      if atom.packages.isPackageDisabled(v)
+        console.log "Enabling package '#{v}'" if atom.inDevMode()
+        atom.packages.enablePackage(v)
 
   consumeConsolePanel: (@consolePanel) ->
 
