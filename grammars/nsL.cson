@@ -98,7 +98,7 @@ patterns: [
         match: "\\$\\\\."
         name: "constant.character.escape.nsl"
       }
-      {    ]
+    ]
   }
   {
     begin: "'"
