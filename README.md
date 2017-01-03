@@ -7,7 +7,7 @@
 [![David](https://img.shields.io/david/dev/idleberg/atom-language-nsl.svg?style=flat-square)](https://david-dm.org/idleberg/atom-language-nsl?type=dev)
 [![Gitter](https://img.shields.io/badge/chat-Gitter-ed1965.svg?style=flat-square)](https://gitter.im/NSIS-Dev/Atom)
 
-Atom language support for [nsL Assembler](https://sourceforge.net/projects/nslassembler/), including grammar, snippets and a rudimentary build system
+Atom language support for [nsL Assembler](https://sourceforge.net/projects/nslassembler/), including grammar, snippets and build system
 
 ![Screenshot](https://raw.github.com/idleberg/atom-language-nsl/master/screenshot.png)
 
@@ -45,7 +45,7 @@ This package automatically installs third-party packages it depends on. You can 
 
 ### Building
 
-As of recently, this package contains a rudimentary build system to translate nsL code into NSIS script and transpile it. To do so, select *Nsl Assembler: Save & Transpile”* from the [command-palette](https://atom.io/docs/latest/getting-started-atom-basics#command-palette) or use the keyboard shortcut.
+As of recently, this package contains a build system to translate nsL code into NSIS script and transpile it. To do so, select *Nsl Assembler: Save & Transpile”* from the [command-palette](https://atom.io/docs/latest/getting-started-atom-basics#command-palette) or use the keyboard shortcut.
 
 Make sure to specify the path for `nsL.jar` in the package settings. There you can also customize the flags for the transpiler.
 
