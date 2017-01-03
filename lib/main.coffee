@@ -54,15 +54,16 @@ module.exports =
 
     # Register commands
     @subscriptions.add atom.commands.add 'atom-workspace', 'nsl-assembler:save-&-transpile': => @buildScript(@consolePanel)
+    @subscriptions.add atom.commands.add 'atom-workspace', 'nsl-assembler:satisfy-package-dependencies': => @satisfyDependencies()
 
     if atom.config.get('language-nsl.manageDependencies')
-      @setupPackageDeps()
+      @satisfyDependencies()
 
   deactivate: ->
     @subscriptions?.dispose()
     @subscriptions = null
 
-  setupPackageDeps: () ->
+  satisfyDependencies: () ->
     require('atom-package-deps').install(meta.name)
 
     for k, v of meta["package-deps"]
