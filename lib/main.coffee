@@ -54,7 +54,6 @@ module.exports =
 
     # Register commands
     @subscriptions.add atom.commands.add 'atom-workspace', 'nsl-assembler:save-&-transpile': => @buildScript(@consolePanel)
-    @subscriptions.add atom.commands.add 'atom-workspace', 'nsl-assembler:satisfy-package-dependencies': => @satisfyDependencies()
 
     if atom.config.get('language-nsl.manageDependencies')
       @satisfyDependencies()
