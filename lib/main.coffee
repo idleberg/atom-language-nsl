@@ -88,7 +88,7 @@ module.exports =
       nslJar  = atom.config.get('language-nsl.pathToJar')
 
       if not nslJar
-        notification = atom.notifications.addError(
+        notification = atom.notifications.addWarning(
           "**#{meta.name}**: No valid `nsL.jar` was specified in your settings"
           dismissable: true
           buttons: [
