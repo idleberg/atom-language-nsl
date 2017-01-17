@@ -88,16 +88,19 @@ module.exports =
       nslJar  = atom.config.get('language-nsl.pathToJar')
 
       if not nslJar
-        return atom.notifications.addError(
-          "**#{meta.name}**: No valid `nsL.jar` was specified in your settings",
-          dismissable: true,
+        notification = atom.notifications.addError(
+          "**#{meta.name}**: No valid `nsL.jar` was specified in your settings"
+          dismissable: true
           buttons: [
             {
               text: 'Open Settings'
-              onDidClick: -> atom.workspace.open("atom://config/packages/#{meta.name}")
+              onDidClick: ->
+                atom.workspace.open("atom://config/packages/#{meta.name}")
+                notification.dismiss()
             }
           ]
         )
+        return
 
       defaultArguments = ["-jar", "#{nslJar}"]
       customArguments = atom.config.get('language-nsl.customArguments').trim().split(" ")
