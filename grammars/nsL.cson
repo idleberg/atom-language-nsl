@@ -4,11 +4,11 @@ fileTypes: [
 name: "nsL Assembler"
 patterns: [
   {
-    begin: "^\\s*(#nsis)\\b"
+    begin: "^\\s*(?i)(#nsis)\\b"
     beginCaptures:
       "1":
         name: "keyword.other.nsl"
-    end: "^\\s*(#nsisend)\\b"
+    end: "^\\s*(?i)(#nsisend)\\b"
     endCaptures:
       "1":
         name: "keyword.other.nsl"
