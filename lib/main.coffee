@@ -1,4 +1,4 @@
-meta = require '../package.json'
+meta = require "../package.json"
 
 module.exports =
   config:
@@ -41,17 +41,17 @@ module.exports =
   subscriptions: null
 
   activate: (state) ->
-    require('atom-package-deps').install(meta.name)
+    require("atom-package-deps").install(meta.name)
 
-    {CompositeDisposable} = require 'atom'
+    {CompositeDisposable} = require "atom"
 
-    # Events subscribed to in atom's system can be easily cleaned up with a CompositeDisposable
+    # Events subscribed to in atom"s system can be easily cleaned up with a CompositeDisposable
     @subscriptions = new CompositeDisposable
 
     # Register commands
-    @subscriptions.add atom.commands.add 'atom-workspace', 'nsl-assembler:save-&-transpile': => @buildScript(@consolePanel)
+    @subscriptions.add atom.commands.add "atom-workspace", "nsl-assembler:save-&-transpile": => @buildScript(@consolePanel)
 
-    if atom.config.get('language-nsl.manageDependencies')
+    if atom.config.get("language-nsl.manageDependencies") and atom.inSpecMode is false
       @satisfyDependencies()
 
   deactivate: ->
@@ -59,7 +59,7 @@ module.exports =
     @subscriptions = null
 
   satisfyDependencies: () ->
-    require('atom-package-deps').install(meta.name)
+    require("atom-package-deps").install(meta.name)
 
     for k, v of meta["package-deps"]
       if atom.packages.isPackageDisabled(v)
@@ -69,7 +69,7 @@ module.exports =
   consumeConsolePanel: (@consolePanel) ->
 
   buildScript: (consolePanel) ->
-    {spawn} = require 'child_process'
+    {spawn} = require "child_process"
 
     editor = atom.workspace.getActiveTextEditor()
 
@@ -80,10 +80,10 @@ module.exports =
     script = editor.getPath()
     scope  = editor.getGrammar().scopeName
 
-    if script? and scope.startsWith 'source.nsl'
+    if script? and scope.startsWith "source.nsl"
       editor.save() if editor.isModified()
       
-      nslJar  = atom.config.get('language-nsl.pathToJar')
+      nslJar  = atom.config.get("language-nsl.pathToJar")
 
       if not nslJar
         notification = atom.notifications.addWarning(
@@ -91,7 +91,7 @@ module.exports =
           dismissable: true
           buttons: [
             {
-              text: 'Open Settings'
+              text: "Open Settings"
               onDidClick: ->
                 atom.workspace.open("atom://config/packages/#{meta.name}")
                 notification.dismiss()
@@ -101,37 +101,37 @@ module.exports =
         return
 
       defaultArguments = ["-jar", "#{nslJar}"]
-      customArguments = atom.config.get('language-nsl.customArguments').trim().split(" ")
+      customArguments = atom.config.get("language-nsl.customArguments").trim().split(" ")
       customArguments.push(script)
       args = defaultArguments.concat(customArguments)
 
       try
         consolePanel.clear()
       catch
-        console.clear() if atom.config.get('language-nsl.clearConsole')
+        console.clear() if atom.config.get("language-nsl.clearConsole")
 
       # Let's go
       nslCmd = spawn "java", args
       hasError = false
 
-      nslCmd.stdout.on 'data', (data) ->
+      nslCmd.stdout.on "data", (data) ->
         try
-          consolePanel.log(data.toString()) if atom.config.get('language-nsl.alwaysShowOutput')
+          consolePanel.log(data.toString()) if atom.config.get("language-nsl.alwaysShowOutput")
         catch
           console.log(data.toString())
 
-      nslCmd.stderr.on 'data', (data) ->
+      nslCmd.stderr.on "data", (data) ->
         hasError = true
         try
           consolePanel.error(data.toString())
         catch
           console.error(data.toString())
 
-      nslCmd.on 'close', ( errorCode ) ->
+      nslCmd.on "close", ( errorCode ) ->
         if errorCode is 0 and hasError is false
-          return atom.notifications.addSuccess("Transpiled successfully", dismissable: false) if atom.config.get('language-nsl.showBuildNotifications')
+          return atom.notifications.addSuccess("Transpiled successfully", dismissable: false) if atom.config.get("language-nsl.showBuildNotifications")
 
-        return atom.notifications.addError("Transpile failed", dismissable: false) if atom.config.get('language-nsl.showBuildNotifications')
+        return atom.notifications.addError("Transpile failed", dismissable: false) if atom.config.get("language-nsl.showBuildNotifications")
     else
       # Something went wrong
       atom.beep()
