@@ -1,9 +1,5 @@
 meta = require '../package.json'
 
-# Dependencies
-{spawn} = require 'child_process'
-os = require 'os'
-
 module.exports =
   config:
     pathToJar:
@@ -73,6 +69,8 @@ module.exports =
   consumeConsolePanel: (@consolePanel) ->
 
   buildScript: (consolePanel) ->
+    {spawn} = require 'child_process'
+
     editor = atom.workspace.getActiveTextEditor()
 
     unless editor?
