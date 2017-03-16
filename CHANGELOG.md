@@ -1,4 +1,9 @@
-# v2.13.0 [#](https://github.com/idleberg/atom-language-nsl/releases/tag/v3.02.1)
+# v2.13.1 [#](https://github.com/idleberg/atom-language-nsl/releases/tag/v2.13.1)
+
+- remove trailing semicolons
+- fix type in changelog
+
+# v2.13.0 [#](https://github.com/idleberg/atom-language-nsl/releases/tag/v2.13.0)
 
 - add `mutePathWarning` option
 - include `CHANGELOG.md`
