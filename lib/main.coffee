@@ -8,36 +8,42 @@ module.exports =
       type: "string"
       default: ""
       order: 0
+    mutePathWarning:
+      title: "Mute Path Warning"
+      description: "When enabled, warnings about missing path to `nsL.jar` will be muted"
+      type: "boolean"
+      default: false
+      order: 1
     customArguments:
       title: "Custom Arguments"
       description: "Specify your preferred arguments for nsL Assembler"
       type: "string"
       default: "/nomake /nopause"
-      order: 1
+      order: 2
     alwaysShowOutput:
       title: "Always Show Output"
       description: "Displays compiler output in console panel. When deactivated, it will only show on errors"
       type: "boolean"
       default: true
-      order: 2
+      order: 3
     showBuildNotifications:
       title: "Show Build Notifications"
       description: "Displays color-coded notifications that close automatically after 5 seconds"
       type: "boolean"
       default: true
-      order: 3
+      order: 4
     clearConsole:
       title: "Clear Console"
       description: "When `console-panel` isn't available, build logs will be printed using `console.log()`. This setting clears the console prior to building."
       type: "boolean"
       default: true
-      order: 4
+      order: 5
     manageDependencies:
       title: "Manage Dependencies"
       description: "When enabled, third-party dependencies will be installed automatically"
       type: "boolean"
       default: true
-      order: 5
+      order: 6
   subscriptions: null
 
   activate: (state) ->
@@ -51,8 +57,8 @@ module.exports =
     # Register commands
     @subscriptions.add atom.commands.add "atom-workspace", "nsl-assembler:save-&-transpile": => @buildScript(@consolePanel)
 
-    if atom.config.get("language-nsl.manageDependencies") and atom.inSpecMode is false
-      @satisfyDependencies()
+    @satisfyDependencies() if atom.config.get("#{meta.name}.manageDependencies") and atom.inSpecMode is false
+    @isPathSetup() if atom.config.get("#{meta.name}.mutePathWarning") is false
 
   deactivate: ->
     @subscriptions?.dispose()
@@ -65,6 +71,32 @@ module.exports =
       if atom.packages.isPackageDisabled(v)
         console.log "Enabling package '#{v}'" if atom.inDevMode()
         atom.packages.enablePackage(v)
+
+  isPathSetup: () ->
+    { access, constants} = require "fs"
+
+    pathToJar = atom.config.get("#{meta.name}.pathToJar")
+
+    access pathToJar, constants.R_OK | constants.W_OK, (error) ->
+      if error
+        notification = atom.notifications.addWarning(
+          "**#{meta.name}**: No valid \`nsL.jar\` was specified in your settings",
+          dismissable: true,
+          buttons: [
+            {
+              text: 'Open Settings'
+              onDidClick: ->
+                atom.workspace.open("atom://config/packages/#{meta.name}");
+                notification.dismiss();
+            },
+            {
+              text: 'Ignore',
+              onDidClick: ->
+                atom.config.set("#{meta.name}.mutePathWarning", true);
+                notification.dismiss();
+            }
+          ]
+        )
 
   consumeConsolePanel: (@consolePanel) ->
 
@@ -82,33 +114,17 @@ module.exports =
 
     if script? and scope.startsWith "source.nsl"
       editor.save() if editor.isModified()
-      
-      nslJar  = atom.config.get("language-nsl.pathToJar")
 
-      if not nslJar
-        notification = atom.notifications.addWarning(
-          "**#{meta.name}**: No valid `nsL.jar` was specified in your settings"
-          dismissable: true
-          buttons: [
-            {
-              text: "Open Settings"
-              onDidClick: ->
-                atom.workspace.open("atom://config/packages/#{meta.name}")
-                notification.dismiss()
-            }
-          ]
-        )
-        return
-
+      nslJar  = atom.config.get("#{meta.name}.pathToJar")
       defaultArguments = ["-jar", "#{nslJar}"]
-      customArguments = atom.config.get("language-nsl.customArguments").trim().split(" ")
+      customArguments = atom.config.get("#{meta.name}.customArguments").trim().split(" ")
       customArguments.push(script)
       args = defaultArguments.concat(customArguments)
 
       try
         consolePanel.clear()
       catch
-        console.clear() if atom.config.get("language-nsl.clearConsole")
+        console.clear() if atom.config.get("#{meta.name}.clearConsole")
 
       # Let's go
       nslCmd = spawn "java", args
@@ -116,7 +132,7 @@ module.exports =
 
       nslCmd.stdout.on "data", (data) ->
         try
-          consolePanel.log(data.toString()) if atom.config.get("language-nsl.alwaysShowOutput")
+          consolePanel.log(data.toString()) if atom.config.get("#{meta.name}.alwaysShowOutput")
         catch
           console.log(data.toString())
 
@@ -129,9 +145,9 @@ module.exports =
 
       nslCmd.on "close", ( errorCode ) ->
         if errorCode is 0 and hasError is false
-          return atom.notifications.addSuccess("Transpiled successfully", dismissable: false) if atom.config.get("language-nsl.showBuildNotifications")
+          return atom.notifications.addSuccess("Transpiled successfully", dismissable: false) if atom.config.get("#{meta.name}.showBuildNotifications")
 
-        return atom.notifications.addError("Transpile failed", dismissable: false) if atom.config.get("language-nsl.showBuildNotifications")
+        return atom.notifications.addError("Transpile failed", dismissable: false) if atom.config.get("#{meta.name}.showBuildNotifications")
     else
       # Something went wrong
       atom.beep()
