@@ -1,7 +1,7 @@
 # v2.13.1 [#](https://github.com/idleberg/atom-language-nsl/releases/tag/v2.13.1)
 
 - remove trailing semicolons
-- fix type in changelog
+- fix tyo  in changelog
 
 # v2.13.0 [#](https://github.com/idleberg/atom-language-nsl/releases/tag/v2.13.0)
 
