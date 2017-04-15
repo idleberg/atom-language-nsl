@@ -1,303 +1,388 @@
 '.source.nsl':
   '#define':
-    'prefix': 'define'
-    'body': '#define ${1:gflag}$2'
-  '#if..#else':
-    'prefix': 'if..#else'
-    'body': """
+    body: '#define ${1:gflag}$2'
+    leftLabelHTML: "<span class='syntax--keyword control'>!</span>"
+    prefix: 'define'
+  '#if…#else':
+    body: """
       #if
       \t${1:// your code here}
       #else
       \t${2:// your code here}
       #ifend$3
     """
+    leftLabelHTML: "<span class='syntax--keyword control'>!</span>"
+    prefix: 'if…else'
   '#if':
-    'prefix': 'if'
-    'body': """
+    body: """
       #if
       \t${1:// your code here}
       #ifend$2
     """
+    leftLabelHTML: "<span class='syntax--keyword control'>!</span>"
+    prefix: 'if'
   '#macro':
-    'prefix': 'macro'
-    'body': """
+    body: """
       #macro
       \t${1:// your code here}
       #macroend$2
     """
+    leftLabelHTML: "<span class='syntax--keyword control'>!</span>"
+    prefix: 'macro'
   '#nsis':
-    'prefix': 'nsis'
-    'body': """
+    body: """
       #nsis
       \t${1:# your code here}
       #nsisend$2
     """
+    leftLabelHTML: "<span class='syntax--support function'>#</span>"
+    prefix: 'nsis'
   'Abort()':
-    'prefix': 'Abort()'
-    'body': 'Abort(${1});$2'
+    body: 'Abort(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'Abort()'
   'AddBrandingImage()':
-    'prefix': 'AddBrandingImage()'
-    'body': 'AddBrandingImage(${1});$2'
+    body: 'AddBrandingImage(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'AddBrandingImage()'
   'AddIncludeDir()':
-    'prefix': 'AddIncludeDir()'
-    'body': 'AddIncludeDir(${1});$2'
+    body: 'AddIncludeDir(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'AddIncludeDir()'
   'AddPluginDir()':
-    'prefix': 'AddPluginDir()'
-    'body': 'AddPluginDir(${1});$2'
+    body: 'AddPluginDir(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'AddPluginDir()'
   'AddSize()':
-    'prefix': 'AddSize()'
-    'body': 'AddSize(${1});$2'
+    body: 'AddSize(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'AddSize()'
   'AllowRootDirInstall()':
-    'prefix': 'AllowRootDirInstall()'
-    'body': 'AllowRootDirInstall(${1});$2'
+    body: 'AllowRootDirInstall(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'AllowRootDirInstall()'
   'AllowRootDirInstall(false)':
-    'prefix': 'AllowRootDirInstall(false)'
-    'body': 'AllowRootDirInstall(false);$2'
+    body: 'AllowRootDirInstall(false);$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'AllowRootDirInstall(false)'
   'AllowRootDirInstall(true)':
-    'prefix': 'AllowRootDirInstall(true)'
-    'body': 'AllowRootDirInstall(true);$2'
+    body: 'AllowRootDirInstall(true);$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'AllowRootDirInstall(true)'
   'AllowSkipFiles()':
-    'prefix': 'AllowSkipFiles()'
-    'body': 'AllowSkipFiles(${1});$2'
+    body: 'AllowSkipFiles(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'AllowSkipFiles()'
   'AllowSkipFiles(off)':
-    'prefix': 'AllowSkipFiles(off)'
-    'body': 'AllowSkipFiles(off);$2'
+    body: 'AllowSkipFiles(off);$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'AllowSkipFiles(off)'
   'AllowSkipFiles(on)':
-    'prefix': 'AllowSkipFiles(on)'
-    'body': 'AllowSkipFiles(on);$2'
+    body: 'AllowSkipFiles(on);$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'AllowSkipFiles(on)'
   'AutoCloseWindow()':
-    'prefix': 'AutoCloseWindow()'
-    'body': 'AutoCloseWindow(${1});$2'
+    body: 'AutoCloseWindow(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'AutoCloseWindow()'
   'AutoCloseWindow(false)':
-    'prefix': 'AutoCloseWindow(false)'
-    'body': 'AutoCloseWindow("false");$2'
+    body: 'AutoCloseWindow("false");$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'AutoCloseWindow(false)'
   'AutoCloseWindow(true)':
-    'prefix': 'AutoCloseWindow(true)'
-    'body': 'AutoCloseWindow("true");$2'
+    body: 'AutoCloseWindow("true");$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'AutoCloseWindow(true)'
   'BGFont()':
-    'prefix': 'BGFont()'
-    'body': 'BGFont(${1});$2'
+    body: 'BGFont(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'BGFont()'
   'BGGradient()':
-    'prefix': 'BGGradient()'
-    'body': 'BGGradient(${1});$2'
+    body: 'BGGradient(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'BGGradient()'
   'BrandingText()':
-    'prefix': 'BrandingText()'
-    'body': 'BrandingText(${1});$2'
+    body: 'BrandingText(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'BrandingText()'
   'BringToFront()':
-    'prefix': 'BringToFront()'
-    'body': 'BringToFront(${1});$2'
+    body: 'BringToFront(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'BringToFront()'
   'Call()':
-    'prefix': 'Call()'
-    'body': 'Call(${1});$2'
+    body: 'Call(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'Call()'
   'Caption()':
-    'prefix': 'Caption()'
-    'body': 'Caption("${1:caption}");$2'
+    body: 'Caption("${1:caption}");$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'Caption()'
   'case':
-    'prefix': 'case'
-    'body': """
+    body: """
       case ${1:value}:
       \t${2:// your code here}
     """
+    leftLabelHTML: "<span class='syntax--support function'>#</span>"
+    prefix: 'case'
   'ChangeUI()':
-    'prefix': 'ChangeUI()'
-    'body': 'ChangeUI(${1});$2'
+    body: 'ChangeUI(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'ChangeUI()'
   'CheckBitmap()':
-    'prefix': 'CheckBitmap()'
-    'body': 'CheckBitmap(${1});$2'
+    body: 'CheckBitmap(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'CheckBitmap()'
   'ClearErrors()':
-    'prefix': 'ClearErrors()'
-    'body': 'ClearErrors(${1});$2'
+    body: 'ClearErrors(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'ClearErrors()'
   'CompletedText()':
-    'prefix': 'CompletedText()'
-    'body': 'CompletedText(${1});$2'
+    body: 'CompletedText(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'CompletedText()'
   'ComponentText()':
-    'prefix': 'ComponentText()'
-    'body': 'ComponentText(${1});$2'
+    body: 'ComponentText(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'ComponentText()'
   'CopyFiles()':
-    'prefix': 'CopyFiles()'
-    'body': 'CopyFiles(${1});$2'
+    body: 'CopyFiles(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'CopyFiles()'
   'CRCCheck()':
-    'prefix': 'CRCCheck()'
-    'body': 'CRCCheck(${1});$2'
+    body: 'CRCCheck(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'CRCCheck()'
   'CreateDirectory()':
-    'prefix': 'CreateDirectory()'
-    'body': 'CreateDirectory(${1});$2'
+    body: 'CreateDirectory(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'CreateDirectory()'
   'CreateFont()':
-    'prefix': 'CreateFont()'
-    'body': 'CreateFont(${1});$2'
+    body: 'CreateFont(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'CreateFont()'
   'CreateShortCut()':
-    'prefix': 'CreateShortCut()'
-    'body': 'CreateShortCut(${1});$2'
+    body: 'CreateShortCut(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'CreateShortCut()'
   'Delete()':
-    'prefix': 'Delete()'
-    'body': 'Delete(${1});$2'
+    body: 'Delete(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'Delete()'
   'DeleteINISec()':
-    'prefix': 'DeleteINISec()'
-    'body': 'DeleteINISec(${1});$2'
+    body: 'DeleteINISec(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'DeleteINISec()'
   'DeleteINIStr()':
-    'prefix': 'DeleteINIStr()'
-    'body': 'DeleteINIStr(${1});$2'
+    body: 'DeleteINIStr(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'DeleteINIStr()'
   'DeleteRegKey()':
-    'prefix': 'DeleteRegKey()'
-    'body': 'DeleteRegKey(${1});$2'
+    body: 'DeleteRegKey(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'DeleteRegKey()'
   'DeleteRegValue()':
-    'prefix': 'DeleteRegValue()'
-    'body': 'DeleteRegValue(${1});$2'
+    body: 'DeleteRegValue(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'DeleteRegValue()'
   'DetailPrint()':
-    'prefix': 'DetailPrint()'
-    'body': 'DetailPrint(${1});$2'
+    body: 'DetailPrint(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'DetailPrint()'
   'DetailsButtonText()':
-    'prefix': 'DetailsButtonText()'
-    'body': 'DetailsButtonText(${1});$2'
+    body: 'DetailsButtonText(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'DetailsButtonText()'
   'DirText()':
-    'prefix': 'DirText()'
-    'body': 'DirText(${1});$2'
+    body: 'DirText(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'DirText()'
   'DirVar()':
-    'prefix': 'DirVar()'
-    'body': 'DirVar(${1});$2'
+    body: 'DirVar(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'DirVar()'
   'DirVerify()':
-    'prefix': 'DirVerify()'
-    'body': 'DirVerify(${1});$2'
+    body: 'DirVerify(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'DirVerify()'
   'EnableWindow()':
-    'prefix': 'EnableWindow()'
-    'body': 'EnableWindow(${1});$2'
+    body: 'EnableWindow(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'EnableWindow()'
   'EnumRegKey()':
-    'prefix': 'EnumRegKey()'
-    'body': 'EnumRegKey(${1});$2'
+    body: 'EnumRegKey(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'EnumRegKey()'
   'EnumRegValue()':
-    'prefix': 'EnumRegValue()'
-    'body': 'EnumRegValue(${1});$2'
+    body: 'EnumRegValue(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'EnumRegValue()'
   'Exch()':
-    'prefix': 'Exch()'
-    'body': 'Exch(${1});$2'
+    body: 'Exch(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'Exch()'
   'Exec()':
-    'prefix': 'Exec()'
-    'body': 'Exec(${1});$2'
+    body: 'Exec(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'Exec()'
   'ExecShell()':
-    'prefix': 'ExecShell()'
-    'body': 'ExecShell(${1});$2'
+    body: 'ExecShell(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'ExecShell()'
   'ExecWait()':
-    'prefix': 'ExecWait()'
-    'body': 'ExecWait(${1});$2'
+    body: 'ExecWait(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'ExecWait()'
   'ExpandEnvStrings()':
-    'prefix': 'ExpandEnvStrings()'
-    'body': 'ExpandEnvStrings(${1});$2'
+    body: 'ExpandEnvStrings(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'ExpandEnvStrings()'
   'File()':
-    'prefix': 'File()'
-    'body': 'File(${1});$2'
+    body: 'File(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'File()'
   'FileBufSize()':
-    'prefix': 'FileBufSize()'
-    'body': 'FileBufSize(${1});$2'
+    body: 'FileBufSize(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'FileBufSize()'
   'FileClose()':
-    'prefix': 'FileClose()'
-    'body': 'FileClose(${1});$2'
+    body: 'FileClose(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'FileClose()'
   'FileErrorText()':
-    'prefix': 'FileErrorText()'
-    'body': 'FileErrorText(${1});$2'
+    body: 'FileErrorText(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'FileErrorText()'
   'FileOpen()':
-    'prefix': 'FileOpen()'
-    'body': 'FileOpen(${1});$2'
+    body: 'FileOpen(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'FileOpen()'
   'FileRead()':
-    'prefix': 'FileRead()'
-    'body': 'FileRead(${1});$2'
+    body: 'FileRead(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'FileRead()'
   'FileReadByte()':
-    'prefix': 'FileReadByte()'
-    'body': 'FileReadByte(${1});$2'
+    body: 'FileReadByte(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'FileReadByte()'
   'FileRecursive()':
-    'prefix': 'FileRecursive()'
-    'body': 'FileRecursive(${1});$2'
+    body: 'FileRecursive(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'FileRecursive()'
   'FileSeek()':
-    'prefix': 'FileSeek()'
-    'body': 'FileSeek(${1});$2'
+    body: 'FileSeek(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'FileSeek()'
   'FileWrite()':
-    'prefix': 'FileWrite()'
-    'body': 'FileWrite(${1});$2'
+    body: 'FileWrite(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'FileWrite()'
   'FileWriteByte()':
-    'prefix': 'FileWriteByte()'
-    'body': 'FileWriteByte(${1});$2'
+    body: 'FileWriteByte(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'FileWriteByte()'
   'FindClose()':
-    'prefix': 'FindClose()'
-    'body': 'FindClose(${1});$2'
+    body: 'FindClose(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'FindClose()'
   'FindFirst()':
-    'prefix': 'FindFirst()'
-    'body': 'FindFirst(${1});$2'
+    body: 'FindFirst(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'FindFirst()'
   'FindNext()':
-    'prefix': 'FindNext()'
-    'body': 'FindNext(${1});$2'
+    body: 'FindNext(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'FindNext()'
   'FindWindow()':
-    'prefix': 'FindWindow()'
-    'body': 'FindWindow(${1});$2'
+    body: 'FindWindow(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'FindWindow()'
   'FlushINI()':
-    'prefix': 'FlushINI()'
-    'body': 'FlushINI(${1});$2'
+    body: 'FlushINI(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'FlushINI()'
   'for()':
-    'prefix': 'for()'
-    'body': """
+    prefix: 'for()'
+    body: """
       for(${1:condition}) {
       \t${2:// your code here}
       }
     """
   'function()':
-    'prefix': 'function()'
-    'body': """
+    body: """
       function ${1:function_name}(${2}) {
       \t${3:// your code here}
       }
     """
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'function()'
   'GetCurInstType()':
-    'prefix': 'GetCurInstType()'
-    'body': 'GetCurInstType(${1});$2'
+    body: 'GetCurInstType(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'GetCurInstType()'
   'GetCurrentAddress()':
-    'prefix': 'GetCurrentAddress()'
-    'body': 'GetCurrentAddress(${1});$2'
+    body: 'GetCurrentAddress(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'GetCurrentAddress()'
   'GetDlgItem()':
-    'prefix': 'GetDlgItem()'
-    'body': 'GetDlgItem(${1});$2'
+    body: 'GetDlgItem(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'GetDlgItem()'
   'GetDLLVersion()':
-    'prefix': 'GetDLLVersion()'
-    'body': 'GetDLLVersion(${1});$2'
+    body: 'GetDLLVersion(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'GetDLLVersion()'
   'GetDLLVersionLocal()':
-    'prefix': 'GetDLLVersionLocal()'
-    'body': 'GetDLLVersionLocal(${1});$2'
+    body: 'GetDLLVersionLocal(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'GetDLLVersionLocal()'
   'GetErrorLevel()':
-    'prefix': 'GetErrorLevel()'
-    'body': 'GetErrorLevel(${1});$2'
+    body: 'GetErrorLevel(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'GetErrorLevel()'
   'GetFileTime()':
-    'prefix': 'GetFileTime()'
-    'body': 'GetFileTime(${1});$2'
+    body: 'GetFileTime(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'GetFileTime()'
   'GetFileTimeLocal()':
-    'prefix': 'GetFileTimeLocal()'
-    'body': 'GetFileTimeLocal(${1});$2'
+    body: 'GetFileTimeLocal(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'GetFileTimeLocal()'
   'GetFunctionAddress()':
-    'prefix': 'GetFunctionAddress()'
-    'body': 'GetFunctionAddress(${1});$2'
+    body: 'GetFunctionAddress(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'GetFunctionAddress()'
   'GetInstDirError()':
-    'prefix': 'GetInstDirError()'
-    'body': 'GetInstDirError(${1});$2'
+    body: 'GetInstDirError(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'GetInstDirError()'
   'GetLabelAddress()':
-    'prefix': 'GetLabelAddress()'
-    'body': 'GetLabelAddress(${1});$2'
+    body: 'GetLabelAddress(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'GetLabelAddress()'
   'GetTempFileName()':
-    'prefix': 'GetTempFileName()'
-    'body': 'GetTempFileName(${1});$2'
+    body: 'GetTempFileName(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'GetTempFileName()'
   'HideWindow()':
-    'prefix': 'HideWindow()'
-    'body': 'HideWindow(${1});$2'
+    body: 'HideWindow(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'HideWindow()'
   'Icon()':
-    'prefix': 'Icon()'
-    'body': 'Icon(${1});$2'
-  'if()..else':
-    'prefix': 'if()..else'
-    'body': """
+    body: 'Icon(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'Icon()'
+  'if()…else':
+    body: """
       if (${1:condition}) {
       \t${2:// your code here}
       } else {
       \t${3:// your code here}
       }
     """
-  'if()..else if()..else':
-    'prefix': 'if()..else if()..else'
-    'body': """
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'if()…else'
+  'if()…else if()…else':
+    body: """
       if (${1:condition}) {
       \t${2:// your code here}
       } else if (${3:condition}) {
@@ -306,556 +391,712 @@
       \t${5:// your code here}
       }
     """
-  'if()..else if()':
-    'prefix': 'if()..else if()'
-    'body': """
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'if()…else if()…else'
+  'if()…else if()':
+    body: """
       if (${1:condition}) {
       \t${2:// your code here}
       } else if (${3:condition}) {
       \t${4:// your code here}
       }
     """
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'if()…else if()'
   'if()':
-    'prefix': 'if()'
-    'body': """
+    body: """
       if (${1:condition}) {
       \t${2:// your code here}
       }
     """
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'if()'
   'IfAbort()':
-    'prefix': 'IfAbort()'
-    'body': 'IfAbort(${1});$2'
+    body: 'IfAbort(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'IfAbort()'
   'IfErrors()':
-    'prefix': 'IfErrors()'
-    'body': 'IfErrors(${1});$2'
+    body: 'IfErrors(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'IfErrors()'
   'IfFileExists()':
-    'prefix': 'IfFileExists()'
-    'body': 'IfFileExists(${1});$2'
+    body: 'IfFileExists(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'IfFileExists()'
   'IfRebootFlag()':
-    'prefix': 'IfRebootFlag()'
-    'body': 'IfRebootFlag(${1});$2'
+    body: 'IfRebootFlag(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'IfRebootFlag()'
   'IfSilent()':
-    'prefix': 'IfSilent()'
-    'body': 'IfSilent(${1});$2'
+    body: 'IfSilent(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'IfSilent()'
   'Include()':
-    'prefix': 'Include()'
-    'body': 'Include(${1});$2'
+    body: 'Include(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'Include()'
   'InitPluginsDir()':
-    'prefix': 'InitPluginsDir()'
-    'body': 'InitPluginsDir(${1});$2'
+    body: 'InitPluginsDir(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'InitPluginsDir()'
   'InstallButtonText()':
-    'prefix': 'InstallButtonText()'
-    'body': 'InstallButtonText(${1});$2'
+    body: 'InstallButtonText(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'InstallButtonText()'
   'InstallColors()':
-    'prefix': 'InstallColors()'
-    'body': 'InstallColors(${1});$2'
+    body: 'InstallColors(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'InstallColors()'
   'InstallDir()':
-    'prefix': 'InstallDir()'
-    'body': 'InstallDir(${1});$2'
+    body: 'InstallDir(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'InstallDir()'
   'InstallDirRegKey()':
-    'prefix': 'InstallDirRegKey()'
-    'body': 'InstallDirRegKey(${1});$2'
+    body: 'InstallDirRegKey(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'InstallDirRegKey()'
   'InstProgressFlags()':
-    'prefix': 'InstProgressFlags()'
-    'body': 'InstProgressFlags(${1});$2'
+    body: 'InstProgressFlags(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'InstProgressFlags()'
   'InstType()':
-    'prefix': 'InstType()'
-    'body': 'InstType(${1});$2'
+    body: 'InstType(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'InstType()'
   'InstTypeGetText()':
-    'prefix': 'InstTypeGetText()'
-    'body': 'InstTypeGetText(${1});$2'
+    body: 'InstTypeGetText(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'InstTypeGetText()'
   'InstTypeSetText()':
-    'prefix': 'InstTypeSetText()'
-    'body': 'InstTypeSetText(${1});$2'
+    body: 'InstTypeSetText(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'InstTypeSetText()'
   'IntFmt()':
-    'prefix': 'IntFmt()'
-    'body': 'IntFmt(${1});$2'
+    body: 'IntFmt(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'IntFmt()'
   'IsWindow()':
-    'prefix': 'IsWindow()'
-    'body': 'IsWindow(${1});$2'
+    body: 'IsWindow(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'IsWindow()'
   'LangString()':
-    'prefix': 'LangString()'
-    'body': 'LangString(${1});$2'
+    body: 'LangString(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'LangString()'
   'LicenseBkColor()':
-    'prefix': 'LicenseBkColor()'
-    'body': 'LicenseBkColor(${1});$2'
+    body: 'LicenseBkColor(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'LicenseBkColor()'
   'LicenseData()':
-    'prefix': 'LicenseData()'
-    'body': 'LicenseData(${1});$2'
+    body: 'LicenseData(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'LicenseData()'
   'LicenseForceSelection()':
-    'prefix': 'LicenseForceSelection()'
-    'body': 'LicenseForceSelection(${1});$2'
+    body: 'LicenseForceSelection(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'LicenseForceSelection()'
   'LicenseLangString()':
-    'prefix': 'LicenseLangString()'
-    'body': 'LicenseLangString(${1});$2'
+    body: 'LicenseLangString(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'LicenseLangString()'
   'LicenseText()':
-    'prefix': 'LicenseText()'
-    'body': 'LicenseText(${1});$2'
+    body: 'LicenseText(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'LicenseText()'
   'LoadLanguageFile()':
-    'prefix': 'LoadLanguageFile()'
-    'body': 'LoadLanguageFile(${1});$2'
+    body: 'LoadLanguageFile(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'LoadLanguageFile()'
   'LockWindow()':
-    'prefix': 'LockWindow()'
-    'body': 'LockWindow(${1});$2'
+    body: 'LockWindow(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'LockWindow()'
   'LogSet()':
-    'prefix': 'LogSet()'
-    'body': 'LogSet(${1});$2'
+    body: 'LogSet(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'LogSet()'
   'LogText()':
-    'prefix': 'LogText()'
-    'body': 'LogText(${1});$2'
+    body: 'LogText(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'LogText()'
   'MessageBox()':
-    'prefix': 'MessageBox()'
-    'body': 'MessageBox(${1});$2'
+    body: 'MessageBox(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'MessageBox()'
   'MiscButtonText()':
-    'prefix': 'MiscButtonText()'
-    'body': 'MiscButtonText(${1});$2'
+    body: 'MiscButtonText(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'MiscButtonText()'
   'Name()':
-    'prefix': 'Name()'
-    'body': 'Name("${1:name}");$2'
+    body: 'Name("${1:name}");$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'Name()'
   'onGUIEnd()':
-    'prefix': 'onGUIEnd()'
-    'body': """
+    body: """
       function .onGUIEnd(${1}) {
       \t${2:// your code here}
       }
     """
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'onGUIEnd()'
   'onGUIInit()':
-    'prefix': 'onGUIInit()'
-    'body': """
+    body: """
       function .onGUIInit(${1}) {
       \t${2:// your code here}
       }
     """
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'onGUIInit()'
   'onInit()':
-    'prefix': 'onInit()'
-    'body': """
+    body: """
       function .onInit(${1}) {
       \t${2:// your code here}
       }
     """
+    leftLabelHTML: "<span class='syntax--entity name function'>E</span>"
+    prefix: 'onInit()'
   'onInstFailed()':
-    'prefix': 'onInstFailed()'
-    'body': """
+    body: """
       function .onInstFailed(${1}) {
       \t${2:// your code here}
       }
     """
+    leftLabelHTML: "<span class='syntax--entity name function'>E</span>"
+    prefix: 'onInstFailed()'
   'onInstSuccess()':
-    'prefix': 'onInstSuccess()'
-    'body': """
+    body: """
       function .onInstSuccess(${1}) {
       \t${2:// your code here}
       }
     """
+    leftLabelHTML: "<span class='syntax--entity name function'>E</span>"
+    prefix: 'onInstSuccess()'
   'onMouseOverSection()':
-    'prefix': 'onMouseOverSection()'
-    'body': """
+    body: """
       function .onMouseOverSection(${1}) {
       \t${2:// your code here}
       }
     """
+    leftLabelHTML: "<span class='syntax--entity name function'>E</span>"
+    prefix: 'onMouseOverSection()'
   'onRebootFailed()':
-    'prefix': 'onRebootFailed()'
-    'body': """
+    body: """
       function .onRebootFailed(${1}) {
       \t${2:// your code here}
       }
     """
+    leftLabelHTML: "<span class='syntax--entity name function'>E</span>"
+    prefix: 'onRebootFailed()'
   'onSelChange()':
-    'prefix': 'onSelChange()'
-    'body': """
+    body: """
       function .onSelChange(${1}) {
       \t${2:// your code here}
       }
     """
+    leftLabelHTML: "<span class='syntax--entity name function'>E</span>"
+    prefix: 'onSelChange()'
   'onUserAbort()':
-    'prefix': 'onUserAbort()'
-    'body': """
+    body: """
       function .onUserAbort(${1}) {
       \t${2:// your code here}
       }
     """
+    leftLabelHTML: "<span class='syntax--entity name function'>E</span>"
+    prefix: 'onUserAbort()'
   'onVerifyInstDir()':
-    'prefix': 'onVerifyInstDir()'
-    'body': """
+    body: """
       function .onVerifyInstDir(${1}) {
       \t${2:// your code here}
       }
     """
+    leftLabelHTML: "<span class='syntax--entity name function'>E</span>"
+    prefix: 'onVerifyInstDir()'
   'OutFile()':
-    'prefix': 'OutFile()'
-    'body': 'OutFile("${1:file_name}.exe");$2'
+    body: 'OutFile("${1:file_name}.exe");$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'OutFile()'
   'page()':
-    'prefix': 'page()'
-    'body': """
+    body: """
       page ${1:PageType}(${2:function}) {
       \t${3:// your code here}
       }
     """
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'page()'
   'page Components()':
-    'prefix': 'page Components()'
-    'body': """
+    body: """
       page Components(${1:function}) {
       \t${2:// your code here}
       }
     """
+    leftLabelHTML: "<span class='syntax--entity name section'>E</span>"
+    prefix: 'page Components()'
   'page Directory()':
-    'prefix': 'page Directory()'
-    'body': """
+    body: """
       page Directory(${1:function}) {
       \t${2:// your code here}
       }
     """
+    leftLabelHTML: "<span class='syntax--entity name section'>E</span>"
+    prefix: 'page Directory()'
   'page InstConfirm()':
-    'prefix': 'page InstConfirm()'
-    'body': """
+    body: """
       page InstConfirm(${1:function}) {
       \t${2:// your code here}
       }
     """
+    leftLabelHTML: "<span class='syntax--entity name section'>E</span>"
+    prefix: 'page InstConfirm()'
   'page InstFiles()':
-    'prefix': 'page InstFiles()'
-    'body': """
+    body: """
       page InstFiles(${1:function}) {
       \t${2:// your code here}
       }
     """
+    leftLabelHTML: "<span class='syntax--entity name section'>E</span>"
+    prefix: 'page InstFiles()'
   'page License()':
-    'prefix': 'page License()'
-    'body': """
+    body: """
       page License(${1:function}) {
       \t${2:// your code here}
       }
     """
+    leftLabelHTML: "<span class='syntax--entity name section'>E</span>"
+    prefix: 'page License()'
   'Pop()':
-    'prefix': 'Pop()'
-    'body': 'Pop(${1});$2'
+    body: 'Pop(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'Pop()'
   'Push()':
-    'prefix': 'Push()'
-    'body': 'Push(${1});$2'
+    body: 'Push(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'Push()'
   'Quit()':
-    'prefix': 'Quit()'
-    'body': 'Quit(${1});$2'
+    body: 'Quit(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'Quit()'
   'ReadEnvStr()':
-    'prefix': 'ReadEnvStr()'
-    'body': 'ReadEnvStr(${1});$2'
+    body: 'ReadEnvStr(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'ReadEnvStr()'
   'ReadINIStr()':
-    'prefix': 'ReadINIStr()'
-    'body': 'ReadINIStr(${1});$2'
+    body: 'ReadINIStr(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'ReadINIStr()'
   'ReadRegDWORD()':
-    'prefix': 'ReadRegDWORD()'
-    'body': 'ReadRegDWORD(${1});$2'
+    body: 'ReadRegDWORD(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'ReadRegDWORD()'
   'ReadRegStr()':
-    'prefix': 'ReadRegStr()'
-    'body': 'ReadRegStr(${1});$2'
+    body: 'ReadRegStr(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'ReadRegStr()'
   'Reboot()':
-    'prefix': 'Reboot()'
-    'body': 'Reboot(${1});$2'
+    body: 'Reboot(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'Reboot()'
   'RegDLL()':
-    'prefix': 'RegDLL()'
-    'body': 'RegDLL(${1});$2'
+    body: 'RegDLL(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'RegDLL()'
   'Rename()':
-    'prefix': 'Rename()'
-    'body': 'Rename(${1});$2'
+    body: 'Rename(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'Rename()'
   'RequestExecutionLevel()':
-    'prefix': 'RequestExecutionLevel()'
-    'body': 'RequestExecutionLevel(${1});$2'
+    body: 'RequestExecutionLevel(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'RequestExecutionLevel()'
   'RequestExecutionLevel(admin)':
-    'prefix': 'RequestExecutionLevel(admin)'
-    'body': 'RequestExecutionLevel("${1:admin}");$2'
+    body: 'RequestExecutionLevel("${1:admin}");$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'RequestExecutionLevel(admin)'
   'RequestExecutionLevel(highest)':
-    'prefix': 'RequestExecutionLevel(highest)'
-    'body': 'RequestExecutionLevel("${1:highest}");$2'
+    body: 'RequestExecutionLevel("${1:highest}");$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'RequestExecutionLevel(highest)'
   'RequestExecutionLevel(none)':
-    'prefix': 'RequestExecutionLevel(none)'
-    'body': 'RequestExecutionLevel("${1:none}");$2'
+    body: 'RequestExecutionLevel("${1:none}");$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'RequestExecutionLevel(none)'
   'RequestExecutionLevel(user)':
-    'prefix': 'RequestExecutionLevel(user)'
-    'body': 'RequestExecutionLevel("${1:user}");$2'
+    body: 'RequestExecutionLevel("${1:user}");$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'RequestExecutionLevel(user)'
   'ReserveFile()':
-    'prefix': 'ReserveFile()'
-    'body': 'ReserveFile(${1});$2'
+    body: 'ReserveFile(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'ReserveFile()'
   'ReserveFileRecursive()':
-    'prefix': 'ReserveFileRecursive()'
-    'body': 'ReserveFileRecursive(${1});$2'
+    body: 'ReserveFileRecursive(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'ReserveFileRecursive()'
   'RMDir()':
-    'prefix': 'RMDir()'
-    'body': 'RMDir(${1});$2'
+    body: 'RMDir(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'RMDir()'
   'RMDirRecursive()':
-    'prefix': 'RMDirRecursive()'
-    'body': 'RMDirRecursive(${1});$2'
+    body: 'RMDirRecursive(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'RMDirRecursive()'
   'SearchPath()':
-    'prefix': 'SearchPath()'
-    'body': 'SearchPath(${1});$2'
+    body: 'SearchPath(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SearchPath()'
   'section()':
-    'prefix': 'section()'
-    'body': """
+    body: """
       section ${1:section_index}("${2:section_name}"${3}) {
       \t${4:// your code here}
       }$5
     """
+    leftLabelHTML: "<span class='syntax--entity name section'>E</span>"
+    prefix: 'section()'
   'SectionGetFlags()':
-    'prefix': 'SectionGetFlags()'
-    'body': 'SectionGetFlags(${1});$2'
+    body: 'SectionGetFlags(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SectionGetFlags()'
   'SectionGetInstTypes()':
-    'prefix': 'SectionGetInstTypes()'
-    'body': 'SectionGetInstTypes(${1});$2'
+    body: 'SectionGetInstTypes(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SectionGetInstTypes()'
   'SectionGetSize()':
-    'prefix': 'SectionGetSize()'
-    'body': 'SectionGetSize(${1});$2'
+    body: 'SectionGetSize(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SectionGetSize()'
   'SectionGetText()':
-    'prefix': 'SectionGetText()'
-    'body': 'SectionGetText(${1});$2'
+    body: 'SectionGetText(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SectionGetText()'
   'SectionIn()':
-    'prefix': 'SectionIn()'
-    'body': 'SectionIn(${1});$2'
+    body: 'SectionIn(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SectionIn()'
   'SectionSetFlags()':
-    'prefix': 'SectionSetFlags()'
-    'body': 'SectionSetFlags(${1});$2'
+    body: 'SectionSetFlags(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SectionSetFlags()'
   'SectionSetInstTypes()':
-    'prefix': 'SectionSetInstTypes()'
-    'body': 'SectionSetInstTypes(${1});$2'
+    body: 'SectionSetInstTypes(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SectionSetInstTypes()'
   'SectionSetSize()':
-    'prefix': 'SectionSetSize()'
-    'body': 'SectionSetSize(${1});$2'
+    body: 'SectionSetSize(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SectionSetSize()'
   'SectionSetText()':
-    'prefix': 'SectionSetText()'
-    'body': 'SectionSetText(${1});$2'
+    body: 'SectionSetText(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SectionSetText()'
   'SendMessage()':
-    'prefix': 'SendMessage()'
-    'body': 'SendMessage(${1});$2'
+    body: 'SendMessage(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SendMessage()'
   'SetAutoClose()':
-    'prefix': 'SetAutoClose()'
-    'body': 'SetAutoClose(${1});$2'
+    body: 'SetAutoClose(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SetAutoClose()'
   'SetAutoClose(false)':
-    'prefix': 'SetAutoClose(false)'
-    'body': 'SetAutoClose("false");$2'
+    body: 'SetAutoClose("false");$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SetAutoClose(false)'
   'SetAutoClose(true)':
-    'prefix': 'SetAutoClose(true)'
-    'body': 'SetAutoClose("true");$2'
+    body: 'SetAutoClose("true");$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SetAutoClose(true)'
   'SetBrandingImage()':
-    'prefix': 'SetBrandingImage()'
-    'body': 'SetBrandingImage(${1});$2'
+    body: 'SetBrandingImage(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SetBrandingImage()'
   'SetCompress()':
-    'prefix': 'SetCompress()'
-    'body': 'SetCompress(${1});$2'
+    body: 'SetCompress(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SetCompress()'
   'SetCompress(auto)':
-    'prefix': 'SetCompress(auto)'
-    'body': 'SetCompress("auto");$2'
+    body: 'SetCompress("auto");$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SetCompress(auto)'
   'SetCompress(force)':
-    'prefix': 'SetCompress(force)'
-    'body': 'SetCompress("force");$2'
+    body: 'SetCompress("force");$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SetCompress(force)'
   'SetCompress(off)':
-    'prefix': 'SetCompress(off)'
-    'body': 'SetCompress("off");$2'
+    body: 'SetCompress("off");$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SetCompress(off)'
   'SetCompressor()':
-    'prefix': 'SetCompressor()'
-    'body': 'SetCompressor(${1});$2'
+    body: 'SetCompressor(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SetCompressor()'
   'SetCompressorDictSize()':
-    'prefix': 'SetCompressorDictSize()'
-    'body': 'SetCompressorDictSize(${1:dict_size_mb});$2'
+    body: 'SetCompressorDictSize(${1:dict_size_mb});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SetCompressorDictSize()'
   'SetCtlColors()':
-    'prefix': 'SetCtlColors()'
-    'body': 'SetCtlColors(${1});$2'
+    body: 'SetCtlColors(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SetCtlColors()'
   'SetCurInstType()':
-    'prefix': 'SetCurInstType()'
-    'body': 'SetCurInstType(${1});$2'
+    body: 'SetCurInstType(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SetCurInstType()'
   'SetDatablockOptimize()':
-    'prefix': 'SetDatablockOptimize()'
-    'body': 'SetDatablockOptimize(${1});$2'
+    body: 'SetDatablockOptimize(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SetDatablockOptimize()'
   'SetDatablockOptimize(off)':
-    'prefix': 'SetDatablockOptimize(off)'
-    'body': 'SetDatablockOptimize("off");$2'
+    body: 'SetDatablockOptimize("off");$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SetDatablockOptimize(off)'
   'SetDatablockOptimize(on)':
-    'prefix': 'SetDatablockOptimize(on)'
-    'body': 'SetDatablockOptimize("on");$2'
+    body: 'SetDatablockOptimize("on");$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SetDatablockOptimize(on)'
   'SetDateSave()':
-    'prefix': 'SetDateSave()'
-    'body': 'SetDateSave(${1});$2'
+    body: 'SetDateSave(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SetDateSave()'
   'SetDateSave(off)':
-    'prefix': 'SetDateSave(off)'
-    'body': 'SetDateSave("off");$2'
+    body: 'SetDateSave("off");$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SetDateSave(off)'
   'SetDateSave(on)':
-    'prefix': 'SetDateSave(on)'
-    'body': 'SetDateSave("on");$2'
+    body: 'SetDateSave("on");$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SetDateSave(on)'
   'SetDetailsPrint()':
-    'prefix': 'SetDetailsPrint()'
-    'body': 'SetDetailsPrint(${1});$2'
+    body: 'SetDetailsPrint(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SetDetailsPrint()'
   'SetDetailsPrint(both)':
-    'prefix': 'SetDetailsPrint(both)'
-    'body': 'SetDetailsPrint("both");$2'
+    body: 'SetDetailsPrint("both");$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SetDetailsPrint(both)'
   'SetDetailsPrint(lastused)':
-    'prefix': 'SetDetailsPrint(lastused)'
-    'body': 'SetDetailsPrint("lastused");$2'
+    body: 'SetDetailsPrint("lastused");$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SetDetailsPrint(lastused)'
   'SetDetailsPrint(listonly)':
-    'prefix': 'SetDetailsPrint(listonly)'
-    'body': 'SetDetailsPrint("listonly");$2'
+    body: 'SetDetailsPrint("listonly");$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SetDetailsPrint(listonly)'
   'SetDetailsPrint(none)':
-    'prefix': 'SetDetailsPrint(none)'
-    'body': 'SetDetailsPrint("none");$2'
+    body: 'SetDetailsPrint("none");$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SetDetailsPrint(none)'
   'SetDetailsPrint(textonly)':
-    'prefix': 'SetDetailsPrint(textonly)'
-    'body': 'SetDetailsPrint("textonly");$2'
+    body: 'SetDetailsPrint("textonly");$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SetDetailsPrint(textonly)'
   'SetDetailsView()':
-    'prefix': 'SetDetailsView()'
-    'body': 'SetDetailsView(${1});$2'
+    body: 'SetDetailsView(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SetDetailsView()'
   'SetDetailsView(hide)':
-    'prefix': 'SetDetailsView(hide)'
-    'body': 'SetDetailsView("hide");$2'
+    body: 'SetDetailsView("hide");$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SetDetailsView(hide)'
   'SetDetailsView(show)':
-    'prefix': 'SetDetailsView(show)'
-    'body': 'SetDetailsView("show");$2'
+    body: 'SetDetailsView("show");$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SetDetailsView(show)'
   'SetErrorLevel()':
-    'prefix': 'SetErrorLevel()'
-    'body': 'SetErrorLevel(${1:error_level});$2'
+    body: 'SetErrorLevel(${1:error_level});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SetErrorLevel()'
   'SetErrors()':
-    'prefix': 'SetErrors()'
-    'body': 'SetErrors(${1});$2'
+    body: 'SetErrors(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SetErrors()'
   'SetFileAttributes()':
-    'prefix': 'SetFileAttributes()'
-    'body': 'SetFileAttributes(${1});$2'
+    body: 'SetFileAttributes(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SetFileAttributes()'
   'SetFont()':
-    'prefix': 'SetFont()'
-    'body': 'SetFont(${1});$2'
+    body: 'SetFont(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SetFont()'
   'SetOutPath()':
-    'prefix': 'SetOutPath()'
-    'body': 'SetOutPath(${1});$2'
+    body: 'SetOutPath(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SetOutPath()'
   'SetOverwrite()':
-    'prefix': 'SetOverwrite()'
-    'body': 'SetOverwrite(${1});$2'
+    body: 'SetOverwrite(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SetOverwrite()'
   'SetOverwrite(ifdiff)':
-    'prefix': 'SetOverwrite(ifdiff)'
-    'body': 'SetOverwrite("ifdiff");$2'
+    body: 'SetOverwrite("ifdiff");$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SetOverwrite(ifdiff)'
   'SetOverwrite(ifnewer)':
-    'prefix': 'SetOverwrite(ifnewer)'
-    'body': 'SetOverwrite("ifnewer");$2'
+    body: 'SetOverwrite("ifnewer");$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SetOverwrite(ifnewer)'
   'SetOverwrite(off)':
-    'prefix': 'SetOverwrite(off)'
-    'body': 'SetOverwrite("off");$2'
+    body: 'SetOverwrite("off");$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SetOverwrite(off)'
   'SetOverwrite(on)':
-    'prefix': 'SetOverwrite(on)'
-    'body': 'SetOverwrite("on");$2'
+    body: 'SetOverwrite("on");$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SetOverwrite(on)'
   'SetOverwrite(try)':
-    'prefix': 'SetOverwrite(try)'
-    'body': 'SetOverwrite("try");$2'
+    body: 'SetOverwrite("try");$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SetOverwrite(try)'
   'SetRebootFlag()':
-    'prefix': 'SetRebootFlag()'
-    'body': 'SetRebootFlag(${1});$2'
+    body: 'SetRebootFlag(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SetRebootFlag()'
   'SetRebootFlag(false)':
-    'prefix': 'SetRebootFlag(false)'
-    'body': 'SetRebootFlag("false");$2'
+    body: 'SetRebootFlag("false");$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SetRebootFlag(false)'
   'SetRebootFlag(true)':
-    'prefix': 'SetRebootFlag(true)'
-    'body': 'SetRebootFlag("true");$2'
+    body: 'SetRebootFlag("true");$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SetRebootFlag(true)'
   'SetRegView()':
-    'prefix': 'SetRegView()'
-    'body': 'SetRegView(${1});$2'
+    body: 'SetRegView(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SetRegView()'
   'SetRegView(32)':
-    'prefix': 'SetRegView(32)'
-    'body': 'SetRegView("32");$2'
+    body: 'SetRegView("32");$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SetRegView(32)'
   'SetRegView(64)':
-    'prefix': 'SetRegView(64)'
-    'body': 'SetRegView("64");$2'
+    body: 'SetRegView("64");$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SetRegView(64)'
   'SetRegView(lastused)':
-    'prefix': 'SetRegView(lastused)'
-    'body': 'SetRegView("lastused");$2'
+    body: 'SetRegView("lastused");$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SetRegView(lastused)'
   'SetShellVarContext()':
-    'prefix': 'SetShellVarContext()'
-    'body': 'SetShellVarContext(${1});$2'
+    body: 'SetShellVarContext(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SetShellVarContext()'
   'SetShellVarContext(all)':
-    'prefix': 'SetShellVarContext(all)'
-    'body': 'SetShellVarContext("all");$2'
+    body: 'SetShellVarContext("all");$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SetShellVarContext(all)'
   'SetShellVarContext(current)':
-    'prefix': 'SetShellVarContext(current)'
-    'body': 'SetShellVarContext("current");$2'
+    body: 'SetShellVarContext("current");$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SetShellVarContext(current)'
   'SetSilent()':
-    'prefix': 'SetSilent()'
-    'body': 'SetSilent(${1});$2'
+    body: 'SetSilent(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SetSilent()'
   'SetSilent(normal)':
-    'prefix': 'SetSilent(normal)'
-    'body': 'SetSilent("normal");$2'
+    body: 'SetSilent("normal");$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SetSilent(normal)'
   'SetSilent(silent)':
-    'prefix': 'SetSilent(silent)'
-    'body': 'SetSilent("silent");$2'
+    body: 'SetSilent("silent");$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SetSilent(silent)'
   'ShowInstDetails()':
-    'prefix': 'ShowInstDetails()'
-    'body': 'ShowInstDetails(${1});$2'
+    body: 'ShowInstDetails(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'ShowInstDetails()'
   'ShowInstDetails(hide)':
-    'prefix': 'ShowInstDetails(hide)'
-    'body': 'ShowInstDetails("hide");$2'
+    body: 'ShowInstDetails("hide");$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'ShowInstDetails(hide)'
   'ShowInstDetails(nevershow)':
-    'prefix': 'ShowInstDetails(nevershow)'
-    'body': 'ShowInstDetails("show");$2'
+    body: 'ShowInstDetails("show");$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'ShowInstDetails(nevershow)'
   'ShowInstDetails(show)':
-    'prefix': 'ShowInstDetails(show)'
-    'body': 'ShowInstDetails("show");$2'
+    body: 'ShowInstDetails("show");$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'ShowInstDetails(show)'
   'ShowUninstDetails()':
-    'prefix': 'ShowUninstDetails()'
-    'body': 'ShowUninstDetails(${1});$2'
+    body: 'ShowUninstDetails(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'ShowUninstDetails()'
   'ShowUninstDetails(hide)':
-    'prefix': 'ShowUninstDetails(hide)'
-    'body': 'ShowUninstDetails("hide");$2'
+    body: 'ShowUninstDetails("hide");$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'ShowUninstDetails(hide)'
   'ShowUninstDetails(nevershow)':
-    'prefix': 'ShowUninstDetails(nevershow)'
-    'body': 'ShowUninstDetails("show");$2'
+    body: 'ShowUninstDetails("show");$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'ShowUninstDetails(nevershow)'
   'ShowUninstDetails(show)':
-    'prefix': 'ShowUninstDetails(show)'
-    'body': 'ShowUninstDetails("show");$2'
+    body: 'ShowUninstDetails("show");$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'ShowUninstDetails(show)'
   'ShowWindow()':
-    'prefix': 'ShowWindow()'
-    'body': 'ShowWindow(${1});$2'
+    body: 'ShowWindow(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'ShowWindow()'
   'SilentInstall()':
-    'prefix': 'SilentInstall()'
-    'body': 'SilentInstall(${1});$2'
+    body: 'SilentInstall(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SilentInstall()'
   'SilentInstall(normal)':
-    'prefix': 'SilentInstall(normal)'
-    'body': 'SilentInstall("normal");$2'
+    body: 'SilentInstall("normal");$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SilentInstall(normal)'
   'SilentInstall(silent)':
-    'prefix': 'SilentInstall(silent)'
-    'body': 'SilentInstall("silent");$2'
+    body: 'SilentInstall("silent");$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SilentInstall(silent)'
   'SilentInstall(silentlog)':
-    'prefix': 'SilentInstall(silentlog)'
-    'body': 'SilentInstall("silentlog");$2'
+    body: 'SilentInstall("silentlog");$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SilentInstall(silentlog)'
   'SilentUninstall()':
-    'prefix': 'SilentUninstall()'
-    'body': 'SilentUninstall(${1});$2'
+    body: 'SilentUninstall(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SilentUninstall()'
   'SilentUninstall(normal)':
-    'prefix': 'SilentUninstall(normal)'
-    'body': 'SilentUninstall("normal");$2'
+    body: 'SilentUninstall("normal");$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SilentUninstall(normal)'
   'SilentUninstall(silent)':
-    'prefix': 'SilentUninstall(silent)'
-    'body': 'SilentUninstall("silent");$2'
+    body: 'SilentUninstall("silent");$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SilentUninstall(silent)'
   'Sleep()':
-    'prefix': 'Sleep()'
-    'body': 'Sleep(${1:sleeptime_in_ms});$2'
+    body: 'Sleep(${1:sleeptime_in_ms});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'Sleep()'
   'SpaceTexts()':
-    'prefix': 'SpaceTexts()'
-    'body': 'SpaceTexts(${1});$2'
+    body: 'SpaceTexts(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SpaceTexts()'
   'StrCmp()':
-    'prefix': 'StrCmp()'
-    'body': 'StrCmp(${1});$2'
+    body: 'StrCmp(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'StrCmp()'
   'StrCmpS()':
-    'prefix': 'StrCmpS()'
-    'body': 'StrCmpS(${1});$2'
+    body: 'StrCmpS(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'StrCmpS()'
   'StrCpy()':
-    'prefix': 'StrCpy()'
-    'body': 'StrCpy(${1});$2'
+    body: 'StrCpy(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'StrCpy()'
   'StrLen()':
-    'prefix': 'StrLen()'
-    'body': 'StrLen(${1});$2'
+    body: 'StrLen(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'StrLen()'
   'SubCaption()':
-    'prefix': 'SubCaption()'
-    'body': 'SubCaption(${1});$2'
+    body: 'SubCaption(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'SubCaption()'
   'switch()':
-    'prefix': 'switch()'
-    'body': """
+    body: """
       switch(\$${1:variable}) {
       \t${2:// your code here}
       }$3
     """
+    leftLabelHTML: "<span class='syntax--support function'>#</span>"
+    prefix: 'switch()'
   'switch():1':
-    'prefix': 'switch():1'
-    'body': """
+    body: """
       switch(\$${1:variable}) {
       \tcase ${2:value}:
       \t\t${3:// your code here}
@@ -863,9 +1104,10 @@
       \t\t${4:// your code here}
       }$5
     """
+    leftLabelHTML: "<span class='syntax--support function'>#</span>"
+    prefix: 'switch():1'
   'switch():2':
-    'prefix': 'switch():2'
-    'body': """
+    body: """
       switch(\$${1:variable}) {
       \tcase ${2:value1}:
       \t\t${3:// your code here}
@@ -875,9 +1117,10 @@
       \t\t${6:// your code here}
       }$7
     """
+    leftLabelHTML: "<span class='syntax--support function'>#</span>"
+    prefix: 'switch():2'
   'switch():3':
-    'prefix': 'switch():3'
-    'body': """
+    body: """
       switch(\$${1:variable}) {
       \tcase ${2:value1}:
       \t\t${3:// your code here}
@@ -889,9 +1132,10 @@
       \t\t${8:// your code here}
       }$9
     """
+    leftLabelHTML: "<span class='syntax--support function'>#</span>"
+    prefix: 'switch():3'
   'switch():4':
-    'prefix': 'switch():4'
-    'body': """
+    body: """
       switch(\$${1:variable}) {
       \tcase ${2:value1}:
       \t\t${3:// your code here}
@@ -905,9 +1149,10 @@
       \t\t${10:// your code here}
       }$11
     """
+    leftLabelHTML: "<span class='syntax--support function'>#</span>"
+    prefix: 'switch():4'
   'switch():5':
-    'prefix': 'switch():5'
-    'body': """
+    body: """
       switch(\$${1:variable}) {
       \tcase ${2:value1}:
       \t\t${3:// your code here}
@@ -923,161 +1168,197 @@
       \t\t${12:// your code here}
       }$13
     """
+    leftLabelHTML: "<span class='syntax--support function'>#</span>"
+    prefix: 'switch():5'
   'un.onGUIEnd()':
-    'prefix': 'un.onGUIEnd()'
-    'body': """
+    body: """
       function un.onGUIEnd(${1}) {
       \t${2:// your code here}
       }$3
     """
+    leftLabelHTML: "<span class='syntax--entity name function'>E</span>"
+    prefix: 'un.onGUIEnd()'
   'un.onGUIInit()':
-    'prefix': 'un.onGUIInit()'
-    'body': """
+    body: """
       function un.onGUIInit(${1}) {
       \t${2:// your code here}
       }$3
     """
+    leftLabelHTML: "<span class='syntax--entity name function'>E</span>"
+    prefix: 'un.onGUIInit()'
   'un.onInit()':
-    'prefix': 'un.onInit()'
-    'body': """
+    body: """
       function un.onInit(${1}) {
       \t${2:// your code here}
       }$3
     """
+    leftLabelHTML: "<span class='syntax--entity name function'>E</span>"
+    prefix: 'un.onInit()'
   'un.onRebootFailed()':
-    'prefix': 'un.onRebootFailed()'
-    'body': """
+    body: """
       function un.onRebootFailed(${1}) {
       \t${2:// your code here}
       }$3
     """
+    leftLabelHTML: "<span class='syntax--entity name function'>E</span>"
+    prefix: 'un.onRebootFailed()'
   'un.onSelChange()':
-    'prefix': 'un.onSelChange()'
-    'body': """
+    body: """
       function un.onSelChange(${1}) {
       \t${2:// your code here}
       }$3
     """
+    leftLabelHTML: "<span class='syntax--entity name function'>E</span>"
+    prefix: 'un.onSelChange()'
   'un.onUninstFailed()':
-    'prefix': 'un.onUninstFailed()'
-    'body': """
+    body: """
       function un.onUninstFailed(${1}) {
       \t${2:// your code here}
       }$3
     """
+    leftLabelHTML: "<span class='syntax--entity name function'>E</span>"
+    prefix: 'un.onUninstFailed()'
   'un.onUninstSuccess()':
-    'prefix': 'un.onUninstSuccess()'
-    'body': """
+    body: """
       function un.onUninstSuccess(${1}) {
       \t${2:// your code here}
       }$3
     """
+    leftLabelHTML: "<span class='syntax--entity name function'>E</span>"
+    prefix: 'un.onUninstSuccess()'
   'un.onUserAbort¡()':
-    'prefix': 'un.onUserAbort¡()'
-    'body': """
+    body: """
       function un.onUserAbort(${1}) {
       \t${2:// your code here}
       }$3
     """
+    leftLabelHTML: "<span class='syntax--entity name function'>E</span>"
+    prefix: 'un.onUserAbort¡()'
   'uninstall page Components()':
-    'prefix': 'uninstall page Components()'
-    'body': """
+    body: """
       uninstall page Components(${1:function}) {
       \t${2:// your code here}
       }$3
     """
+    leftLabelHTML: "<span class='syntax--entity name section'>E</span>"
+    prefix: 'uninstall page Components()'
   'uninstall page Directory()':
-    'prefix': 'uninstall page Directory()'
-    'body': """
+    body: """
       uninstall page Directory(${1:function}) {
       \t${2:// your code here}
       }$3
     """
+    leftLabelHTML: "<span class='syntax--entity name section'>E</span>"
+    prefix: 'uninstall page Directory()'
   'uninstall page InstFiles()':
-    'prefix': 'uninstall page InstFiles()'
-    'body': """
+    body: """
       uninstall page InstFiles(${1:function}) {
       \t${2:// your code here}
       }$3
     """
+    leftLabelHTML: "<span class='syntax--entity name section'>E</span>"
+    prefix: 'uninstall page InstFiles()'
   'uninstall page License()':
-    'prefix': 'uninstall page License()'
-    'body': """
+    body: """
       uninstall page License(${1:function}) {
       \t${2:// your code here}
       }$3
     """
+    leftLabelHTML: "<span class='syntax--entity name section'>E</span>"
+    prefix: 'uninstall page License()'
   'uninstall page uninstConfirm()':
-    'prefix': 'uninstall page uninstConfirm()'
-    'body': """
+    body: """
       uninstall page uninstConfirm(${1:function}) {
       \t${2:// your code here}
       }$3
     """
+    leftLabelHTML: "<span class='syntax--entity name section'>E</span>"
+    prefix: 'uninstall page uninstConfirm()'
   'UninstallButtonText()':
-    'prefix': 'UninstallButtonText()'
-    'body': 'UninstallButtonText("${1:text}");$2'
+    body: 'UninstallButtonText("${1:text}");$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'UninstallButtonText()'
   'UninstallCaption()':
-    'prefix': 'UninstallCaption()'
-    'body': 'UninstallCaption("${1:caption}");$2'
+    body: 'UninstallCaption("${1:caption}");$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'UninstallCaption()'
   'UninstallIcon()':
-    'prefix': 'UninstallIcon()'
-    'body': 'UninstallIcon(${1});$2'
+    body: 'UninstallIcon(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'UninstallIcon()'
   'UninstallSubCaption()':
-    'prefix': 'UninstallSubCaption()'
-    'body': 'UninstallSubCaption(${1});$2'
+    body: 'UninstallSubCaption(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'UninstallSubCaption()'
   'UninstallText()':
-    'prefix': 'UninstallText()'
-    'body': 'UninstallText("${1:text}"${2:, "${3:subtext}"});$4'
+    body: 'UninstallText("${1:text}"${2:, "${3:subtext}"});$4'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'UninstallText()'
   'UnRegDLL()':
-    'prefix': 'UnRegDLL()'
-    'body': 'UnRegDLL(${1});$2'
+    body: 'UnRegDLL(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'UnRegDLL()'
   'VIAddVersionKey()':
-    'prefix': 'VIAddVersionKey()'
-    'body': 'VIAddVersionKey(${1});$2'
+    body: 'VIAddVersionKey(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'VIAddVersionKey()'
   'VIProductVersion()':
-    'prefix': 'VIProductVersion()'
-    'body': 'VIProductVersion(${1});$2'
+    body: 'VIProductVersion(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'VIProductVersion()'
   'while()':
-    'prefix': 'while()'
-    'body': """
+    body: """
       while(${1:condition}) {
       \t${2:// your code here}
       }$3
     """
+    leftLabelHTML: "<span class='syntax--support function'>#</span>"
+    prefix: 'while()'
   'WindowIcon()':
-    'prefix': 'WindowIcon()'
-    'body': 'WindowIcon(${1});$2'
+    body: 'WindowIcon(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'WindowIcon()'
   'WindowIcon(off)':
-    'prefix': 'WindowIcon(off)'
-    'body': 'WindowIcon("off");$2'
+    body: 'WindowIcon("off");$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'WindowIcon(off)'
   'WindowIcon(on)':
-    'prefix': 'WindowIcon(on)'
-    'body': 'WindowIcon("on");$2'
+    body: 'WindowIcon("on");$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'WindowIcon(on)'
   'WriteINIStr()':
-    'prefix': 'WriteINIStr()'
-    'body': 'WriteINIStr(${1});$2'
+    body: 'WriteINIStr(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'WriteINIStr()'
   'WriteRegBin()':
-    'prefix': 'WriteRegBin()'
-    'body': 'WriteRegBin(${1});$2'
+    body: 'WriteRegBin(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'WriteRegBin()'
   'WriteRegDWORD()':
-    'prefix': 'WriteRegDWORD()'
-    'body': 'WriteRegDWORD(${1});$2'
+    body: 'WriteRegDWORD(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'WriteRegDWORD()'
   'WriteRegExpandStr()':
-    'prefix': 'WriteRegExpandStr()'
-    'body': 'WriteRegExpandStr(${1});$2'
+    body: 'WriteRegExpandStr(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'WriteRegExpandStr()'
   'WriteRegStr()':
-    'prefix': 'WriteRegStr()'
-    'body': 'WriteRegStr(${1});$2'
+    body: 'WriteRegStr(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'WriteRegStr()'
   'WriteUninstaller()':
-    'prefix': 'WriteUninstaller()'
-    'body': 'WriteUninstaller(${1});$2'
+    body: 'WriteUninstaller(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'WriteUninstaller()'
   'XPStyle()':
-    'prefix': 'XPStyle()'
-    'body': 'XPStyle(${1});$2'
+    body: 'XPStyle(${1});$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'XPStyle()'
   'XPStyle(off)':
-    'prefix': 'XPStyle(off)'
-    'body': 'XPStyle("off");$2'
+    body: 'XPStyle("off");$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'XPStyle(off)'
   'XPStyle(on)':
-    'prefix': 'XPStyle(on)'
-    'body': 'XPStyle("on");$2'
+    body: 'XPStyle("on");$2'
+    leftLabelHTML: "<span class='syntax--keyword'>K</span>"
+    prefix: 'XPStyle(on)'
