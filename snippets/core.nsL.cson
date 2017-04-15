@@ -1,7 +1,7 @@
 '.source.nsl':
   '#define':
     body: '#define ${1:gflag}$2'
-    leftLabelHTML: "<span class='syntax--keyword control'>!</span>"
+    leftLabelHTML: "<span class='syntax--keyword syntax--control'>!</span>"
     prefix: 'define'
   '#if…#else':
     body: """
@@ -11,7 +11,7 @@
       \t${2:// your code here}
       #ifend$3
     """
-    leftLabelHTML: "<span class='syntax--keyword control'>!</span>"
+    leftLabelHTML: "<span class='syntax--keyword syntax--control'>!</span>"
     prefix: 'if…else'
   '#if':
     body: """
@@ -19,7 +19,7 @@
       \t${1:// your code here}
       #ifend$2
     """
-    leftLabelHTML: "<span class='syntax--keyword control'>!</span>"
+    leftLabelHTML: "<span class='syntax--keyword syntax--control'>!</span>"
     prefix: 'if'
   '#macro':
     body: """
@@ -27,7 +27,7 @@
       \t${1:// your code here}
       #macroend$2
     """
-    leftLabelHTML: "<span class='syntax--keyword control'>!</span>"
+    leftLabelHTML: "<span class='syntax--keyword syntax--control'>!</span>"
     prefix: 'macro'
   '#nsis':
     body: """
@@ -35,7 +35,7 @@
       \t${1:# your code here}
       #nsisend$2
     """
-    leftLabelHTML: "<span class='syntax--support function'>#</span>"
+    leftLabelHTML: "<span class='syntax--support syntax--function'>#</span>"
     prefix: 'nsis'
   'Abort()':
     body: 'Abort(${1});$2'
@@ -122,7 +122,7 @@
       case ${1:value}:
       \t${2:// your code here}
     """
-    leftLabelHTML: "<span class='syntax--support function'>#</span>"
+    leftLabelHTML: "<span class='syntax--support syntax--function'>#</span>"
     prefix: 'case'
   'ChangeUI()':
     body: 'ChangeUI(${1});$2'
@@ -553,7 +553,7 @@
       \t${2:// your code here}
       }
     """
-    leftLabelHTML: "<span class='syntax--entity name function'>E</span>"
+    leftLabelHTML: "<span class='syntax--entity syntax--name syntax--function'>E</span>"
     prefix: 'onInit()'
   'onInstFailed()':
     body: """
@@ -561,7 +561,7 @@
       \t${2:// your code here}
       }
     """
-    leftLabelHTML: "<span class='syntax--entity name function'>E</span>"
+    leftLabelHTML: "<span class='syntax--entity syntax--name syntax--function'>E</span>"
     prefix: 'onInstFailed()'
   'onInstSuccess()':
     body: """
@@ -569,7 +569,7 @@
       \t${2:// your code here}
       }
     """
-    leftLabelHTML: "<span class='syntax--entity name function'>E</span>"
+    leftLabelHTML: "<span class='syntax--entity syntax--name syntax--function'>E</span>"
     prefix: 'onInstSuccess()'
   'onMouseOverSection()':
     body: """
@@ -577,7 +577,7 @@
       \t${2:// your code here}
       }
     """
-    leftLabelHTML: "<span class='syntax--entity name function'>E</span>"
+    leftLabelHTML: "<span class='syntax--entity syntax--name syntax--function'>E</span>"
     prefix: 'onMouseOverSection()'
   'onRebootFailed()':
     body: """
@@ -585,7 +585,7 @@
       \t${2:// your code here}
       }
     """
-    leftLabelHTML: "<span class='syntax--entity name function'>E</span>"
+    leftLabelHTML: "<span class='syntax--entity syntax--name syntax--function'>E</span>"
     prefix: 'onRebootFailed()'
   'onSelChange()':
     body: """
@@ -593,7 +593,7 @@
       \t${2:// your code here}
       }
     """
-    leftLabelHTML: "<span class='syntax--entity name function'>E</span>"
+    leftLabelHTML: "<span class='syntax--entity syntax--name syntax--function'>E</span>"
     prefix: 'onSelChange()'
   'onUserAbort()':
     body: """
@@ -601,7 +601,7 @@
       \t${2:// your code here}
       }
     """
-    leftLabelHTML: "<span class='syntax--entity name function'>E</span>"
+    leftLabelHTML: "<span class='syntax--entity syntax--name syntax--function'>E</span>"
     prefix: 'onUserAbort()'
   'onVerifyInstDir()':
     body: """
@@ -609,7 +609,7 @@
       \t${2:// your code here}
       }
     """
-    leftLabelHTML: "<span class='syntax--entity name function'>E</span>"
+    leftLabelHTML: "<span class='syntax--entity syntax--name syntax--function'>E</span>"
     prefix: 'onVerifyInstDir()'
   'OutFile()':
     body: 'OutFile("${1:file_name}.exe");$2'
@@ -629,7 +629,7 @@
       \t${2:// your code here}
       }
     """
-    leftLabelHTML: "<span class='syntax--entity name section'>E</span>"
+    leftLabelHTML: "<span class='syntax--entity syntax--name syntax--section'>E</span>"
     prefix: 'page Components()'
   'page Directory()':
     body: """
@@ -637,7 +637,7 @@
       \t${2:// your code here}
       }
     """
-    leftLabelHTML: "<span class='syntax--entity name section'>E</span>"
+    leftLabelHTML: "<span class='syntax--entity syntax--name syntax--section'>E</span>"
     prefix: 'page Directory()'
   'page InstConfirm()':
     body: """
@@ -645,7 +645,7 @@
       \t${2:// your code here}
       }
     """
-    leftLabelHTML: "<span class='syntax--entity name section'>E</span>"
+    leftLabelHTML: "<span class='syntax--entity syntax--name syntax--section'>E</span>"
     prefix: 'page InstConfirm()'
   'page InstFiles()':
     body: """
@@ -653,7 +653,7 @@
       \t${2:// your code here}
       }
     """
-    leftLabelHTML: "<span class='syntax--entity name section'>E</span>"
+    leftLabelHTML: "<span class='syntax--entity syntax--name syntax--section'>E</span>"
     prefix: 'page InstFiles()'
   'page License()':
     body: """
@@ -661,7 +661,7 @@
       \t${2:// your code here}
       }
     """
-    leftLabelHTML: "<span class='syntax--entity name section'>E</span>"
+    leftLabelHTML: "<span class='syntax--entity syntax--name syntax--section'>E</span>"
     prefix: 'page License()'
   'Pop()':
     body: 'Pop(${1});$2'
@@ -749,7 +749,7 @@
       \t${4:// your code here}
       }$5
     """
-    leftLabelHTML: "<span class='syntax--entity name section'>E</span>"
+    leftLabelHTML: "<span class='syntax--entity syntax--name syntax--section'>E</span>"
     prefix: 'section()'
   'SectionGetFlags()':
     body: 'SectionGetFlags(${1});$2'
@@ -1093,7 +1093,7 @@
       \t${2:// your code here}
       }$3
     """
-    leftLabelHTML: "<span class='syntax--support function'>#</span>"
+    leftLabelHTML: "<span class='syntax--support syntax--function'>#</span>"
     prefix: 'switch()'
   'switch():1':
     body: """
@@ -1104,7 +1104,7 @@
       \t\t${4:// your code here}
       }$5
     """
-    leftLabelHTML: "<span class='syntax--support function'>#</span>"
+    leftLabelHTML: "<span class='syntax--support syntax--function'>#</span>"
     prefix: 'switch():1'
   'switch():2':
     body: """
@@ -1117,7 +1117,7 @@
       \t\t${6:// your code here}
       }$7
     """
-    leftLabelHTML: "<span class='syntax--support function'>#</span>"
+    leftLabelHTML: "<span class='syntax--support syntax--function'>#</span>"
     prefix: 'switch():2'
   'switch():3':
     body: """
@@ -1132,7 +1132,7 @@
       \t\t${8:// your code here}
       }$9
     """
-    leftLabelHTML: "<span class='syntax--support function'>#</span>"
+    leftLabelHTML: "<span class='syntax--support syntax--function'>#</span>"
     prefix: 'switch():3'
   'switch():4':
     body: """
@@ -1149,7 +1149,7 @@
       \t\t${10:// your code here}
       }$11
     """
-    leftLabelHTML: "<span class='syntax--support function'>#</span>"
+    leftLabelHTML: "<span class='syntax--support syntax--function'>#</span>"
     prefix: 'switch():4'
   'switch():5':
     body: """
@@ -1168,7 +1168,7 @@
       \t\t${12:// your code here}
       }$13
     """
-    leftLabelHTML: "<span class='syntax--support function'>#</span>"
+    leftLabelHTML: "<span class='syntax--support syntax--function'>#</span>"
     prefix: 'switch():5'
   'un.onGUIEnd()':
     body: """
@@ -1176,7 +1176,7 @@
       \t${2:// your code here}
       }$3
     """
-    leftLabelHTML: "<span class='syntax--entity name function'>E</span>"
+    leftLabelHTML: "<span class='syntax--entity syntax--name syntax--function'>E</span>"
     prefix: 'un.onGUIEnd()'
   'un.onGUIInit()':
     body: """
@@ -1184,7 +1184,7 @@
       \t${2:// your code here}
       }$3
     """
-    leftLabelHTML: "<span class='syntax--entity name function'>E</span>"
+    leftLabelHTML: "<span class='syntax--entity syntax--name syntax--function'>E</span>"
     prefix: 'un.onGUIInit()'
   'un.onInit()':
     body: """
@@ -1192,7 +1192,7 @@
       \t${2:// your code here}
       }$3
     """
-    leftLabelHTML: "<span class='syntax--entity name function'>E</span>"
+    leftLabelHTML: "<span class='syntax--entity syntax--name syntax--function'>E</span>"
     prefix: 'un.onInit()'
   'un.onRebootFailed()':
     body: """
@@ -1200,7 +1200,7 @@
       \t${2:// your code here}
       }$3
     """
-    leftLabelHTML: "<span class='syntax--entity name function'>E</span>"
+    leftLabelHTML: "<span class='syntax--entity syntax--name syntax--function'>E</span>"
     prefix: 'un.onRebootFailed()'
   'un.onSelChange()':
     body: """
@@ -1208,7 +1208,7 @@
       \t${2:// your code here}
       }$3
     """
-    leftLabelHTML: "<span class='syntax--entity name function'>E</span>"
+    leftLabelHTML: "<span class='syntax--entity syntax--name syntax--function'>E</span>"
     prefix: 'un.onSelChange()'
   'un.onUninstFailed()':
     body: """
@@ -1216,7 +1216,7 @@
       \t${2:// your code here}
       }$3
     """
-    leftLabelHTML: "<span class='syntax--entity name function'>E</span>"
+    leftLabelHTML: "<span class='syntax--entity syntax--name syntax--function'>E</span>"
     prefix: 'un.onUninstFailed()'
   'un.onUninstSuccess()':
     body: """
@@ -1224,7 +1224,7 @@
       \t${2:// your code here}
       }$3
     """
-    leftLabelHTML: "<span class='syntax--entity name function'>E</span>"
+    leftLabelHTML: "<span class='syntax--entity syntax--name syntax--function'>E</span>"
     prefix: 'un.onUninstSuccess()'
   'un.onUserAbort¡()':
     body: """
@@ -1232,7 +1232,7 @@
       \t${2:// your code here}
       }$3
     """
-    leftLabelHTML: "<span class='syntax--entity name function'>E</span>"
+    leftLabelHTML: "<span class='syntax--entity syntax--name syntax--function'>E</span>"
     prefix: 'un.onUserAbort¡()'
   'uninstall page Components()':
     body: """
@@ -1240,7 +1240,7 @@
       \t${2:// your code here}
       }$3
     """
-    leftLabelHTML: "<span class='syntax--entity name section'>E</span>"
+    leftLabelHTML: "<span class='syntax--entity syntax--name syntax--section'>E</span>"
     prefix: 'uninstall page Components()'
   'uninstall page Directory()':
     body: """
@@ -1248,7 +1248,7 @@
       \t${2:// your code here}
       }$3
     """
-    leftLabelHTML: "<span class='syntax--entity name section'>E</span>"
+    leftLabelHTML: "<span class='syntax--entity syntax--name syntax--section'>E</span>"
     prefix: 'uninstall page Directory()'
   'uninstall page InstFiles()':
     body: """
@@ -1256,7 +1256,7 @@
       \t${2:// your code here}
       }$3
     """
-    leftLabelHTML: "<span class='syntax--entity name section'>E</span>"
+    leftLabelHTML: "<span class='syntax--entity syntax--name syntax--section'>E</span>"
     prefix: 'uninstall page InstFiles()'
   'uninstall page License()':
     body: """
@@ -1264,7 +1264,7 @@
       \t${2:// your code here}
       }$3
     """
-    leftLabelHTML: "<span class='syntax--entity name section'>E</span>"
+    leftLabelHTML: "<span class='syntax--entity syntax--name syntax--section'>E</span>"
     prefix: 'uninstall page License()'
   'uninstall page uninstConfirm()':
     body: """
@@ -1272,7 +1272,7 @@
       \t${2:// your code here}
       }$3
     """
-    leftLabelHTML: "<span class='syntax--entity name section'>E</span>"
+    leftLabelHTML: "<span class='syntax--entity syntax--name syntax--section'>E</span>"
     prefix: 'uninstall page uninstConfirm()'
   'UninstallButtonText()':
     body: 'UninstallButtonText("${1:text}");$2'
@@ -1312,7 +1312,7 @@
       \t${2:// your code here}
       }$3
     """
-    leftLabelHTML: "<span class='syntax--support function'>#</span>"
+    leftLabelHTML: "<span class='syntax--support syntax--function'>#</span>"
     prefix: 'while()'
   'WindowIcon()':
     body: 'WindowIcon(${1});$2'
