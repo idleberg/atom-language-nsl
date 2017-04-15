@@ -1,7 +1,11 @@
+# v2.14.0 [#](https://github.com/idleberg/atom-language-nsl/releases/tag/v2.14.0)
+
+- add HTML labels for snippets
+
 # v2.13.1 [#](https://github.com/idleberg/atom-language-nsl/releases/tag/v2.13.1)
 
 - remove trailing semicolons
-- fix tyo  in changelog
+- fix typo in changelog
 
 # v2.13.0 [#](https://github.com/idleberg/atom-language-nsl/releases/tag/v2.13.0)
 
@@ -10,11 +14,11 @@
 
 # v2.12.1 [#](https://github.com/idleberg/atom-language-nsl/releases/tag/v2.12.1)
 
-- allow case-insensitive syntax (in forgotten pattern)
+* allow case-insensitive syntax (in forgotten pattern)
 
 # v2.12.0 [#](https://github.com/idleberg/atom-language-nsl/releases/tag/v2.12.0)
 
-- allow case-insensitive syntax
+* allow case-insensitive syntax
 
 # v2.11.7 [#](https://github.com/idleberg/atom-language-nsl/releases/tag/v2.11.7)
 
