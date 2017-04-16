@@ -1,3 +1,8 @@
+# v2.14.1 [#](https://github.com/idleberg/atom-language-nsl/releases/tag/v2.14.1)
+
+- use real-world example in `README.md`
+- update dependencies
+
 # v2.14.0 [#](https://github.com/idleberg/atom-language-nsl/releases/tag/v2.14.0)
 
 - add HTML labels for snippets
