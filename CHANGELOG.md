@@ -1,3 +1,8 @@
+# v2.14.2 [#](https://github.com/idleberg/atom-language-nsl/releases/tag/v2.14.2)
+
+- fix dependency management
+- update `devDependencies`
+
 # v2.14.1 [#](https://github.com/idleberg/atom-language-nsl/releases/tag/v2.14.1)
 
 - use real-world example in `README.md`
