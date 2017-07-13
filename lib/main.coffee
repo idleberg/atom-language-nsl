@@ -48,7 +48,6 @@ module.exports =
   subscriptions: null
 
   activate: (state) ->
-    meta = require "../package.json"
     { CompositeDisposable } = require "atom"
 
     # Events subscribed to in atom"s system can be easily cleaned up with a CompositeDisposable
@@ -57,8 +56,8 @@ module.exports =
     # Register commands
     @subscriptions.add atom.commands.add "atom-workspace", "nsl-assembler:save-&-transpile": => transpile(@consolePanel)
 
-    satisfyDependencies() if atom.config.get("#{meta.name}.manageDependencies") is true
-    isPathSetup() if atom.config.get("#{meta.name}.mutePathWarning") is false
+    satisfyDependencies() if atom.config.get("language-nsl.manageDependencies") is true
+    isPathSetup() if atom.config.get("language-nsl.mutePathWarning") is false
 
   deactivate: ->
     @subscriptions?.dispose()

@@ -1,26 +1,25 @@
 module.exports = Util =
   isPathSetup: () ->
-    meta = require "../package.json"
     { access, constants} = require "fs"
 
-    pathToJar = atom.config.get("#{meta.name}.pathToJar")
+    pathToJar = atom.config.get("language-nsl.pathToJar")
 
     access pathToJar, constants.R_OK | constants.W_OK, (error) ->
       if error
         notification = atom.notifications.addWarning(
-          "**#{meta.name}**: No valid \`nsL.jar\` was specified in your settings",
+          "**language-nsl**: No valid \`nsL.jar\` was specified in your settings",
           dismissable: true,
           buttons: [
             {
               text: 'Open Settings'
               onDidClick: ->
-                atom.workspace.open("atom://config/packages/#{meta.name}")
+                atom.workspace.open("atom://config/packages/language-nsl")
                 notification.dismiss()
             }
             {
               text: 'Ignore',
               onDidClick: ->
-                atom.config.set("#{meta.name}.mutePathWarning", true)
+                atom.config.set("language-nsl.mutePathWarning", true)
                 notification.dismiss()
             }
           ]
@@ -35,7 +34,26 @@ module.exports = Util =
         console.log "Enabling package '#{v}'" if atom.inDevMode()
         atom.packages.enablePackage(v)
 
-  successNslAssembler: () ->
+  notifyOnSucess: ->
+    notification = atom.notifications.addSuccess(
+      "Transpiled successfully",
+      dismissable: true,
+      buttons: [
+        {
+          text: 'Open'
+          onDidClick: ->
+            Util.openScript()
+            notification.dismiss()
+        }
+        {
+          text: 'Cancel'
+          onDidClick: ->
+            notification.dismiss()
+        }
+      ]
+    ) if atom.config.get("language-nsl.showBuildNotifications")
+
+  openScript: ->
     { basename, dirname, extname, join } = require "path"
     doc = atom.workspace.getActiveTextEditor().buffer?.file.path
     dirName = dirname(doc)

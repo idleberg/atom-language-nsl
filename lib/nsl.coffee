@@ -1,14 +1,13 @@
 module.exports = Nsl =
 
   transpile: (consolePanel) ->
-    meta = require "../package.json"
     { spawn } = require "child_process"
-    { successNslAssembler } = require "./util"
+    { notifyOnSucess } = require "./util"
 
     editor = atom.workspace.getActiveTextEditor()
 
     unless editor?
-      atom.notifications.addWarning("**#{meta.name}**: No active editor", dismissable: false)
+      atom.notifications.addWarning("**language-nsl**: No active editor", dismissable: false)
       return
 
     script = editor.getPath()
@@ -17,16 +16,16 @@ module.exports = Nsl =
     if script? and scope.startsWith "source.nsl"
       editor.save() if editor.isModified()
 
-      nslJar  = atom.config.get("#{meta.name}.pathToJar")
+      nslJar  = atom.config.get("language-nsl.pathToJar")
       defaultArguments = ["-jar", "#{nslJar}"]
-      customArguments = atom.config.get("#{meta.name}.customArguments").trim().split(" ")
+      customArguments = atom.config.get("language-nsl.customArguments").trim().split(" ")
       customArguments.push(script)
       args = defaultArguments.concat(customArguments)
 
       try
         consolePanel.clear()
       catch
-        console.clear() if atom.config.get("#{meta.name}.clearConsole")
+        console.clear() if atom.config.get("language-nsl.clearConsole")
 
       # Let's go
       nslCmd = spawn "java", args
@@ -34,7 +33,7 @@ module.exports = Nsl =
 
       nslCmd.stdout.on "data", (data) ->
         try
-          consolePanel.log(data.toString()) if atom.config.get("#{meta.name}.alwaysShowOutput")
+          consolePanel.log(data.toString()) if atom.config.get("language-nsl.alwaysShowOutput")
         catch
           console.log(data.toString())
 
@@ -47,26 +46,9 @@ module.exports = Nsl =
 
       nslCmd.on "close", ( errorCode ) ->
         if errorCode is 0 and hasError is false
-          console.log "1"
-          notification = atom.notifications.addSuccess(
-            "Transpiled successfully",
-            dismissable: true,
-            buttons: [
-              {
-                text: 'Open'
-                onDidClick: ->
-                  successNslAssembler()
-                  notification.dismiss()
-              }
-              {
-                text: 'Cancel'
-                onDidClick: ->
-                  notification.dismiss()
-              }
-            ]
-          ) if atom.config.get("#{meta.name}.showBuildNotifications")
+          return notifyOnSucess() if atom.config.get("language-nsl.showBuildNotifications")
         else
-          atom.notifications.addError("Transpile failed", dismissable: false) if atom.config.get("#{meta.name}.showBuildNotifications")
+          atom.notifications.addError("Transpile failed", dismissable: false) if atom.config.get("language-nsl.showBuildNotifications")
     else
       # Something went wrong
       atom.beep()
