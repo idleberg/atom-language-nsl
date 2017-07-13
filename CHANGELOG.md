@@ -1,3 +1,8 @@
+# v3.0.0 [#](https://github.com/idleberg/atom-language-nsl/releases/tag/v3.0.0)
+
+- add support to open transpiled scripts
+- split code into modules
+
 # v2.14.2 [#](https://github.com/idleberg/atom-language-nsl/releases/tag/v2.14.2)
 
 - fix dependency management
