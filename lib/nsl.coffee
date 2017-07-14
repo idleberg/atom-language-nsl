@@ -1,8 +1,8 @@
 module.exports = Nsl =
 
   transpile: (consolePanel) ->
-    { spawn } = require "child_process"
     { notifyOnSucess } = require "./util"
+    { spawn } = require "child_process"
 
     editor = atom.workspace.getActiveTextEditor()
 
