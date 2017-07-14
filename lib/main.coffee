@@ -1,6 +1,3 @@
-{ transpile } = require "./nsl"
-{ isPathSetup, satisfyDependencies } = require "./util"
-
 module.exports =
   config:
     pathToJar:
@@ -49,6 +46,8 @@ module.exports =
 
   activate: (state) ->
     { CompositeDisposable } = require "atom"
+    { isPathSetup, satisfyDependencies } = require "./util"
+    { transpile } = require "./nsl"
 
     # Events subscribed to in atom"s system can be easily cleaned up with a CompositeDisposable
     @subscriptions = new CompositeDisposable
