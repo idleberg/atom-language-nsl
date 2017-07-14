@@ -2,6 +2,7 @@
 
 - add support to open transpiled scripts
 - split code into modules
+- update `devDependencies`
 
 # v2.14.2 [#](https://github.com/idleberg/atom-language-nsl/releases/tag/v2.14.2)
 
