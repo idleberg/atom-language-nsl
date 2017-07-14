@@ -1,3 +1,7 @@
+# v3.0.1 [#](https://github.com/idleberg/atom-language-nsl/releases/tag/v3.0.1)
+
+- optimize dependency loading
+
 # v3.0.0 [#](https://github.com/idleberg/atom-language-nsl/releases/tag/v3.0.0)
 
 - add support to open transpiled scripts
