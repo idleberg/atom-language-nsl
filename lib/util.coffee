@@ -13,7 +13,7 @@ module.exports = Util =
             {
               text: 'Open Settings'
               onDidClick: ->
-                atom.workspace.open("atom://config/packages/language-nsl")
+                atom.workspace.open("atom://config/packages/language-nsl", {pending: true, searchAllPanes: true})
                 notification.dismiss()
             }
             {

@@ -1,3 +1,7 @@
+# v3.1.1 [#](https://github.com/idleberg/atom-language-nsl/releases/tag/v3.1.1)
+
+- pass options to `atom.workspace.open`
+
 # v3.1.0 [#](https://github.com/idleberg/atom-language-nsl/releases/tag/v3.1.0)
 
 - use async `TextEditor.save()` (closes #2)
