@@ -13,12 +13,14 @@ module.exports = Util =
             {
               text: 'Open Settings'
               onDidClick: ->
+                require("./ga").sendEvent "util", "Open Settings"
                 atom.workspace.open("atom://config/packages/language-nsl", {pending: true, searchAllPanes: true})
                 notification.dismiss()
             }
             {
               text: 'Ignore',
               onDidClick: ->
+                require("./ga").sendEvent "util", "Mute Path Warning"
                 atom.config.set("language-nsl.mutePathWarning", true)
                 notification.dismiss()
             }
@@ -33,6 +35,7 @@ module.exports = Util =
         {
           text: 'Open'
           onDidClick: ->
+            require("./ga").sendEvent "util", "Open Transpiled Script"
             Util.openScript()
             notification.dismiss()
         }
