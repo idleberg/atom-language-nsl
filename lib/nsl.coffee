@@ -4,6 +4,8 @@ module.exports = Nsl =
     { notifyOnSucess } = require "./util"
     { spawn } = require "child_process"
 
+    require("./ga").sendEvent "nsl", "Save & Transpile"
+
     editor = atom.workspace.getActiveTextEditor()
 
     unless editor?

@@ -57,6 +57,8 @@ module.exports = Util =
 
   satisfyDependencies: () ->
     meta = require "../package.json"
+
+    require("./ga").sendEvent "util", "Satisfy Dependencies"
     require("atom-package-deps").install(meta.name)
 
     for k, v of meta["package-deps"]
