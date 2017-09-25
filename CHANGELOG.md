@@ -1,3 +1,7 @@
+# v3.2.1 [#](https://github.com/idleberg/atom-language-nsl/releases/tag/v3.2.1)
+
+- remove activation event
+
 # v3.2.0 [#](https://github.com/idleberg/atom-language-nsl/releases/tag/v3.2.0)
 
 - add metrics support
