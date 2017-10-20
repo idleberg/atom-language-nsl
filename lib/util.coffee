@@ -11,14 +11,15 @@ module.exports = Util =
           dismissable: true,
           buttons: [
             {
-              text: 'Open Settings'
+              text: "Open Settings"
+              className: "icon icon-gear"
               onDidClick: ->
                 require("./ga").sendEvent "util", "Open Settings"
                 atom.workspace.open("atom://config/packages/language-nsl", {pending: true, searchAllPanes: true})
                 notification.dismiss()
             }
             {
-              text: 'Ignore',
+              text: "Ignore",
               onDidClick: ->
                 require("./ga").sendEvent "util", "Mute Path Warning"
                 atom.config.set("language-nsl.mutePathWarning", true)
@@ -33,14 +34,15 @@ module.exports = Util =
       dismissable: true,
       buttons: [
         {
-          text: 'Open'
+          text: "Open"
+          className: "icon icon-pencil"
           onDidClick: ->
             require("./ga").sendEvent "util", "Open Transpiled Script"
             Util.openScript()
             notification.dismiss()
         }
         {
-          text: 'Cancel'
+          text: "Cancel"
           onDidClick: ->
             notification.dismiss()
         }
