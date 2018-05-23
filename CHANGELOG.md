@@ -1,3 +1,8 @@
+# v3.3.1 [#](https://github.com/idleberg/atom-language-nsl/releases/tag/v3.3.1)
+
+- update default GA parameter
+- update dependencies
+
 # v3.3.0 [#](https://github.com/idleberg/atom-language-nsl/releases/tag/v3.3.0)
 
 - add button icons
