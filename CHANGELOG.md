@@ -1,6 +1,6 @@
 # v3.3.2 [#](https://github.com/idleberg/atom-language-nsl/releases/tag/v3.3.2)
 
-- fix anonymizerIP parameter
+- fix `anonymizerIP` parameter
 
 # v3.3.1 [#](https://github.com/idleberg/atom-language-nsl/releases/tag/v3.3.1)
 
