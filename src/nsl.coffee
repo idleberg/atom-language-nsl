@@ -1,15 +1,15 @@
-module.exports = Nsl =
+{ readManifestSync } = require("atom-read-manifest")
+meta = readManifestSync('language-nsl')
 
+module.exports = Nsl =
   transpile: (consolePanel) ->
     { notifyOnSucess } = require "./util"
     { spawn } = require "child_process"
 
-    require("./ga").sendEvent "nsl", "Save & Transpile"
-
     editor = atom.workspace.getActiveTextEditor()
 
     unless editor?
-      atom.notifications.addWarning("**language-nsl**: No active editor", dismissable: false)
+      atom.notifications.addWarning("**#{meta.name}**: No active editor", dismissable: false)
       return
 
     script = editor.getPath()

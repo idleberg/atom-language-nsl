@@ -1,3 +1,6 @@
+{ readManifestSync } = require("atom-read-manifest")
+meta = readManifestSync('language-nsl')
+
 module.exports = Util =
   isPathSetup: () ->
     { access, constants} = require "fs"
@@ -14,14 +17,12 @@ module.exports = Util =
               text: "Open Settings"
               className: "icon icon-gear"
               onDidClick: ->
-                require("./ga").sendEvent "util", "Open Settings"
                 atom.workspace.open("atom://config/packages/language-nsl", {pending: true, searchAllPanes: true})
                 notification.dismiss()
             }
             {
               text: "Ignore",
               onDidClick: ->
-                require("./ga").sendEvent "util", "Mute Path Warning"
                 atom.config.set("language-nsl.mutePathWarning", true)
                 notification.dismiss()
             }
@@ -37,7 +38,6 @@ module.exports = Util =
           text: "Open"
           className: "icon icon-pencil"
           onDidClick: ->
-            require("./ga").sendEvent "util", "Open Transpiled Script"
             Util.openScript()
             notification.dismiss()
         }
@@ -61,9 +61,6 @@ module.exports = Util =
     atom.workspace.open(nsisFile)
 
   satisfyDependencies: () ->
-    meta = require "../package.json"
-
-    require("./ga").sendEvent "util", "Satisfy Dependencies"
     require("atom-package-deps").install(meta.name)
 
     for k, v of meta["package-deps"]

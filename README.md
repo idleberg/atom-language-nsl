@@ -1,11 +1,11 @@
 # nsL Assembler for Atom
 
-[![apm](https://img.shields.io/apm/l/language-nsl.svg?style=flat-square)](https://atom.io/packages/language-nsl)
-[![apm](https://img.shields.io/apm/v/language-nsl.svg?style=flat-square)](https://atom.io/packages/language-nsl)
-[![apm](https://img.shields.io/apm/dm/language-nsl.svg?style=flat-square)](https://atom.io/packages/language-nsl)
-[![Travis](https://img.shields.io/travis/idleberg/atom-language-nsl.svg?style=flat-square)](https://travis-ci.org/idleberg/atom-language-nsl)
-[![David](https://img.shields.io/david/dev/idleberg/atom-language-nsl.svg?style=flat-square)](https://david-dm.org/idleberg/atom-language-nsl?type=dev)
-[![Gitter](https://img.shields.io/badge/chat-Gitter-ed1965.svg?style=flat-square)](https://gitter.im/NSIS-Dev/Atom)
+[![apm](https://flat.badgen.net/apm/license/language-nsl)](https://atom.io/packages/language-nsl)
+[![apm](https://flat.badgen.net/apm/v/language-nsl)](https://atom.io/packages/language-nsl)
+[![apm](https://flat.badgen.net/apm/dl/language-nsl)](https://atom.io/packages/language-nsl)
+[![CircleCI](https://flat.badgen.net/circleci/github/idleberg/atom-language-nsl)](https://circleci.com/gh/idleberg/atom-language-nsl)
+[![David](https://flat.badgen.net/david/dep/idleberg/atom-language-nsl)](https://david-dm.org/idleberg/atom-language-nsl)
+[![Gitter](https://flat.badgen.net/badge/chat/on%20gitter/ff69b4)](https://gitter.im/NSIS-Dev/Atom)
 
 Atom language support for [nsL Assembler](https://sourceforge.net/projects/nslassembler/), including grammar, snippets and build system
 
