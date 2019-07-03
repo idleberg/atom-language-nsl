@@ -24,7 +24,7 @@
     "type": "git",
     "url": "https://github.com/idleberg/atom-language-nsl"
   },
-  "main": "lib/main.coffee",
+  "main": "lib/main",
   "engines": {
     "atom": ">=1.19.0 <2.0.0"
   },
