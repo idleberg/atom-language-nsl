@@ -1,3 +1,10 @@
+# v3.4.0 [#](https://github.com/idleberg/atom-language-nsl/releases/tag/v3.4.0)
+
+- bundle with Webpack
+- add activation hooks
+- remove metrics
+- update dependencies
+
 # v3.3.2 [#](https://github.com/idleberg/atom-language-nsl/releases/tag/v3.3.2)
 
 - fix `anonymizerIP` parameter
