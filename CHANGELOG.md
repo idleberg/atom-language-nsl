@@ -1,6 +1,6 @@
 # v4.0.0 [#](https://github.com/idleberg/atom-language-nsl/releases/tag/v4.0.0)
 
-- **Breaking change** arguments need to be passed as array
+- **Breaking change:** arguments need to be passed as array
 - update dependencies
 
 # v3.4.0 [#](https://github.com/idleberg/atom-language-nsl/releases/tag/v3.4.0)
