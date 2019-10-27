@@ -19,7 +19,7 @@ module.exports = Nsl =
       editor.save().then ->
         nslJar  = atom.config.get("language-nsl.pathToJar")
         defaultArguments = ["-jar", "#{nslJar}"]
-        customArguments = atom.config.get("language-nsl.customArguments").trim().split(" ")
+        customArguments = atom.config.get("language-nsl.customArguments")
         customArguments.push(script)
         args = defaultArguments.concat(customArguments)
 

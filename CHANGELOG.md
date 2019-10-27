@@ -1,3 +1,7 @@
+# v4.0.1 [#](https://github.com/idleberg/atom-language-nsl/releases/tag/v4.0.1)
+
+- fix argument handling
+
 # v4.0.0 [#](https://github.com/idleberg/atom-language-nsl/releases/tag/v4.0.0)
 
 - **Breaking change:** arguments need to be passed as array
