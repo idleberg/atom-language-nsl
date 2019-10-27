@@ -54,7 +54,7 @@ Make sure to specify the path for `nsL.jar` in the package settings. There you c
 ```cson
 "language-nsl":
   pathToJar: "%PROGRAMFILES(X86)%\\NSIS\\NSL\\nsL.jar"
-  customArguments: "/nopause /nomake"
+  customArguments: ["/nopause", "/nomake"]
 ```
 
 #### Third-party packages

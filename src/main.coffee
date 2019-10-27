@@ -14,9 +14,14 @@ module.exports =
       order: 1
     customArguments:
       title: "Custom Arguments"
-      description: "Specify your preferred arguments for nsL Assembler"
+      description: "Specify your preferred arguments for nsL Assembler, separated by commas"
       type: "string"
-      default: "/nomake /nopause"
+      default: [
+        "/nomake",
+        "/nopause"
+      ]
+      items:
+        type: "string"
       order: 2
     alwaysShowOutput:
       title: "Always Show Output"
