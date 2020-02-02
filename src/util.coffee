@@ -59,11 +59,3 @@ module.exports = Util =
     nsisFile = join(dirName, outName)
 
     atom.workspace.open(nsisFile)
-
-  satisfyDependencies: () ->
-    require("atom-package-deps").install(meta.name)
-
-    for k, v of meta["package-deps"]
-      if atom.packages.isPackageDisabled(v)
-        console.log "Enabling package '#{v}'" if atom.inDevMode()
-        atom.packages.enablePackage(v)

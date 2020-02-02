@@ -45,7 +45,8 @@
   },
   "dependencies": {
     "atom-package-deps": "^5.1.0",
-    "atom-read-manifest": "^0.3.1"
+    "atom-read-manifest": "^0.3.1",
+    "atom-satisfy-dependencies": "^0.2.1"
   },
   "devDependencies": {
     "coffee-loader": "^0.9.0",

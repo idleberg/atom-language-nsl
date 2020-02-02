@@ -1,3 +1,5 @@
+{ satisfyDependencies } = "atom-satisfy-dependencies"
+
 module.exports =
   config:
     pathToJar:
