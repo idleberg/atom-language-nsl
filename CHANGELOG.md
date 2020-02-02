@@ -1,3 +1,9 @@
+# v4.1.0 [#](https://github.com/idleberg/atom-language-nsl/releases/tag/v4.1.0)
+
+- replace custom code with `atom-satisfy-dependencies` module
+- use `activationHooks`
+- update dependencies
+
 # v4.0.1 [#](https://github.com/idleberg/atom-language-nsl/releases/tag/v4.0.1)
 
 - fix argument handling

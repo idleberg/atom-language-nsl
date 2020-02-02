@@ -1,5 +1,3 @@
-{ satisfyDependencies } = "atom-satisfy-dependencies"
-
 module.exports =
   config:
     pathToJar:
@@ -54,6 +52,7 @@ module.exports =
   activate: (state) ->
     { CompositeDisposable } = require "atom"
     { isPathSetup } = require "./util"
+    { satisfyDependencies } = require "atom-satisfy-dependencies"
     { transpile } = require "./nsl"
 
     # Events subscribed to in atom"s system can be easily cleaned up with a CompositeDisposable
@@ -62,7 +61,7 @@ module.exports =
     # Register commands
     @subscriptions.add atom.commands.add "atom-workspace", "nsl-assembler:save-&-transpile": => transpile(@consolePanel)
 
-    satisfyDependencies() if atom.config.get("language-nsl.manageDependencies") is true
+    satisfyDependencies("language-nsl") if atom.config.get("language-nsl.manageDependencies") is true
     isPathSetup() if atom.config.get("language-nsl.mutePathWarning") is false
 
   deactivate: ->
