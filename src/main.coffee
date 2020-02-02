@@ -53,7 +53,7 @@ module.exports =
 
   activate: (state) ->
     { CompositeDisposable } = require "atom"
-    { isPathSetup, satisfyDependencies } = require "./util"
+    { isPathSetup } = require "./util"
     { transpile } = require "./nsl"
 
     # Events subscribed to in atom"s system can be easily cleaned up with a CompositeDisposable
