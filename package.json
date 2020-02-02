@@ -36,6 +36,9 @@
       "nsl-assembler:save-&-transpile"
     ]
   },
+  "activationHooks": [
+    "language-nsl:grammar-used"
+  ],
   "consumedServices": {
     "console-panel": {
       "versions": {
