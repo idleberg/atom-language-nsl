@@ -4,10 +4,12 @@
   "description": "Atom language support for nsL Assembler, including grammar, snippets and build system",
   "license": "MIT OR GPL-2.0",
   "scripts": {
-    "build": "webpack --mode production",
+    "build": "rollup --config",
     "dev": "npm run start",
-    "lint": "gulp lint",
-    "start": "webpack --mode none --watch",
+    "lint:coffee": "eslint --fix ./src/*.coffee",
+    "lint:cson": "eslint --fix ./grammars/*.cson ./keymaps/*.cson ./snippets/*.cson",
+    "lint": "npm-run-all --parallel lint:*",
+    "start": "rollup --config --watch",
     "test": "npm run lint"
   },
   "author": {
@@ -30,7 +32,18 @@
     "atom": ">=1.19.0 <2.0.0"
   },
   "package-deps": [
-    "language-nsis"
+    {
+      "name": "language-nsis"
+    },
+    [
+      {
+        "name": "console",
+        "minimumVersion": "0.4.0"
+      },
+      {
+        "name": "console-panel"
+      }
+    ]
   ],
   "activationCommands": {
     "atom-workspace": [
@@ -41,6 +54,11 @@
     "language-nsl:grammar-used"
   ],
   "consumedServices": {
+    "console": {
+      "versions": {
+        "^1.0.0": "consumeConsolePanel"
+      }
+    },
     "console-panel": {
       "versions": {
         "^1.0.0": "consumeConsolePanel"
@@ -48,20 +66,27 @@
     }
   },
   "dependencies": {
-    "atom-package-deps": "^5.1.0",
-    "atom-read-manifest": "^0.5.1",
-    "atom-satisfy-dependencies": "^0.2.1"
+    "atom-package-deps": "^8.0.0",
+    "atom-satisfy-dependencies": "^0.3.0"
   },
   "devDependencies": {
-    "coffee-loader": "^0.9.0",
-    "coffeelint-stylish": "^0.1.2",
+    "@babel/core": "^7.15.0",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-commonjs": "^20.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.0.4",
     "coffeescript": "^2.5.1",
-    "gulp": "^4.0.2",
-    "gulp-coffeelint": "^0.6.0",
-    "gulp-debug": "^4.0.0",
-    "gulp-jsonlint": "^1.3.2",
-    "husky": "^4.2.4",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11"
+    "eslint": "^7.32.0",
+    "eslint-plugin-coffee": "^0.1.14",
+    "eslint-plugin-json": "^3.1.0",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.1.2",
+    "npm-run-all": "^4.1.5",
+    "rollup": "^2.56.2",
+    "rollup-plugin-coffee-script": "^2.0.0",
+    "rollup-plugin-terser": "^7.0.2"
+  },
+  "lint-staged": {
+    "*.(coffee|cson|json)": "eslint --cache --fix"
   }
 }

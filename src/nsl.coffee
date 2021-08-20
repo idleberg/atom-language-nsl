@@ -1,5 +1,4 @@
-{ readManifestSync } = require("atom-read-manifest")
-meta = readManifestSync('language-nsl')
+meta = require('../package.json')
 
 module.exports = Nsl =
   transpile: (consolePanel) ->
