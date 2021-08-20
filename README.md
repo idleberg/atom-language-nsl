@@ -1,9 +1,9 @@
-# nsL Assembler for Atom
+# atom-language-nsl
 
 [![apm](https://flat.badgen.net/apm/license/language-nsl)](https://atom.io/packages/language-nsl)
 [![apm](https://flat.badgen.net/apm/v/language-nsl)](https://atom.io/packages/language-nsl)
 [![apm](https://flat.badgen.net/apm/dl/language-nsl)](https://atom.io/packages/language-nsl)
-[![CircleCI](https://flat.badgen.net/circleci/github/idleberg/atom-language-nsl)](https://circleci.com/gh/idleberg/atom-language-nsl)
+[![CI](https://img.shields.io/github/workflow/status/idleberg/atom-language-nsl/CI?style=flat-square)](https://github.com/idleberg/atom-language-nsl/actions)
 [![David](https://flat.badgen.net/david/dep/idleberg/atom-language-nsl)](https://david-dm.org/idleberg/atom-language-nsl)
 
 Atom language support for [nsL Assembler](https://sourceforge.net/projects/nslassembler/), including grammar, snippets and build system
