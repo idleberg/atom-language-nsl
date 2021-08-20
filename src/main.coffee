@@ -15,7 +15,7 @@ module.exports =
     customArguments:
       title: "Custom Arguments"
       description: "Specify your preferred arguments for nsL Assembler, separated by commas"
-      type: "string"
+      type: "array"
       default: [
         "/nomake",
         "/nopause"
