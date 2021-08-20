@@ -9,6 +9,7 @@
     "lint:coffee": "eslint --fix ./src/*.coffee",
     "lint:cson": "eslint --fix ./grammars/*.cson ./keymaps/*.cson ./snippets/*.cson",
     "lint": "npm-run-all --parallel lint:*",
+    "prepare": "husky install",
     "start": "rollup --config --watch",
     "test": "npm run lint"
   },
