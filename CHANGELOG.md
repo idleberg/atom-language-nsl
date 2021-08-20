@@ -1,3 +1,11 @@
+# v4.2.0 [#](https://github.com/idleberg/atom-language-nsl/releases/tag/v4.2.0)
+
+- build with Rollup
+- replace linter
+- update to `husky@v7`
+- run CI on GitHub
+- fix config
+
 # v4.1.1 [#](https://github.com/idleberg/atom-language-nsl/releases/tag/v4.1.1)
 
 - some housekeeping
