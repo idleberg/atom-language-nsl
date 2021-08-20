@@ -1,6 +1,6 @@
 meta = require('../package.json')
 
-module.exports = Nsl =
+module.exports =
   transpile: (consolePanel) ->
     { notifyOnSucess } = require "./util"
     { spawn } = require "child_process"

@@ -1,27 +1,28 @@
 meta = require('../package.json')
-module.exports = Util =
+
+module.exports =
   isPathSetup: () ->
     { access, constants} = require "fs"
 
-    pathToJar = atom.config.get("language-nsl.pathToJar")
+    pathToJar = atom.config.get("#{meta.name}.pathToJar")
 
     access pathToJar, constants.R_OK | constants.W_OK, (error) ->
       if error
         notification = atom.notifications.addWarning(
-          "**language-nsl**: No valid \`nsL.jar\` was specified in your settings",
+          "**#{meta.name}**: No valid \`nsL.jar\` was specified in your settings",
           dismissable: true,
           buttons: [
             {
               text: "Open Settings"
               className: "icon icon-gear"
               onDidClick: ->
-                atom.workspace.open("atom://config/packages/language-nsl", {pending: true, searchAllPanes: true})
+                atom.workspace.open("atom://config/packages/#{meta.name}", {pending: true, searchAllPanes: true})
                 notification.dismiss()
             }
             {
               text: "Ignore",
               onDidClick: ->
-                atom.config.set("language-nsl.mutePathWarning", true)
+                atom.config.set("#{meta.name}.mutePathWarning", true)
                 notification.dismiss()
             }
           ]
@@ -36,7 +37,7 @@ module.exports = Util =
           text: "Open"
           className: "icon icon-pencil"
           onDidClick: ->
-            Util.openScript()
+            this.openScript()
             notification.dismiss()
         }
         {
@@ -45,7 +46,7 @@ module.exports = Util =
             notification.dismiss()
         }
       ]
-    ) if atom.config.get("language-nsl.showBuildNotifications")
+    ) if atom.config.get("#{meta.name}.showBuildNotifications")
 
   openScript: ->
     { basename, dirname, extname, join } = require "path"

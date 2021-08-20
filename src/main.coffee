@@ -49,7 +49,7 @@ module.exports =
       order: 6
   subscriptions: null
 
-  activate: (state) ->
+  activate: () ->
     { CompositeDisposable } = require "atom"
     { isPathSetup } = require "./util"
     { satisfyDependencies } = require "atom-satisfy-dependencies"
