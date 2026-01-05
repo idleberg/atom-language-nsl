@@ -4,13 +4,13 @@
 	"description": "Atom language support for nsL Assembler, including grammar, snippets and build system",
 	"license": "MIT OR GPL-2.0",
 	"scripts": {
-		"build": "rollup --config",
+		"build": "tsup",
 		"dev": "npm run start",
 		"lint:coffee": "eslint --fix ./src/*.coffee",
 		"lint:cson": "eslint --fix ./grammars/*.cson ./keymaps/*.cson ./snippets/*.cson",
 		"lint": "npm-run-all --parallel lint:*",
 		"prepare": "husky install",
-		"start": "rollup --config --watch",
+		"start": "tsup --watch",
 		"test": "npm run lint"
 	},
 	"author": {
@@ -28,7 +28,7 @@
 		"type": "git",
 		"url": "https://github.com/idleberg/atom-language-nsl"
 	},
-	"main": "lib/main",
+	"main": "lib/main.js",
 	"engines": {
 		"atom": ">=1.52.0 <2.0.0",
 		"pulsar": ">=1.102.0 <2.0.0"
@@ -72,11 +72,8 @@
 		"atom-satisfy-dependencies": "^0.3.0"
 	},
 	"devDependencies": {
-		"@babel/core": "^7.15.0",
-		"@rollup/plugin-babel": "^5.3.0",
-		"@rollup/plugin-commonjs": "^20.0.0",
-		"@rollup/plugin-json": "^4.1.0",
-		"@rollup/plugin-node-resolve": "^13.0.4",
+		"@types/atom": "^1.40.18",
+		"@types/node": "^25.0.3",
 		"coffeescript": "^2.5.1",
 		"eslint": "^7.32.0",
 		"eslint-plugin-coffee": "^0.1.14",
@@ -84,9 +81,7 @@
 		"husky": "^7.0.1",
 		"lint-staged": "^11.1.2",
 		"npm-run-all": "^4.1.5",
-		"rollup": "^2.56.2",
-		"rollup-plugin-coffee-script": "^2.0.0",
-		"rollup-plugin-terser": "^7.0.2"
+		"tsup": "^8.5.1"
 	},
 	"lint-staged": {
 		"*.(coffee|cson|json)": "eslint --cache --fix"
