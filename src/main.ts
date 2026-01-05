@@ -70,13 +70,12 @@ const config = {
 	}
 };
 
-const packageModule: LanguageNSLPackage = {
+export default {
 	config,
 	subscriptions: null,
 	consolePanel: undefined,
 
-	activate(): void {
-		// Events subscribed to in atom's system can be easily cleaned up with a CompositeDisposable
+	async activate(): Promise<void> {
 		this.subscriptions = new CompositeDisposable();
 
 		// Register commands
@@ -91,7 +90,7 @@ const packageModule: LanguageNSLPackage = {
 		}
 
 		if (atom.config.get("language-nsl.mutePathWarning") === false) {
-			isPathSetup();
+			await isPathSetup();
 		}
 	},
 
@@ -106,6 +105,4 @@ const packageModule: LanguageNSLPackage = {
 	consumeConsolePanel(consolePanel: any): void {
 		this.consolePanel = consolePanel;
 	}
-};
-
-export default packageModule;
+} as LanguageNSLPackage;
