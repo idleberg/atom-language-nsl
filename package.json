@@ -6,10 +6,9 @@
 	"scripts": {
 		"build": "tsup",
 		"dev": "npm run start",
-		"lint:coffee": "eslint --fix ./src/*.coffee",
-		"lint:cson": "eslint --fix ./grammars/*.cson ./keymaps/*.cson ./snippets/*.cson",
-		"lint": "npm-run-all --parallel lint:*",
-		"prepare": "husky install",
+		"lint": "concurrently --prefix-colors blue,green,magenta npm:lint:*",
+		"lint:biome": "biome check",
+		"prepare": "lefthook install",
 		"start": "tsup --watch",
 		"test": "npm run lint"
 	},
@@ -72,18 +71,12 @@
 		"atom-satisfy-dependencies": "^0.3.0"
 	},
 	"devDependencies": {
+		"@commitlint/cli": "^20.3.0",
+		"@commitlint/config-conventional": "^20.3.0",
+		"@idleberg/configs": "^0.4.1",
 		"@types/atom": "^1.40.18",
 		"@types/node": "^25.0.3",
-		"coffeescript": "^2.5.1",
-		"eslint": "^7.32.0",
-		"eslint-plugin-coffee": "^0.1.14",
-		"eslint-plugin-json": "^3.1.0",
-		"husky": "^7.0.1",
-		"lint-staged": "^11.1.2",
-		"npm-run-all": "^4.1.5",
+		"concurrently": "^9.2.1",
 		"tsup": "^8.5.1"
-	},
-	"lint-staged": {
-		"*.(coffee|cson|json)": "eslint --cache --fix"
 	}
 }
