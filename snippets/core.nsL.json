@@ -120,11 +120,11 @@
 			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
 			"prefix": "Call()"
 		},
-	"CallInstDLL()": {
-		"body": "CallInstDLL($1);",
-		"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
-		"prefix": "CallInstDLL()"
-	},
+		"CallInstDLL()": {
+			"body": "CallInstDLL($1);",
+			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+			"prefix": "CallInstDLL()"
+		},
 		"Caption()": {
 			"body": "Caption(\"${1:caption}\");$2",
 			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
