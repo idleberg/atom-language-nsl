@@ -1,10 +1,9 @@
 # atom-language-nsl
 
-[![apm](https://flat.badgen.net/apm/license/language-nsl)](https://atom.io/packages/language-nsl)
-[![apm](https://flat.badgen.net/apm/v/language-nsl)](https://atom.io/packages/language-nsl)
-[![apm](https://flat.badgen.net/apm/dl/language-nsl)](https://atom.io/packages/language-nsl)
-[![CI](https://img.shields.io/github/workflow/status/idleberg/atom-language-nsl/CI?style=flat-square)](https://github.com/idleberg/atom-language-nsl/actions)
-[![David](https://flat.badgen.net/david/dep/idleberg/atom-language-nsl)](https://david-dm.org/idleberg/atom-language-nsl)
+[![License](https://img.shields.io/github/license/idleberg/atom-language-nsl?color=blue&style=for-the-badge)](https://github.com/idleberg/atom-language-nsl/blob/master/LICENSE)
+[![Release](https://img.shields.io/github/v/release/idleberg/atom-language-nsl?style=for-the-badge)](https://github.com/idleberg/atom-language-nsl/releases)
+[![Downloads](https://img.shields.io/pulsar/dt/language-nsl?style=for-the-badge&color=slateblue)](https://web.pulsar-edit.dev/packages/language-nsl)
+[![CI](https://img.shields.io/github/actions/workflow/status/idleberg/atom-language-nsl/default.yml?style=for-the-badge)](https://github.com/idleberg/atom-language-nsl/actions)
 
 Atom language support for [nsL Assembler](https://sourceforge.net/projects/nslassembler/), including grammar, snippets and build system
 
