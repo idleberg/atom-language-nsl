@@ -1,3 +1,26 @@
+# v4.3.0 [#](https://github.com/idleberg/atom-language-nsl/releases/tag/v4.3.0)
+
+- add new language features
+  - `CallInstDLL`
+  - `CPU`
+  - `ExecShellWait`
+  - `FileReadUTF16LE`
+  - `FileReadWord`
+  - `FileWriteUTF16LE`
+  - `FileWriteWord`
+  - `GetKnownFolderPath`
+  - `GetRegView`
+  - `GetShellVarContext`
+  - `GetWinVer`
+  - `ManifestAppendCustomString`
+  - `ManifestDisableWindowFiltering`
+  - `ManifestGdiScaling`
+  - `ManifestSupportedOS`
+  - `SetCompressionLevel`
+  - `Target`
+  - `WriteRegMultiStr`
+  - `WriteRegNone`
+
 # v4.2.0 [#](https://github.com/idleberg/atom-language-nsl/releases/tag/v4.2.0)
 
 - build with Rollup
