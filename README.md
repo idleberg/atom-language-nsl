@@ -11,26 +11,60 @@ Atom language support for [nsL Assembler](https://sourceforge.net/projects/nslas
 
 ## Installation
 
-### apm
+> [!NOTE]
+>
+> The following guide assumes that you're by now using Pulsar, a
+> community-driven fork of the Atom editor. Should you still be using Atom, use
+> `apm` command instead of `ppm`.
 
-* Install package `apm install language-nsl` (or use the GUI)
+### Package Manager
+
+Install `language-nsl` from the editor's
+[Package Manager](http://flight-manual.atom-editor.cc/using-atom/sections/atom-packages/)
+or the command-line equivalent:
+
+```bash
+$ ppm install language-nsl
+```
 
 ### Using Git
 
 Change to your Atom packages directory:
 
-```bash
-# Windows
-$ cd %USERPROFILE%\.atom\packages
+**Windows**
 
-# Linux & macOS
-$ cd ~/.atom/packages/
+```powershell
+# Powershell
+$ cd $Env:USERPROFILE\.pulsar\packages
+```
+
+```cmd
+:: Command Prompt
+$ cd %USERPROFILE%\.pulsar\packages
+```
+
+**Linux & macOS**
+
+```bash
+$ cd ~/.pulsar/packages/
 ```
 
 Clone repository as `language-nsl`:
 
 ```bash
 $ git clone https://github.com/idleberg/atom-language-nsl language-nsl
+```
+
+Inside the cloned directory, install its dependencies:
+
+```bash
+$ ppm ci
+```
+
+Build the source:
+
+```bash
+$ ppm run build
 ```
 
 ### Package Dependencies
