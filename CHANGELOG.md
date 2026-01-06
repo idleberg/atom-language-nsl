@@ -1,5 +1,6 @@
-# v4.3.0 [#](https://github.com/idleberg/atom-language-nsl/releases/tag/v4.3.0)
+# v5.0.0 [#](https://github.com/idleberg/atom-language-nsl/releases/tag/v5.0.0)
 
+- **Breaking change** change license to MIT-only
 - add new language features
   - `CallInstDLL`
   - `CPU`
@@ -20,6 +21,9 @@
   - `Target`
   - `WriteRegMultiStr`
   - `WriteRegNone`
+- convert code-base to TypeScript
+- update dependencies
+- update tooling
 
 # v4.2.0 [#](https://github.com/idleberg/atom-language-nsl/releases/tag/v4.2.0)
 
