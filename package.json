@@ -1,6 +1,6 @@
 {
 	"name": "language-nsl",
-	"version": "4.2.0",
+	"version": "5.0.0",
 	"description": "Atom language support for nsL Assembler, including grammar, snippets and build system",
 	"license": "MIT",
 	"scripts": {
