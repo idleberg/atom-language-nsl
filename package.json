@@ -8,7 +8,6 @@
 		"dev": "npm run start",
 		"lint": "concurrently --prefix-colors blue,green,magenta npm:lint:*",
 		"lint:biome": "biome check",
-		"prepare": "lefthook install",
 		"start": "tsup --watch",
 		"test": "npm run lint"
 	},
