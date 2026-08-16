@@ -6,12 +6,12 @@
 			"prefix": "define"
 		},
 		"#if…#else": {
-			"body": "#if\n\t${1:// your code here}\n#else\n\t${2:// your code here}\n#ifend$3",
+			"body": "#if\n\t${1:// your code here}\n#else\n\t${2:// your code here}\n#endif$3",
 			"leftLabelHTML": "<span class='syntax--keyword syntax--control'>!</span>",
 			"prefix": "if…else"
 		},
 		"#if": {
-			"body": "#if\n\t${1:// your code here}\n#ifend$2",
+			"body": "#if\n\t${1:// your code here}\n#endif$2",
 			"leftLabelHTML": "<span class='syntax--keyword syntax--control'>!</span>",
 			"prefix": "if"
 		},
@@ -30,20 +30,15 @@
 			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
 			"prefix": "Abort()"
 		},
+		"AbortCalled()": {
+			"body": "AbortCalled()$1",
+			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+			"prefix": "AbortCalled()"
+		},
 		"AddBrandingImage()": {
 			"body": "AddBrandingImage(${1});$2",
 			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
 			"prefix": "AddBrandingImage()"
-		},
-		"AddIncludeDir()": {
-			"body": "AddIncludeDir(${1});$2",
-			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
-			"prefix": "AddIncludeDir()"
-		},
-		"AddPluginDir()": {
-			"body": "AddPluginDir(${1});$2",
-			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
-			"prefix": "AddPluginDir()"
 		},
 		"AddSize()": {
 			"body": "AddSize(${1});$2",
@@ -79,6 +74,11 @@
 			"body": "AllowSkipFiles(on);$2",
 			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
 			"prefix": "AllowSkipFiles(on)"
+		},
+		"AltRegView()": {
+			"body": "AltRegView()$1",
+			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+			"prefix": "AltRegView()"
 		},
 		"AutoCloseWindow()": {
 			"body": "AutoCloseWindow(${1});$2",
@@ -265,6 +265,11 @@
 			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
 			"prefix": "EnumRegValue()"
 		},
+		"Errors()": {
+			"body": "Errors()$1",
+			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+			"prefix": "Errors()"
+		},
 		"Exch()": {
 			"body": "Exch(${1});$2",
 			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
@@ -314,6 +319,11 @@
 			"body": "FileErrorText(${1});$2",
 			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
 			"prefix": "FileErrorText()"
+		},
+		"FileExists()": {
+			"body": "FileExists(${1:path})$2",
+			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+			"prefix": "FileExists()"
 		},
 		"FileOpen()": {
 			"body": "FileOpen(${1});$2",
@@ -444,6 +454,11 @@
 			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
 			"prefix": "GetFileTimeLocal()"
 		},
+		"GetFullPathName()": {
+			"body": "GetFullPathName(${1:path});$2",
+			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+			"prefix": "GetFullPathName()"
+		},
 		"GetFunctionAddress()": {
 			"body": "GetFunctionAddress(${1});$2",
 			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
@@ -514,36 +529,6 @@
 			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
 			"prefix": "if()"
 		},
-		"IfAbort()": {
-			"body": "IfAbort(${1});$2",
-			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
-			"prefix": "IfAbort()"
-		},
-		"IfErrors()": {
-			"body": "IfErrors(${1});$2",
-			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
-			"prefix": "IfErrors()"
-		},
-		"IfFileExists()": {
-			"body": "IfFileExists(${1});$2",
-			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
-			"prefix": "IfFileExists()"
-		},
-		"IfRebootFlag()": {
-			"body": "IfRebootFlag(${1});$2",
-			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
-			"prefix": "IfRebootFlag()"
-		},
-		"IfSilent()": {
-			"body": "IfSilent(${1});$2",
-			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
-			"prefix": "IfSilent()"
-		},
-		"Include()": {
-			"body": "Include(${1});$2",
-			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
-			"prefix": "Include()"
-		},
 		"InitPluginsDir()": {
 			"body": "InitPluginsDir(${1});$2",
 			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
@@ -589,10 +574,20 @@
 			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
 			"prefix": "InstTypeSetText()"
 		},
+		"Int64Fmt()": {
+			"body": "Int64Fmt(${1:format}, ${2:numberstring});$3",
+			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+			"prefix": "Int64Fmt()"
+		},
 		"IntFmt()": {
 			"body": "IntFmt(${1});$2",
 			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
 			"prefix": "IntFmt()"
+		},
+		"IntPtrOp()": {
+			"body": "IntPtrOp(${1:value1}, ${2:op}, ${3:value2});$4",
+			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+			"prefix": "IntPtrOp()"
 		},
 		"IsWindow()": {
 			"body": "IsWindow(${1});$2",
@@ -679,6 +674,31 @@
 			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
 			"prefix": "ManifestDPIAware(false)"
 		},
+		"ManifestDPIAwareness()": {
+			"body": "ManifestDPIAwareness($1);$2",
+			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+			"prefix": "ManifestDPIAwareness()"
+		},
+		"ManifestDPIAwareness(unaware)": {
+			"body": "ManifestDPIAwareness(\"unaware\");$1",
+			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+			"prefix": "ManifestDPIAwareness(unaware)"
+		},
+		"ManifestDPIAwareness(system)": {
+			"body": "ManifestDPIAwareness(\"system\");$1",
+			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+			"prefix": "ManifestDPIAwareness(system)"
+		},
+		"ManifestDPIAwareness(PerMonitor)": {
+			"body": "ManifestDPIAwareness(\"PerMonitor\");$1",
+			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+			"prefix": "ManifestDPIAwareness(PerMonitor)"
+		},
+		"ManifestDPIAwareness(PerMonitorV2)": {
+			"body": "ManifestDPIAwareness(\"PerMonitorV2\");$1",
+			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+			"prefix": "ManifestDPIAwareness(PerMonitorV2)"
+		},
 		"ManifestGdiScaling()": {
 			"body": "ManifestGdiScaling($1);",
 			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
@@ -704,6 +724,11 @@
 			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
 			"prefix": "ManifestLongPathAware(false)"
 		},
+		"ManifestMaxVersionTested()": {
+			"body": "ManifestMaxVersionTested(${1:version});$2",
+			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+			"prefix": "ManifestMaxVersionTested()"
+		},
 		"ManifestSupportedOS()": {
 			"body": "ManifestSupportedOS($1);",
 			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
@@ -723,6 +748,11 @@
 			"body": "Name(\"${1:name}\");$2",
 			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
 			"prefix": "Name()"
+		},
+		"Nop()": {
+			"body": "Nop();$1",
+			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+			"prefix": "Nop()"
 		},
 		"onGUIEnd()": {
 			"body": "function .onGUIEnd(${1}) {\n\t${2:// your code here}\n}",
@@ -809,6 +839,26 @@
 			"leftLabelHTML": "<span class='syntax--entity syntax--name syntax--section'>E</span>",
 			"prefix": "page License()"
 		},
+		"PEAddResource()": {
+			"body": "PEAddResource(${1:file}, ${2:type}, ${3:name});$4",
+			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+			"prefix": "PEAddResource()"
+		},
+		"PEDllCharacteristics()": {
+			"body": "PEDllCharacteristics(${1:disable}, ${2:enable});$3",
+			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+			"prefix": "PEDllCharacteristics()"
+		},
+		"PERemoveResource()": {
+			"body": "PERemoveResource(${1:type}, ${2:name}, ${3:language});$4",
+			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+			"prefix": "PERemoveResource()"
+		},
+		"PESubsysVer()": {
+			"body": "PESubsysVer(${1:major}, ${2:minor});$3",
+			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+			"prefix": "PESubsysVer()"
+		},
 		"Pop()": {
 			"body": "Pop(${1});$2",
 			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
@@ -834,6 +884,11 @@
 			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
 			"prefix": "ReadINIStr()"
 		},
+		"ReadMemory()": {
+			"body": "ReadMemory(${1:address}, ${2:bytes});$3",
+			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+			"prefix": "ReadMemory()"
+		},
 		"ReadRegDWORD()": {
 			"body": "ReadRegDWORD(${1});$2",
 			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
@@ -848,6 +903,11 @@
 			"body": "Reboot(${1});$2",
 			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
 			"prefix": "Reboot()"
+		},
+		"RebootFlag()": {
+			"body": "RebootFlag()$1",
+			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+			"prefix": "RebootFlag()"
 		},
 		"RegDLL()": {
 			"body": "RegDLL(${1});$2",
@@ -903,6 +963,11 @@
 			"body": "RMDirRecursive(${1});$2",
 			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
 			"prefix": "RMDirRecursive()"
+		},
+		"RtlLanguage()": {
+			"body": "RtlLanguage()$1",
+			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+			"prefix": "RtlLanguage()"
 		},
 		"SearchPath()": {
 			"body": "SearchPath(${1});$2",
@@ -1022,6 +1087,11 @@
 			"body": "SetCtlColors(${1});$2",
 			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
 			"prefix": "SetCtlColors()"
+		},
+		"SetCtlColorsBranding()": {
+			"body": "SetCtlColorsBranding(${1:hwnd});$2",
+			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+			"prefix": "SetCtlColorsBranding()"
 		},
 		"SetCurInstType()": {
 			"body": "SetCurInstType(${1});$2",
@@ -1158,6 +1228,21 @@
 			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
 			"prefix": "SetOverwrite(try)"
 		},
+		"SetPluginUnload()": {
+			"body": "SetPluginUnload($1);$2",
+			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+			"prefix": "SetPluginUnload()"
+		},
+		"SetPluginUnload(manual)": {
+			"body": "SetPluginUnload(\"manual\");$1",
+			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+			"prefix": "SetPluginUnload(manual)"
+		},
+		"SetPluginUnload(alwaysoff)": {
+			"body": "SetPluginUnload(\"alwaysoff\");$1",
+			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+			"prefix": "SetPluginUnload(alwaysoff)"
+		},
 		"SetRebootFlag()": {
 			"body": "SetRebootFlag(${1});$2",
 			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
@@ -1223,6 +1308,11 @@
 			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
 			"prefix": "SetSilent(silent)"
 		},
+		"ShellVarContextAll()": {
+			"body": "ShellVarContextAll()$1",
+			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+			"prefix": "ShellVarContextAll()"
+		},
 		"ShowInstDetails()": {
 			"body": "ShowInstDetails(${1});$2",
 			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
@@ -1267,6 +1357,11 @@
 			"body": "ShowWindow(${1});$2",
 			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
 			"prefix": "ShowWindow()"
+		},
+		"Silent()": {
+			"body": "Silent()$1",
+			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+			"prefix": "Silent()"
 		},
 		"SilentInstall()": {
 			"body": "SilentInstall(${1});$2",
@@ -1487,6 +1582,11 @@
 			"body": "VIAddVersionKey(${1});$2",
 			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
 			"prefix": "VIAddVersionKey()"
+		},
+		"VIFileVersion()": {
+			"body": "VIFileVersion(${1:version});$2",
+			"leftLabelHTML": "<span class='syntax--keyword'>K</span>",
+			"prefix": "VIFileVersion()"
 		},
 		"VIProductVersion()": {
 			"body": "VIProductVersion(${1});$2",
