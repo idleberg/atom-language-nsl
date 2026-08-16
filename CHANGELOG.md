@@ -1,4 +1,4 @@
-# v5.1.0
+# v5.1.0 [#](https://github.com/idleberg/atom-language-nsl/releases/tag/v5.1.0)
 
 - support nsL assembler v1.2.0 language features
   - `AltRegView`
