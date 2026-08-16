@@ -28,7 +28,7 @@ patterns: [
     name: "keyword.control.nsl"
   }
   {
-    match: "^\\s*(?i)#(define|else|endif|if|ifend|macro|macroend|nsis|nsisend|return)\\b"
+    match: "^\\s*(?i)#(define|elseif|else|endif|error|if|include|macro|macroend|nsis|nsisend|redefine|return|undef)\\b"
     name: "keyword.other.nsl"
   }
   {
